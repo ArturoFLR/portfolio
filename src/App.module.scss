@@ -16,4 +16,17 @@
     overflow: hidden;
     height: 6.5rem;
   }
+
+  .skipAnimationsButton {
+    position: absolute;
+    top: 3vh;
+    right: 10vw;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: transparent;
+    border: 2px solid rgb(247, 206, 131);
+    border-radius: 5px;
+    color: rgb(170, 218, 245);
+    font-size: 2rem;
+  }
 }

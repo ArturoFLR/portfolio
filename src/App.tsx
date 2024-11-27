@@ -1,24 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./App.module.scss";
 import LoadingContainerHero from "./components/loadingContainers/loadingContainerHero/LoadingContainerHero";
 import LetterTranslator from "./components/letterTranslator/LetterTranslator";
 
-type MainStateType = "loading1" | "loading2";
+type MainStateType = "loading1" | "loading2" | "loaded";
 
 function App() {
   const [mainState, setMainState] = useState<MainStateType>("loading1");
+  const mainStateTimeout = useRef<number>(0);
+
+  function handleSkipAnimationButtonClick() {
+    clearTimeout(mainStateTimeout.current);
+    setMainState("loaded");
+  }
 
   useEffect(() => {
-    let mainStateTimeout: number = 0;
-
     if (mainState === "loading1") {
-      mainStateTimeout = window.setTimeout(() => {
+      mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loading2");
       }, 5500);
     }
 
     return () => {
-      clearTimeout(mainStateTimeout);
+      clearTimeout(mainStateTimeout.current);
     };
   }, []);
 
@@ -31,6 +35,15 @@ function App() {
             <LetterTranslator text="Front-End  Developer" activate={true} />
           )}
         </div>
+
+        {mainState !== "loaded" && (
+          <div
+            className={styles.skipAnimationsButton}
+            onClick={handleSkipAnimationButtonClick}
+          >
+            Saltar animación
+          </div>
+        )}
       </header>
     </main>
   );
