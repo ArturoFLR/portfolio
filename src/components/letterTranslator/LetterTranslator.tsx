@@ -80,9 +80,9 @@ function LetterTranslator({ text, activate }: LetterTranslatorProps) {
   }, []);
 
   return (
-    <div className={styles.letterTranslatorMainContainer}>
+    <p className={styles.letterTranslatorMainContainer} aria-label={text}>
       {returnLetterComponents()}
-    </div>
+    </p>
   );
 }
 
