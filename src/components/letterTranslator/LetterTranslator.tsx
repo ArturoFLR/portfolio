@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./LetterTranslator.module.scss";
-import AnimatedAlienLetter from "../animatedLetters/animatedJapaneseLetter/AnimatedAlienLetter";
+import AnimatedAlienLetter from "../animatedLetters/animatedAlienLetter/AnimatedAlienLetter";
 import AnimatedNormalLetter from "../animatedLetters/animatedNormalLetter/AnimatedNormalLetter";
 
 type LetterTranslatorProps = {
