@@ -1,0 +1,46 @@
+@keyframes textGlow {
+  0% {
+    filter: drop-shadow(0 0 0px #00ffff);
+  }
+  10% {
+    filter: drop-shadow(0 0 10px #00ffff);
+  }
+  100% {
+    filter: drop-shadow(0 0 0px #00ffff);
+  }
+}
+
+@keyframes flashEffect {
+  0% {
+    filter: drop-shadow(0 0 0px #00ffff);
+    scale: 0;
+  }
+  10% {
+    filter: drop-shadow(0 0 10px #00ffff);
+    scale: 1;
+  }
+  100% {
+    filter: drop-shadow(0 0 0px #00ffff);
+    scale: 0;
+  }
+}
+
+.normalLetterContainer {
+  position: relative;
+  height: 4rem;
+  color: #edf0f7;
+  font-size: 4rem;
+  font-family: "Strait", sans-serif;
+  animation: textGlow 1s 0.05s linear;
+}
+
+.flashEffectContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: rgba(237, 240, 247, 0.9);
+  animation: flashEffect 0.2s linear forwards;
+}
