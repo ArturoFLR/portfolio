@@ -5,7 +5,7 @@ function LoadingContainerHero() {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.textContainer}>
-        <p className={styles.text}>Arturo López Rosa</p>
+        <h1 className={styles.text}>Arturo López Rosa</h1>
       </div>
       <div className={styles.iconContainer}>
         <ThreeCircles
