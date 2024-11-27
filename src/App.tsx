@@ -14,7 +14,7 @@ function App() {
     if (mainState === "loading1") {
       mainStateTimeout = window.setTimeout(() => {
         setMainState("loading2");
-      }, 5000);
+      }, 5500);
     }
 
     return () => {

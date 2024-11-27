@@ -50,9 +50,16 @@ function LetterTranslator({ text, activate }: LetterTranslatorProps) {
             textArray[textToShow.length],
           ];
           setTextToShow(newTextToShow);
-        } else if (translatorCounter.current < text.length) {
+        } else if (translatorCounter.current < textArray.length) {
+          //Terminamos el intervalo creado en el 1º bloque del "if" antes de crear uno nuevo.
           clearInterval(interval);
+
           interval = window.setInterval(() => {
+            //Una vez creado el intervalo no se vuelve a comprobar si se cumplen las condiciones para que pare, por lo que las ponemos dentro del propio interval
+            if (translatorCounter.current >= textArray.length - 1) {
+              clearInterval(interval);
+            }
+
             const newTextToShow = [...textToShowRef.current];
             newTextToShow.splice(
               translatorCounter.current,
@@ -63,8 +70,6 @@ function LetterTranslator({ text, activate }: LetterTranslatorProps) {
             translatorCounter.current++;
             setTextToShow(newTextToShow);
           }, 170);
-        } else {
-          clearInterval(interval);
         }
       }, 100);
     }
@@ -76,7 +81,7 @@ function LetterTranslator({ text, activate }: LetterTranslatorProps) {
 
   return (
     <div className={styles.letterTranslatorMainContainer}>
-      <span>{returnLetterComponents()}</span>
+      {returnLetterComponents()}
     </div>
   );
 }
