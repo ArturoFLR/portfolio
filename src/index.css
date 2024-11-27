@@ -15,5 +15,11 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   font-size: 1.6rem;
-  background: #0d1117;
+  background: radial-gradient(
+    circle at 45% -120%,
+    rgba(138, 198, 248, 0.6),
+    rgb(8, 11, 26) 70%
+  );
+  background-color: rgb(12, 17, 40);
+  /* 0A1A36 */
 }
