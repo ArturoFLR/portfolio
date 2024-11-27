@@ -1,0 +1,67 @@
+@keyframes border-glow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px; /* Bordes redondeados */
+  background: #2b3544; /* Fondo del contenedor */
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  scale: 1.4;
+  border-radius: 20px;
+  background: conic-gradient(
+    from 0deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.2) 37%,
+    #ffcc00 40%,
+    #ffcc00 44%,
+    rgba(0, 0, 0, 0.2) 47%,
+    rgba(0, 0, 0, 0.2) 85%,
+    #ffcc00 88%,
+    #ffcc00 92%,
+    rgba(0, 0, 0, 0.2) 95%
+  );
+  background-size: 100% 100%;
+  animation: border-glow 3s infinite linear;
+  z-index: 1;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: #161b22;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.content {
+  color: rgb(116, 137, 185);
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  z-index: 3;
+}
