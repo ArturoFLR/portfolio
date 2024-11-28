@@ -6,9 +6,16 @@ import AnimatedNormalLetter from "../animatedLetters/animatedNormalLetter/Animat
 type LetterTranslatorProps = {
   text: string;
   activate: boolean;
+  alienLettersTimer: number;
+  normalLettersTimer: number;
 };
 
-function LetterTranslator({ text, activate }: LetterTranslatorProps) {
+function LetterTranslator({
+  text,
+  activate,
+  alienLettersTimer,
+  normalLettersTimer,
+}: LetterTranslatorProps) {
   const textArray: string[] = [];
   for (let i = 0; i < text.length; i++) {
     textArray.push("*");
@@ -69,9 +76,9 @@ function LetterTranslator({ text, activate }: LetterTranslatorProps) {
 
             translatorCounter.current++;
             setTextToShow(newTextToShow);
-          }, 170);
+          }, normalLettersTimer);
         }
-      }, 100);
+      }, alienLettersTimer);
     }
 
     return () => {

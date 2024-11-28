@@ -33,7 +33,12 @@ function App() {
         <LoadingContainerHero />
         <div className={styles.mainLetterTranslatorContainer}>
           {mainState !== "loading1" && (
-            <LetterTranslator text="Front-End  Developer" activate={true} />
+            <LetterTranslator
+              text="Front-End  Developer"
+              activate={true}
+              alienLettersTimer={100}
+              normalLettersTimer={150}
+            />
           )}
         </div>
 
