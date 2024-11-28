@@ -1,10 +1,20 @@
 import styles from "./GlowContainer.module.scss";
 
-function GlowContainer() {
+type GlowContainerProps = {
+  glowColor: "mono" | "multi";
+  children: React.ReactNode;
+};
+
+function GlowContainer({ glowColor, children }: GlowContainerProps) {
   return (
-    <div className={styles.container}>
-      <div className={styles.spark}></div>
-      <p className={styles.content}>CONTENIDO</p>
+    <div
+      className={
+        glowColor === "mono"
+          ? styles.containerMonoColor
+          : styles.containerMultiColor
+      }
+    >
+      {children}
     </div>
   );
 }

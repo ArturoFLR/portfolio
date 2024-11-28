@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./App.module.scss";
 import LoadingContainerHero from "./components/loadingContainers/loadingContainerHero/LoadingContainerHero";
 import LetterTranslator from "./components/letterTranslator/LetterTranslator";
+import GlowContainer from "./components/glowContainer/GlowContainer";
 
 type MainStateType = "loading1" | "loading2" | "loaded";
 
@@ -37,11 +38,15 @@ function App() {
         </div>
 
         {mainState !== "loaded" && (
-          <div
-            className={styles.skipAnimationsButton}
-            onClick={handleSkipAnimationButtonClick}
-          >
-            Saltar animación
+          <div className={styles.skipAnimationButtonPositioner}>
+            <GlowContainer glowColor="multi">
+              <div
+                className={styles.skipAnimationsButton}
+                onClick={handleSkipAnimationButtonClick}
+              >
+                Saltar animación
+              </div>
+            </GlowContainer>
           </div>
         )}
       </header>

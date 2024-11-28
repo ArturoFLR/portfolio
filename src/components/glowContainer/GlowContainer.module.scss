@@ -1,4 +1,4 @@
-@keyframes border-glow {
+@keyframes border-glow-mono {
   0% {
     transform: rotate(0deg);
   }
@@ -7,19 +7,31 @@
   }
 }
 
-.container {
+@keyframes border-glow-multi {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.containerMonoColor {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 300px;
   height: 300px;
-  border-radius: 20px; /* Bordes redondeados */
-  background: #2b3544; /* Fondo del contenedor */
+  border-radius: 20px;
+  background: #2b3544;
   overflow: hidden;
 }
 
-.container::before {
+.containerMonoColor::before {
   content: "";
   position: absolute;
   top: 0;
@@ -41,11 +53,11 @@
     rgba(0, 0, 0, 0.2) 95%
   );
   background-size: 100% 100%;
-  animation: border-glow 3s infinite linear;
+  animation: border-glow-mono 3s infinite linear;
   z-index: 1;
 }
 
-.container::after {
+.containerMonoColor::after {
   content: "";
   position: absolute;
   top: 5px;
@@ -57,11 +69,44 @@
   z-index: 2;
 }
 
-.content {
-  color: rgb(116, 137, 185);
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  z-index: 3;
+.containerMultiColor {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #161b22;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.containerMultiColor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 204, 255, 1),
+    rgba(255, 255, 0, 1)
+  );
+  background-size: 300% 300%;
+  animation: border-glow-multi 3s infinite linear;
+  z-index: 1;
+}
+
+.containerMultiColor::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: #161b22;
+  border-radius: 15px;
+  z-index: 2;
 }

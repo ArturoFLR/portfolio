@@ -17,16 +17,19 @@
     height: 6.5rem;
   }
 
-  .skipAnimationsButton {
+  .skipAnimationButtonPositioner {
     position: absolute;
     top: 3vh;
     right: 10vw;
+  }
+
+  .skipAnimationsButton {
     cursor: pointer;
+    width: 170px;
+    height: 30px;
     padding: 1rem;
     background-color: transparent;
-    border: 2px solid rgb(247, 206, 131);
-    border-radius: 5px;
-    color: rgb(170, 218, 245);
+    color: rgb(247, 206, 131);
     font-size: 2rem;
   }
 }
