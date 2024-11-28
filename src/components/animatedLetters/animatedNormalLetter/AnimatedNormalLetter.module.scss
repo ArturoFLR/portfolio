@@ -1,35 +1,37 @@
+@use "../../../fontsAndVariables" as *;
+
 @keyframes textGlow {
   0% {
-    filter: drop-shadow(0 0 0px #00ffff);
+    filter: drop-shadow(0 0 0px $blueGlowEffect);
   }
   10% {
-    filter: drop-shadow(0 0 10px #00ffff);
+    filter: drop-shadow(0 0 10px $blueGlowEffect);
   }
   100% {
-    filter: drop-shadow(0 0 0px #00ffff);
+    filter: drop-shadow(0 0 0px $blueGlowEffect);
   }
 }
 
 @keyframes flashEffect {
   0% {
-    filter: drop-shadow(0 0 0px #00ffff);
+    filter: drop-shadow(0 0 0px $blueGlowEffect);
     scale: 0;
   }
   10% {
-    filter: drop-shadow(0 0 10px #00ffff);
+    filter: drop-shadow(0 0 10px $blueGlowEffect);
     scale: 1;
   }
   100% {
-    filter: drop-shadow(0 0 0px #00ffff);
+    filter: drop-shadow(0 0 0px $blueGlowEffect);
     scale: 0;
   }
 }
 
 .normalLetterContainer {
   position: relative;
-  color: #fddd5c;
+  color: $orangeText;
   font-size: 3rem;
-  font-family: "Strait", sans-serif;
+  font-family: $titlesTextFont;
   animation: textGlow 1s 0.05s linear;
 }
 

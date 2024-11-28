@@ -1,3 +1,5 @@
+@use "../../../fontsAndVariables" as *;
+
 @keyframes loadingIconAnim {
   0% {
     transform: translate(2500%, -500%) scale(14);
@@ -51,10 +53,10 @@
   .text {
     opacity: 0;
     margin-bottom: -1.2rem;
-    color: rgb(237, 240, 247);
+    color: $titlesTextColor;
     font-size: 6.5rem;
     letter-spacing: 1.5px;
-    font-family: "Strait", sans-serif;
+    font-family: $titlesTextFont;
     animation: textAnim ease-in-out forwards 2.5s 3.8s;
   }
 
@@ -62,7 +64,7 @@
     width: 10px;
     height: 10px;
     transform: translate(2500%, -500%) scale(14);
-    filter: drop-shadow(0 0 1px #00ffff);
+    filter: drop-shadow(0 0 1px $blueGlowEffect);
     animation: loadingIconAnim ease-in-out forwards 2.5s 1.5s;
     z-index: 1;
   }
@@ -76,7 +78,7 @@
     height: 0px;
     border-radius: 15px;
     background-color: rgb(146, 196, 242);
-    filter: drop-shadow(0 0 6px #00ffff);
+    filter: drop-shadow(0 0 6px $blueGlowEffect);
     animation: lineAnim ease-in-out forwards 2.5s 3.8s;
     z-index: 0;
   }

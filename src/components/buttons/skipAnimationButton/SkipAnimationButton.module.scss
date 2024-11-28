@@ -1,3 +1,5 @@
+@use "../../../fontsAndVariables" as *;
+
 @keyframes border-glow {
   0% {
     transform: rotate(0deg);
@@ -7,15 +9,15 @@
   }
 }
 
-@keyframes box-glow {
+@keyframes text-glow {
   0% {
-    filter: drop-shadow(0 0 0px #ffcc00);
+    filter: drop-shadow(0 0 0px $orangeGlowEffect);
   }
   50% {
-    filter: drop-shadow(0 0 5px #ffcc00);
+    filter: drop-shadow(0 0 5px $orangeGlowEffect);
   }
   100% {
-    filter: drop-shadow(0 0 0px #ffcc00);
+    filter: drop-shadow(0 0 0px $orangeGlowEffect);
   }
 }
 
@@ -37,7 +39,7 @@
   width: 150px;
   height: 50px;
   border-radius: 5px;
-  background: #2b3544;
+  background: $backgroundContainer;
   overflow: hidden;
   user-select: none;
   transition: scale 200ms;
@@ -46,7 +48,7 @@
     scale: 1.1;
 
     .contentAnimated {
-      animation: box-glow 1.5s infinite ease-in-out;
+      animation: text-glow 1.5s infinite linear;
     }
   }
 }
@@ -64,12 +66,12 @@
     from 0deg,
     rgb(83, 74, 37) 0%,
     rgb(83, 74, 37) 37%,
-    #ffcc00 40%,
-    #ffcc00 44%,
+    $orangeGlowEffect 40%,
+    $orangeGlowEffect 44%,
     rgb(83, 74, 37) 47%,
     rgb(83, 74, 37) 85%,
-    #ffcc00 88%,
-    #ffcc00 92%,
+    $orangeGlowEffect 88%,
+    $orangeGlowEffect 92%,
     rgb(83, 74, 37) 95%
   );
   background-size: 100% 100%;
@@ -84,7 +86,7 @@
   left: 2px;
   right: 2px;
   bottom: 2px;
-  background: #161b22;
+  background: $backgroundContainer;
   border-radius: 5px;
   z-index: 2;
 }
@@ -97,9 +99,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fadd6a;
+  color: $orangeText;
   font-size: 2rem;
   font-weight: 500;
-  font-family: "Strait", sans-serif;
+  font-family: $buttonTextFont;
   z-index: 3;
 }
