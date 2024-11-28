@@ -16,9 +16,9 @@ function AnimatedAlienLetter() {
   }, []);
 
   return (
-    <div className={styles.alienLetterContainer}>
+    <span className={styles.alienLetterContainer}>
       {alienCharacters[showedCharacter]}
-    </div>
+    </span>
   );
 }
 
