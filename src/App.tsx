@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./App.module.scss";
 import LoadingContainerHero from "./components/loadingContainers/loadingContainerHero/LoadingContainerHero";
 import LetterTranslator from "./components/letterTranslator/LetterTranslator";
-import GlowContainer from "./components/glowContainer/GlowContainer";
+import SkipAnimationButton from "./components/buttons/skipAnimationButton/SkipAnimationButton";
 
 type MainStateType = "loading1" | "loading2" | "loaded";
 
@@ -39,14 +39,9 @@ function App() {
 
         {mainState !== "loaded" && (
           <div className={styles.skipAnimationButtonPositioner}>
-            <GlowContainer glowColor="multi">
-              <div
-                className={styles.skipAnimationsButton}
-                onClick={handleSkipAnimationButtonClick}
-              >
-                Saltar animación
-              </div>
-            </GlowContainer>
+            <SkipAnimationButton handleClick={handleSkipAnimationButtonClick}>
+              Saltar Intro
+            </SkipAnimationButton>
           </div>
         )}
       </header>
