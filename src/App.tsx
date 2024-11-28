@@ -3,6 +3,7 @@ import styles from "./App.module.scss";
 import LoadingContainerHero from "./components/loadingContainers/loadingContainerHero/LoadingContainerHero";
 import LetterTranslator from "./components/letterTranslator/LetterTranslator";
 import SkipAnimationButton from "./components/buttons/skipAnimationButton/SkipAnimationButton";
+import GenericButton from "./components/buttons/genericButton/GenericButton";
 
 type MainStateType = "loading1" | "loading2" | "loaded";
 
@@ -49,7 +50,15 @@ function App() {
             </SkipAnimationButton>
           </div>
         )}
+
+        {mainState !== "loading1" && mainState !== "loading2" && (
+          <GenericButton onClick={() => console.log("Click!")}>
+            Prueba Botón
+          </GenericButton>
+        )}
       </header>
+
+      <section></section>
     </main>
   );
 }
