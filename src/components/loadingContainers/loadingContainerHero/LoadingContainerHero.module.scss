@@ -2,7 +2,7 @@
 
 @keyframes loadingIconAnim {
   0% {
-    transform: translate(2500%, -500%) scale(14);
+    transform: translate(2500%, 500%) scale(14);
   }
   100% {
     transform: translate(-70%, 40%) scale(0);
@@ -63,7 +63,7 @@
   .iconContainer {
     width: 10px;
     height: 10px;
-    transform: translate(2500%, -500%) scale(14);
+    transform: translate(2500%, 500%) scale(14);
     filter: drop-shadow(0 0 1px $blueGlowEffect);
     animation: loadingIconAnim ease-in-out forwards 2.5s 1.5s;
     z-index: 1;
