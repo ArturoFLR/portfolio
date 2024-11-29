@@ -13,7 +13,6 @@ type MainStateType =
   | "loading2"
   | "loading3"
   | "loading4"
-  | "loading5"
   | "loaded";
 
 function App() {
@@ -41,13 +40,13 @@ function App() {
     if (mainState === "loading3") {
       mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loading4");
-      }, 1000);
+      }, 2000);
     }
 
     if (mainState === "loading4") {
       mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loaded");
-      }, 2000);
+      }, 1000);
     }
 
     return () => {
@@ -78,7 +77,7 @@ function App() {
           </div>
         )}
 
-        {mainState !== "loading1" && mainState !== "loading2" && (
+        {/* {mainState !== "loading1" && mainState !== "loading2" && (
           <div className={styles.mainButtonsContainer}>
             <GenericButton
               handleClick={() => console.log("Click!")}
@@ -101,42 +100,66 @@ function App() {
               Descargar CV
             </GenericButton>
           </div>
-        )}
+        )} */}
       </header>
 
-      {(mainState === "loading4" ||
-        mainState === "loading5" ||
+      {(mainState === "loading3" ||
+        mainState === "loading4" ||
         mainState === "loaded") && (
         <>
           <section className={styles.profilePositioner}>
             <Profile />
+
+            {(mainState === "loading4" || mainState === "loaded") && (
+              <div className={styles.mainButtonsContainer}>
+                <GenericButton
+                  handleClick={() => console.log("Click!")}
+                  icon="github"
+                >
+                  GitHub
+                </GenericButton>
+
+                <GenericButton
+                  handleClick={() => console.log("Click!")}
+                  icon="linkedin"
+                >
+                  LinkedIn
+                </GenericButton>
+
+                <GenericButton
+                  handleClick={() => console.log("Click!")}
+                  icon="document"
+                >
+                  Descargar CV
+                </GenericButton>
+              </div>
+            )}
           </section>
 
-          {mainState === "loading5" ||
-            (mainState === "loaded" && (
-              <>
-                <div className={styles.animatedLinePositioner}>
-                  <AnimatedLine />
-                </div>
+          {mainState === "loaded" && (
+            <>
+              <div className={styles.animatedLinePositioner}>
+                <AnimatedLine />
+              </div>
 
-                <section
-                  className={`${styles.projectsSectionContainer} ${styles.fadeInAnimation} ${styles.sectionsCommonStyles}`}
-                >
-                  <HeaderH2>Proyectos</HeaderH2>
-                  <div className={styles.proyectCardsContainer}></div>
-                </section>
+              <section
+                className={`${styles.projectsSectionContainer} ${styles.fadeInAnimation} ${styles.sectionsCommonStyles}`}
+              >
+                <HeaderH2>Proyectos</HeaderH2>
+                <div className={styles.proyectCardsContainer}></div>
+              </section>
 
-                <div className={styles.animatedLinePositioner}>
-                  <AnimatedLine />
-                </div>
+              <div className={styles.animatedLinePositioner}>
+                <AnimatedLine />
+              </div>
 
-                <section
-                  className={`${styles.techSectionContainer} ${styles.sectionsCommonStyles}`}
-                >
-                  <HeaderH2>Tecnologías</HeaderH2>
-                </section>
-              </>
-            ))}
+              <section
+                className={`${styles.techSectionContainer} ${styles.sectionsCommonStyles}`}
+              >
+                <HeaderH2>Tecnologías</HeaderH2>
+              </section>
+            </>
+          )}
         </>
       )}
     </main>

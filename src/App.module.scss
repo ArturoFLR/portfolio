@@ -35,16 +35,17 @@
     top: 3vh;
     right: 10vw;
   }
-
-  .mainButtonsContainer {
-    display: flex;
-    column-gap: 4rem;
-    margin-top: 5rem;
-  }
 }
 
 .profilePositioner {
   margin-top: 10rem;
+}
+
+.mainButtonsContainer {
+  display: flex;
+  column-gap: 4rem;
+  width: 100%;
+  margin: 2rem 0rem 0rem 2rem;
 }
 
 .animatedLinePositioner {
