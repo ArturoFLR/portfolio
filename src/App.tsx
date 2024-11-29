@@ -8,7 +8,13 @@ import Profile from "./components/profile/Profile";
 import AnimatedLine from "./components/animatedLine/AnimatedLine";
 import HeaderH2 from "./components/headers/headerH2/HeaderH2";
 
-type MainStateType = "loading1" | "loading2" | "loading3" | "loaded";
+type MainStateType =
+  | "loading1"
+  | "loading2"
+  | "loading3"
+  | "loading4"
+  | "loading5"
+  | "loaded";
 
 function App() {
   const [mainState, setMainState] = useState<MainStateType>("loading1");
@@ -34,8 +40,14 @@ function App() {
 
     if (mainState === "loading3") {
       mainStateTimeout.current = window.setTimeout(() => {
-        setMainState("loaded");
+        setMainState("loading4");
       }, 1000);
+    }
+
+    if (mainState === "loading4") {
+      mainStateTimeout.current = window.setTimeout(() => {
+        setMainState("loaded");
+      }, 2000);
     }
 
     return () => {
@@ -92,19 +104,39 @@ function App() {
         )}
       </header>
 
-      {mainState === "loaded" && (
+      {(mainState === "loading4" ||
+        mainState === "loading5" ||
+        mainState === "loaded") && (
         <>
           <section className={styles.profilePositioner}>
             <Profile />
           </section>
 
-          <div className={styles.animatedLinePositioner}>
-            <AnimatedLine />
-          </div>
+          {mainState === "loading5" ||
+            (mainState === "loaded" && (
+              <>
+                <div className={styles.animatedLinePositioner}>
+                  <AnimatedLine />
+                </div>
 
-          <div>
-            <HeaderH2>Proyectos</HeaderH2>
-          </div>
+                <section
+                  className={`${styles.projectsSectionContainer} ${styles.fadeInAnimation}`}
+                >
+                  <HeaderH2>Proyectos</HeaderH2>
+                  <div className=""></div>
+                </section>
+
+                <div className={styles.animatedLinePositioner}>
+                  <AnimatedLine />
+                </div>
+
+                <section
+                  className={`${styles.techSectionContainer} ${styles.fadeInAnimation}`}
+                >
+                  <HeaderH2>Tecnologías</HeaderH2>
+                </section>
+              </>
+            ))}
         </>
       )}
     </main>

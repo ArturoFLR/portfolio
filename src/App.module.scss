@@ -1,5 +1,17 @@
 @use "./fontsAndVariables" as *;
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .mainTag {
   display: flex;
   flex-direction: column;
@@ -37,5 +49,20 @@
 
 .animatedLinePositioner {
   width: 80%;
-  margin: 10rem 0rem 3rem 0rem;
+  margin-top: 12rem;
+}
+
+.fadeInAnimation {
+  animation: fade-in 2s linear;
+}
+
+.projectsSectionContainer {
+  width: 80%;
+  margin-top: 2rem;
+  padding-left: 2rem;
+}
+
+.techSectionContainer {
+  width: 80%;
+  margin-top: 2rem;
 }

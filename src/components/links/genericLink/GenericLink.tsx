@@ -37,6 +37,7 @@ function GenericLink({ icon, handleClick, children }: GenericLinkProps) {
       className={styles.genericLinkMainContainer}
       onClick={handleClick}
       target={icon !== "document" ? "_blank" : ""}
+      rel="noopener"
       href={hrefValue}
       download={icon === "document" ? "CV Arturo López Rosa 2024.pdf" : ""}
     >
