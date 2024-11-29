@@ -36,9 +36,9 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  width: 150px;
-  height: 50px;
-  border-radius: 5px;
+  width: 110px;
+  height: 110px;
+  border-radius: 100%;
   background: $backgroundContainer;
   overflow: hidden;
   user-select: none;
@@ -61,7 +61,7 @@
   width: 100%;
   height: 100%;
   scale: 4;
-  border-radius: 5px;
+  border-radius: 100%;
   background: conic-gradient(
     from 0deg,
     rgb(83, 74, 37) 0%,
@@ -87,7 +87,7 @@
   right: 2px;
   bottom: 2px;
   background: $backgroundContainer;
-  border-radius: 5px;
+  border-radius: 100%;
   z-index: 2;
 }
 

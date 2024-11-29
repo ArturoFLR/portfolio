@@ -63,16 +63,17 @@
 }
 
 .projectsSectionContainer {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(80, 116, 146, 0.6),
+    rgb(8, 11, 26) 60%
+  );
+
   .proyectCardsContainer {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     min-height: 100vh;
-    background: radial-gradient(
-      ellipse at 50% 50%,
-      rgba(71, 102, 128, 0.6),
-      rgb(8, 11, 26) 65%
-    );
   }
 }
 
