@@ -1,0 +1,28 @@
+@use "../../../fontsAndVariables" as *;
+
+@keyframes intro-drop-glow {
+  0% {
+    filter: drop-shadow(0 0 0px $blueGlowEffect);
+    opacity: 0;
+  }
+  50% {
+    filter: drop-shadow(0 0 5px $blueGlowEffect);
+    opacity: 1;
+  }
+  100% {
+    filter: drop-shadow(0 0 0px $blueGlowEffect);
+    opacity: 1;
+  }
+}
+
+.h2Tag {
+  font-family: $titlesTextFont;
+  font-weight: 900;
+  font-size: 4rem;
+  color: $titlesTextColor;
+  animation: intro-drop-glow 1s linear;
+
+  span {
+    color: $blueGlowEffect;
+  }
+}

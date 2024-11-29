@@ -6,6 +6,7 @@ import SkipAnimationButton from "./components/buttons/skipAnimationButton/SkipAn
 import GenericButton from "./components/links/genericLink/GenericLink";
 import Profile from "./components/profile/Profile";
 import AnimatedLine from "./components/animatedLine/AnimatedLine";
+import HeaderH2 from "./components/headers/headerH2/HeaderH2";
 
 type MainStateType = "loading1" | "loading2" | "loading3" | "loaded";
 
@@ -99,6 +100,10 @@ function App() {
 
           <div className={styles.animatedLinePositioner}>
             <AnimatedLine />
+          </div>
+
+          <div>
+            <HeaderH2>Proyectos</HeaderH2>
           </div>
         </>
       )}
