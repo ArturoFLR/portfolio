@@ -6,7 +6,7 @@ html {
 
 body {
   overflow-x: hidden;
-  min-height: 100vh;
+  min-height: 110vh;
   font-size: 1.6rem;
   background: radial-gradient(
     circle at 45% -120%,
