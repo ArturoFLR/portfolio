@@ -56,13 +56,25 @@
   animation: fade-in 2s linear;
 }
 
-.projectsSectionContainer {
+.sectionsCommonStyles {
   width: 80%;
   margin-top: 2rem;
   padding-left: 2rem;
 }
 
-.techSectionContainer {
-  width: 80%;
-  margin-top: 2rem;
+.projectsSectionContainer {
+  .proyectCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(
+      ellipse at 50% 50%,
+      rgba(71, 102, 128, 0.6),
+      rgb(8, 11, 26) 65%
+    );
+  }
 }
+
+// .techSectionContainer {
+// }

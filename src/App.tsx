@@ -120,10 +120,10 @@ function App() {
                 </div>
 
                 <section
-                  className={`${styles.projectsSectionContainer} ${styles.fadeInAnimation}`}
+                  className={`${styles.projectsSectionContainer} ${styles.fadeInAnimation} ${styles.sectionsCommonStyles}`}
                 >
                   <HeaderH2>Proyectos</HeaderH2>
-                  <div className=""></div>
+                  <div className={styles.proyectCardsContainer}></div>
                 </section>
 
                 <div className={styles.animatedLinePositioner}>
@@ -131,7 +131,7 @@ function App() {
                 </div>
 
                 <section
-                  className={`${styles.techSectionContainer} ${styles.fadeInAnimation}`}
+                  className={`${styles.techSectionContainer} ${styles.sectionsCommonStyles}`}
                 >
                   <HeaderH2>Tecnologías</HeaderH2>
                 </section>
