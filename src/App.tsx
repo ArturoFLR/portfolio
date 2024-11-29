@@ -3,9 +3,9 @@ import styles from "./App.module.scss";
 import LoadingContainerHero from "./components/loadingContainers/loadingContainerHero/LoadingContainerHero";
 import LetterTranslator from "./components/letterTranslator/LetterTranslator";
 import SkipAnimationButton from "./components/buttons/skipAnimationButton/SkipAnimationButton";
-import GenericButton from "./components/buttons/genericButton/GenericButton";
+import GenericButton from "./components/links/genericLink/GenericLink";
 
-type MainStateType = "loading1" | "loading2" | "loaded";
+type MainStateType = "loading1" | "loading2" | "loading3" | "loaded";
 
 function App() {
   const [mainState, setMainState] = useState<MainStateType>("loading1");
@@ -23,10 +23,16 @@ function App() {
       }, 5500);
     }
 
+    if (mainState === "loading2") {
+      mainStateTimeout.current = window.setTimeout(() => {
+        setMainState("loading3");
+      }, 5300);
+    }
+
     return () => {
       clearTimeout(mainStateTimeout.current);
     };
-  }, []);
+  }, [mainState]);
 
   return (
     <main className={styles.mainTag}>
@@ -52,9 +58,28 @@ function App() {
         )}
 
         {mainState !== "loading1" && mainState !== "loading2" && (
-          <GenericButton onClick={() => console.log("Click!")}>
-            Prueba Botón
-          </GenericButton>
+          <div className={styles.mainButtonsContainer}>
+            <GenericButton
+              handleClick={() => console.log("Click!")}
+              icon="github"
+            >
+              GitHub
+            </GenericButton>
+
+            <GenericButton
+              handleClick={() => console.log("Click!")}
+              icon="linkedin"
+            >
+              LinkedIn
+            </GenericButton>
+
+            <GenericButton
+              handleClick={() => console.log("Click!")}
+              icon="document"
+            >
+              Descargar CV
+            </GenericButton>
+          </div>
         )}
       </header>
 

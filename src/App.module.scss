@@ -1,9 +1,10 @@
+@use "./fontsAndVariables" as *;
+
 .mainTag {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 12rem 2rem;
 }
 
@@ -23,13 +24,9 @@
     right: 10vw;
   }
 
-  .skipAnimationsButton {
-    cursor: pointer;
-    width: 170px;
-    height: 30px;
-    padding: 1rem;
-    background-color: transparent;
-    color: rgb(247, 206, 131);
-    font-size: 2rem;
+  .mainButtonsContainer {
+    display: flex;
+    column-gap: 4rem;
+    margin-top: 5rem;
   }
 }

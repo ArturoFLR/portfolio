@@ -1,0 +1,78 @@
+@use "../../../fontsAndVariables" as *;
+
+@keyframes intro-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes intro-glow {
+  0% {
+    filter: drop-shadow(0 0 0px $blueGlowEffect);
+  }
+  50% {
+    filter: drop-shadow(0 0 5px $blueGlowEffect);
+  }
+  100% {
+    filter: drop-shadow(0 0 0px $blueGlowEffect);
+  }
+}
+
+.genericLinkMainContainer {
+  display: block;
+  width: fit-content;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  animation: intro-glow 1s linear;
+
+  .genericLinkContentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    padding: 0.2rem 0.8rem 0rem 0.8rem;
+    border: 1px solid $normalTextColor;
+    border-radius: 20px;
+    background-image: linear-gradient(
+      to right,
+      rgb(59, 66, 98),
+      $backgroundBody
+    );
+    color: $normalTextColor;
+    font-family: $buttonTextFont;
+    transition: all 400ms;
+    animation: intro-fade-in 0.6s linear;
+
+    &:hover {
+      scale: 1.1;
+      filter: drop-shadow(0 0 3px $blueGlowEffect);
+    }
+
+    &:active {
+      transition: all 50ms;
+      scale: 1;
+      filter: drop-shadow(0 0 0px $blueGlowEffect);
+      background-image: linear-gradient(
+        to right,
+        rgb(31, 35, 50),
+        $backgroundBody
+      );
+      opacity: 0.6;
+    }
+
+    .iconContainer {
+      font-size: 2.1rem;
+    }
+
+    .linkText {
+      font-size: 1.6rem;
+    }
+  }
+}
