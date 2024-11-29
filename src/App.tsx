@@ -4,7 +4,8 @@ import LoadingContainerHero from "./components/loadingContainers/loadingContaine
 import LetterTranslator from "./components/letterTranslator/LetterTranslator";
 import SkipAnimationButton from "./components/buttons/skipAnimationButton/SkipAnimationButton";
 import GenericButton from "./components/links/genericLink/GenericLink";
-import Profile from "./components/profile/profile";
+import Profile from "./components/profile/Profile";
+import AnimatedLine from "./components/animatedLine/AnimatedLine";
 
 type MainStateType = "loading1" | "loading2" | "loading3" | "loaded";
 
@@ -91,9 +92,15 @@ function App() {
       </header>
 
       {mainState === "loaded" && (
-        <section className={styles.profilePositioner}>
-          <Profile />
-        </section>
+        <>
+          <section className={styles.profilePositioner}>
+            <Profile />
+          </section>
+
+          <div className={styles.animatedLinePositioner}>
+            <AnimatedLine />
+          </div>
+        </>
       )}
     </main>
   );
