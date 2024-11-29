@@ -1,0 +1,105 @@
+@use "../../fontsAndVariables" as *;
+
+@keyframes intro-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes longer-intro-fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes intro-box-glow {
+  0% {
+    box-shadow: 0 0 0px 0px $blueGlowEffect;
+  }
+  50% {
+    box-shadow: 0 0 7px 3px $blueGlowEffect;
+  }
+  100% {
+    box-shadow: 0 0 0px 0px $blueGlowEffect;
+  }
+}
+
+@keyframes intro-drop-glow {
+  0% {
+    filter: drop-shadow(0 0 0px $blueGlowEffect);
+    opacity: 0;
+  }
+  50% {
+    filter: drop-shadow(0 0 5px $blueGlowEffect);
+    opacity: 1;
+  }
+  100% {
+    filter: drop-shadow(0 0 0px $blueGlowEffect);
+    opacity: 1;
+  }
+}
+
+.profileMainContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 800px;
+}
+
+.textContainer {
+  width: 600px;
+
+  .header {
+    font-family: $titlesTextFont;
+    font-weight: 900;
+    font-size: 4rem;
+    color: $titlesTextColor;
+    animation: intro-drop-glow 1s linear;
+
+    .headerSpan {
+      color: $blueGlowEffect;
+    }
+  }
+
+  .paragraph {
+    margin-top: 1.6rem;
+    font-family: $normalTextFont;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 120%;
+    color: $normalTextColor;
+    animation: longer-intro-fade-in 2s linear;
+
+    span {
+      font-size: 2.4rem;
+      color: $highlightedText;
+    }
+  }
+}
+
+.imageContainer {
+  overflow: hidden;
+  width: 110px;
+  height: 110px;
+  border-radius: 100%;
+  border: 2px solid $iconLightBlueColor;
+  animation: intro-box-glow 1s linear;
+
+  .image {
+    aspect-ratio: 600/512;
+    width: 100%;
+    scale: 1.3;
+    transform: translateX(-1px) translateY(10px);
+    animation: intro-fade-in 0.5s linear;
+  }
+}

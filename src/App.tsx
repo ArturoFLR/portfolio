@@ -4,6 +4,7 @@ import LoadingContainerHero from "./components/loadingContainers/loadingContaine
 import LetterTranslator from "./components/letterTranslator/LetterTranslator";
 import SkipAnimationButton from "./components/buttons/skipAnimationButton/SkipAnimationButton";
 import GenericButton from "./components/links/genericLink/GenericLink";
+import Profile from "./components/profile/profile";
 
 type MainStateType = "loading1" | "loading2" | "loading3" | "loaded";
 
@@ -27,6 +28,12 @@ function App() {
       mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loading3");
       }, 5300);
+    }
+
+    if (mainState === "loading3") {
+      mainStateTimeout.current = window.setTimeout(() => {
+        setMainState("loaded");
+      }, 1000);
     }
 
     return () => {
@@ -83,7 +90,11 @@ function App() {
         )}
       </header>
 
-      <section></section>
+      {mainState === "loaded" && (
+        <section className={styles.profilePositioner}>
+          <Profile />
+        </section>
+      )}
     </main>
   );
 }
