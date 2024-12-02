@@ -14,3 +14,9 @@
     filter: drop-shadow(0 0 5px $blueGlowEffect);
   }
 }
+
+.linksContainer {
+  display: flex;
+  justify-content: center;
+  column-gap: 4rem;
+}

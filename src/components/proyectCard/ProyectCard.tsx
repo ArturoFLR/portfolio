@@ -1,5 +1,6 @@
 import HeaderH3 from "../headers/headerH3/HeaderH3";
 import GenericLink from "../links/genericLink/GenericLink";
+import Paragraph from "../paragraph/paragraph";
 import styles from "./ProyectCard.module.scss";
 import ProyectCardImage from "./proyectCardImage/ProyectCardImage";
 
@@ -32,12 +33,17 @@ function ProyectCard({
         <HeaderH3>{title}</HeaderH3>
       </div>
 
-      <div className={styles.descriptionPositioner}>{description}</div>
+      <div className={styles.descriptionPositioner}>
+        <Paragraph>{description}</Paragraph>
+      </div>
 
       <div className={styles.linksContainer}>
+        <GenericLink hrefValue={github} icon="github">
+          Ver Código
+        </GenericLink>
         {online && (
-          <GenericLink hrefValue="" icon="">
-            Ver Online{" "}
+          <GenericLink hrefValue={online} icon="launch">
+            Ver Online
           </GenericLink>
         )}
       </div>

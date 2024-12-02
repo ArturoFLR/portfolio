@@ -120,7 +120,15 @@ function App() {
               >
                 <HeaderH2>Proyectos</HeaderH2>
                 <div className={styles.proyectCardsContainer}>
-                  <ProyectCard online="https://arturoflr.github.io/checkmate/" />
+                  <ProyectCard
+                    imageSrc="../public/images/proyects/checkmate/checkmate-1-miniature.webp"
+                    imageAlt="Imagen de CHECKMATE!"
+                    title="CHECKMATE!"
+                    description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
+                    techIcons={[]}
+                    online="https://arturoflr.github.io/checkmate/"
+                    github="https://github.com/ArturoFLR/checkmate"
+                  />
                   <ProyectCard />
                   <ProyectCard />
                 </div>

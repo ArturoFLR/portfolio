@@ -1,11 +1,11 @@
 import styles from "./Paragraph.module.scss";
 
 type ParagraphProps = {
-  text: string;
+  children: React.ReactNode;
 };
 
-function Paragraph({ text }: ParagraphProps) {
-  return <p className={styles.pTag}>{text}</p>;
+function Paragraph({ children }: ParagraphProps) {
+  return <p className={styles.pTag}>{children}</p>;
 }
 
 export default Paragraph;
