@@ -139,7 +139,7 @@ function App() {
                   <ProyectCard
                     imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
                     imageAlt="Imagen de CHECKMATE!"
-                    title="CHECKMATE!"
+                    title="L&R Ingenieros"
                     description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
                     techIcons={[
                       "icons/html5.webp",
@@ -154,7 +154,7 @@ function App() {
                   <ProyectCard
                     imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
                     imageAlt="Imagen de CHECKMATE!"
-                    title="CHECKMATE!"
+                    title="Plant-In"
                     description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
                     techIcons={[
                       "icons/html5.webp",

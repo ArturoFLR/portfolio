@@ -21,10 +21,18 @@
   10% {
     opacity: 1;
   }
-  100% {
+  60% {
     width: 100%;
     height: 3px;
     opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    height: 3px;
+    opacity: 0;
   }
 }
 
@@ -79,7 +87,7 @@
     border-radius: 15px;
     background-color: rgb(146, 196, 242);
     filter: drop-shadow(0 0 6px $blueGlowEffect);
-    animation: lineAnim ease-in-out forwards 2.5s 3.8s;
+    animation: lineAnim ease-in-out forwards 4.5s 3.8s;
     z-index: 0;
   }
 }
