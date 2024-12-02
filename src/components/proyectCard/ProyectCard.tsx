@@ -1,6 +1,6 @@
 import HeaderH3 from "../headers/headerH3/HeaderH3";
 import GenericLink from "../links/genericLink/GenericLink";
-import Paragraph from "../paragraph/paragraph";
+import Paragraph from "../paragraph/Paragraph";
 import styles from "./ProyectCard.module.scss";
 import ProyectCardImage from "./proyectCardImage/ProyectCardImage";
 
