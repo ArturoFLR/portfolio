@@ -1,0 +1,7 @@
+@use "../../fontsAndVariables" as *;
+
+.pTag {
+  font-family: $normalTextFont;
+  font-weight: 600;
+  color: $normalTextColor;
+}

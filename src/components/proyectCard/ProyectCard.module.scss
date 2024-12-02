@@ -1,0 +1,16 @@
+@use "../../fontsAndVariables" as *;
+
+.proyectCardMainContainer {
+  width: 400px;
+  height: 650px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 20px;
+  backdrop-filter: blur(20px) brightness(80%);
+  transition: all 300ms;
+
+  &:hover {
+    border-color: $blueGlowEffect;
+    filter: drop-shadow(0 0 5px $blueGlowEffect);
+  }
+}

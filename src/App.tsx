@@ -3,10 +3,11 @@ import styles from "./App.module.scss";
 import LoadingContainerHero from "./components/loadingContainers/loadingContainerHero/LoadingContainerHero";
 import LetterTranslator from "./components/letterTranslator/LetterTranslator";
 import SkipAnimationButton from "./components/buttons/skipAnimationButton/SkipAnimationButton";
-import GenericButton from "./components/links/genericLink/GenericLink";
+import GenericLink from "./components/links/genericLink/GenericLink";
 import Profile from "./components/profile/Profile";
 import AnimatedLine from "./components/animatedLine/AnimatedLine";
 import HeaderH2 from "./components/headers/headerH2/HeaderH2";
+import ProyectCard from "./components/proyectCard/proyectCard";
 
 type MainStateType =
   | "loading1"
@@ -76,31 +77,6 @@ function App() {
             </SkipAnimationButton>
           </div>
         )}
-
-        {/* {mainState !== "loading1" && mainState !== "loading2" && (
-          <div className={styles.mainButtonsContainer}>
-            <GenericButton
-              handleClick={() => console.log("Click!")}
-              icon="github"
-            >
-              GitHub
-            </GenericButton>
-
-            <GenericButton
-              handleClick={() => console.log("Click!")}
-              icon="linkedin"
-            >
-              LinkedIn
-            </GenericButton>
-
-            <GenericButton
-              handleClick={() => console.log("Click!")}
-              icon="document"
-            >
-              Descargar CV
-            </GenericButton>
-          </div>
-        )} */}
       </header>
 
       {(mainState === "loading3" ||
@@ -112,26 +88,23 @@ function App() {
 
             {(mainState === "loading4" || mainState === "loaded") && (
               <div className={styles.mainButtonsContainer}>
-                <GenericButton
-                  handleClick={() => console.log("Click!")}
+                <GenericLink
+                  hrefValue="https://github.com/ArturoFLR"
                   icon="github"
                 >
                   GitHub
-                </GenericButton>
+                </GenericLink>
 
-                <GenericButton
-                  handleClick={() => console.log("Click!")}
+                <GenericLink
+                  hrefValue="https://www.linkedin.com/in/arturo-lopez-rosa/"
                   icon="linkedin"
                 >
                   LinkedIn
-                </GenericButton>
+                </GenericLink>
 
-                <GenericButton
-                  handleClick={() => console.log("Click!")}
-                  icon="document"
-                >
+                <GenericLink hrefValue="documents/cv2024.pdf" icon="document">
                   Descargar CV
-                </GenericButton>
+                </GenericLink>
               </div>
             )}
           </section>
@@ -146,7 +119,11 @@ function App() {
                 className={`${styles.projectsSectionContainer} ${styles.fadeInAnimation} ${styles.sectionsCommonStyles}`}
               >
                 <HeaderH2>Proyectos</HeaderH2>
-                <div className={styles.proyectCardsContainer}></div>
+                <div className={styles.proyectCardsContainer}>
+                  <ProyectCard online="https://arturoflr.github.io/checkmate/" />
+                  <ProyectCard />
+                  <ProyectCard />
+                </div>
               </section>
 
               <div className={styles.animatedLinePositioner}>

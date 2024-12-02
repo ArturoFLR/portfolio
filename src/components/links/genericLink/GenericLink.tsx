@@ -2,40 +2,20 @@ import styles from "./GenericLink.module.scss";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import LaunchIcon from "@mui/icons-material/Launch";
 
-type IconType = "github" | "linkedin" | "document";
+type IconType = "github" | "linkedin" | "document" | "launch";
 
 type GenericLinkProps = {
-  handleClick: () => void;
+  hrefValue: string;
   icon: IconType;
   children: React.ReactNode;
 };
 
-function GenericLink({ icon, handleClick, children }: GenericLinkProps) {
-  let hrefValue: string;
-
-  switch (icon) {
-    case "github":
-      hrefValue = "https://github.com/ArturoFLR";
-      break;
-
-    case "linkedin":
-      hrefValue = "https://www.linkedin.com/in/arturo-lopez-rosa/";
-      break;
-
-    case "document":
-      hrefValue = "documents/cv2024.pdf";
-      break;
-
-    default:
-      hrefValue = "";
-      break;
-  }
-
+function GenericLink({ icon, hrefValue, children }: GenericLinkProps) {
   return (
     <a
       className={styles.genericLinkMainContainer}
-      onClick={handleClick}
       target={icon !== "document" ? "_blank" : ""}
       rel="noopener"
       href={hrefValue}
@@ -53,6 +33,10 @@ function GenericLink({ icon, handleClick, children }: GenericLinkProps) {
 
           {icon === "document" && (
             <PictureAsPdfIcon color="inherit" fontSize="inherit" />
+          )}
+
+          {icon === "launch" && (
+            <LaunchIcon color="inherit" fontSize="inherit" />
           )}
         </div>
         <p className={styles.linkText}>{children}</p>

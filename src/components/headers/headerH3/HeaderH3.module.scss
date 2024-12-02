@@ -1,0 +1,12 @@
+@use "../../../fontsAndVariables" as *;
+
+.h3Tag {
+  font-family: $titlesTextFont;
+  font-weight: 500;
+  font-size: 2.8rem;
+  color: $titlesTextColor;
+
+  span {
+    color: $blueGlowEffect;
+  }
+}

@@ -1,0 +1,9 @@
+@use "../../../fontsAndVariables" as *;
+
+.proyectCardImageMainContainer {
+  width: 100%;
+
+  .image {
+    width: 80%;
+  }
+}
