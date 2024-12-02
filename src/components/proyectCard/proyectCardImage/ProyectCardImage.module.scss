@@ -1,9 +1,26 @@
 @use "../../../fontsAndVariables" as *;
 
 .proyectCardImageMainContainer {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
   width: 100%;
+  padding: 1.5rem 0rem;
+  border-radius: 15px 15px 0 0;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgb(95, 165, 234),
+    rgb(74, 87, 160) 90%
+  );
 
   .image {
-    width: 80%;
+    width: 90%;
+    cursor: pointer;
+    box-shadow: 2px 2px 12px 2px $blueGlowEffect;
+    transition: all 350ms;
+
+    &:hover {
+      scale: 1.2;
+    }
   }
 }
