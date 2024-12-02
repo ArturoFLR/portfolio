@@ -10,13 +10,13 @@
   background: radial-gradient(
     ellipse at 50% 50%,
     rgb(95, 165, 234),
-    rgb(74, 87, 160) 90%
+    rgb(29, 34, 63) 90%
   );
 
   .image {
     width: 90%;
     cursor: pointer;
-    box-shadow: 2px 2px 12px 2px $blueGlowEffect;
+    box-shadow: 2px 2px 12px 1px $blueGlowEffect;
     transition: all 350ms;
 
     &:hover {
