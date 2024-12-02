@@ -23,6 +23,19 @@ function ProyectCard({
   online,
   techIcons,
 }: ProyectCardProps) {
+  console.log(techIcons);
+  function techIconsGenerator() {
+    const iconElementList: React.ReactNode[] = [];
+
+    techIcons.map((element, index) => {
+      iconElementList.push(
+        <img className={styles.techIcon} src={element} alt="" key={index} />,
+      );
+    });
+
+    return iconElementList;
+  }
+
   return (
     <article className={styles.proyectCardMainContainer}>
       <div className={styles.imagePositioner}>
@@ -48,7 +61,7 @@ function ProyectCard({
         )}
       </div>
 
-      <div className={styles.techContainer}></div>
+      <div className={styles.techContainer}>{techIconsGenerator()}</div>
     </article>
   );
 }

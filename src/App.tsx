@@ -7,7 +7,7 @@ import GenericLink from "./components/links/genericLink/GenericLink";
 import Profile from "./components/profile/Profile";
 import AnimatedLine from "./components/animatedLine/AnimatedLine";
 import HeaderH2 from "./components/headers/headerH2/HeaderH2";
-import ProyectCard from "./components/proyectCard/proyectCard";
+import ProyectCard from "./components/proyectCard/ProyectCard";
 
 type MainStateType =
   | "loading1"
@@ -125,12 +125,47 @@ function App() {
                     imageAlt="Imagen de CHECKMATE!"
                     title="CHECKMATE!"
                     description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
-                    techIcons={[]}
+                    techIcons={[
+                      "icons/html5.webp",
+                      "icons/css3.webp",
+                      "icons/typescript.webp",
+                      "icons/react.webp",
+                      "icons/sass.webp",
+                    ]}
                     online="https://arturoflr.github.io/checkmate/"
                     github="https://github.com/ArturoFLR/checkmate"
                   />
-                  <ProyectCard />
-                  <ProyectCard />
+
+                  <ProyectCard
+                    imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
+                    imageAlt="Imagen de CHECKMATE!"
+                    title="CHECKMATE!"
+                    description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
+                    techIcons={[
+                      "icons/html5.webp",
+                      "icons/css3.webp",
+                      "icons/typescript.webp",
+                      "icons/react.webp",
+                      "icons/sass.webp",
+                    ]}
+                    github="https://github.com/ArturoFLR/checkmate"
+                  />
+
+                  <ProyectCard
+                    imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
+                    imageAlt="Imagen de CHECKMATE!"
+                    title="CHECKMATE!"
+                    description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
+                    techIcons={[
+                      "icons/html5.webp",
+                      "icons/css3.webp",
+                      "icons/typescript.webp",
+                      "icons/react.webp",
+                      "icons/sass.webp",
+                    ]}
+                    online="https://arturoflr.github.io/checkmate/"
+                    github="https://github.com/ArturoFLR/checkmate"
+                  />
                 </div>
               </section>
 
