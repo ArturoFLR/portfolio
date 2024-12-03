@@ -1,8 +1,25 @@
 import HeaderH3 from "../headers/headerH3/HeaderH3";
 import GenericLink from "../links/genericLink/GenericLink";
 import Paragraph from "../paragraph/Paragraph";
+import TechIcon from "../techIcon/TechIcon";
 import styles from "./ProyectCard.module.scss";
 import ProyectCardImage from "./proyectCardImage/ProyectCardImage";
+
+type TechIconType =
+  | "css3"
+  | "docker"
+  | "express"
+  | "git"
+  | "html5"
+  | "javascript"
+  | "netlify"
+  | "poo"
+  | "react"
+  | "reactrouter"
+  | "sass"
+  | "tailwind"
+  | "typescript"
+  | "vscode";
 
 type ProyectCardProps = {
   imageSrc: string;
@@ -11,7 +28,7 @@ type ProyectCardProps = {
   description: string;
   github: string;
   online?: string;
-  techIcons: string[];
+  techIcons: TechIconType[];
 };
 
 function ProyectCard({
@@ -23,13 +40,14 @@ function ProyectCard({
   online,
   techIcons,
 }: ProyectCardProps) {
-  console.log(techIcons);
   function techIconsGenerator() {
     const iconElementList: React.ReactNode[] = [];
 
     techIcons.map((element, index) => {
       iconElementList.push(
-        <img className={styles.techIcon} src={element} alt="" key={index} />,
+        <div key={index}>
+          <TechIcon iconName={element} />
+        </div>,
       );
     });
 

@@ -126,12 +126,12 @@ function App() {
                     title="CHECKMATE!"
                     description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
                     techIcons={[
-                      "icons/html5.webp",
-                      "icons/css3.webp",
-                      "icons/typescript.webp",
-                      "icons/react.webp",
-                      "icons/sass.webp",
-                      "icons/poo.webp",
+                      "html5",
+                      "css3",
+                      "poo",
+                      "typescript",
+                      "react",
+                      "sass",
                     ]}
                     online="https://arturoflr.github.io/checkmate/"
                     github="https://github.com/ArturoFLR/checkmate"
@@ -143,11 +143,12 @@ function App() {
                     title="L&R Ingenieros"
                     description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
                     techIcons={[
-                      "icons/html5.webp",
-                      "icons/css3.webp",
-                      "icons/typescript.webp",
-                      "icons/react.webp",
-                      "icons/sass.webp",
+                      "html5",
+                      "css3",
+                      "typescript",
+                      "express",
+                      "react",
+                      "sass",
                     ]}
                     github="https://github.com/ArturoFLR/checkmate"
                   />
@@ -158,11 +159,12 @@ function App() {
                     title="Plant-In"
                     description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
                     techIcons={[
-                      "icons/html5.webp",
-                      "icons/css3.webp",
-                      "icons/typescript.webp",
-                      "icons/react.webp",
-                      "icons/sass.webp",
+                      "netlify",
+                      "css3",
+                      "typescript",
+                      "react",
+                      "sass",
+                      "javascript",
                     ]}
                     online="https://arturoflr.github.io/checkmate/"
                     github="https://github.com/ArturoFLR/checkmate"

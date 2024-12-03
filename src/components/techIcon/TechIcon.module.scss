@@ -1,0 +1,143 @@
+@use "../../fontsAndVariables" as *;
+
+.techIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+
+  .techIcon {
+    width: 22px;
+    height: 20px;
+  }
+}
+
+.blueIconContainer {
+  background-color: rgba(70, 70, 247, 0.1);
+  border: 1.5px solid transparent;
+  transition: all 800ms;
+
+  &:hover {
+    background-color: rgba(95, 115, 204, 0.3);
+    border: 1.5px solid rgb(139, 152, 240);
+    box-shadow: 0 0 7px 0.3px rgb(95, 115, 204);
+  }
+}
+
+.greyIconContainer {
+  background-color: rgba(129, 129, 141, 0.1);
+  border: 1.5px solid transparent;
+  transition: all 800ms;
+
+  &:hover {
+    background-color: rgba(166, 166, 167, 0.3);
+    border: 1.5px solid rgb(100, 100, 101);
+    box-shadow: 0 0 7px 0.3px rgb(100, 100, 101);
+  }
+}
+
+.redIconContainer {
+  background-color: rgba(187, 71, 48, 0.1);
+  border: 1.5px solid transparent;
+  transition: all 800ms;
+
+  &:hover {
+    background-color: rgba(239, 25, 25, 0.35);
+    border: 1.5px solid rgb(230, 106, 78);
+    box-shadow: 0 0 7px 0.3px rgb(230, 106, 78);
+  }
+}
+
+.yellowIconContainer {
+  background-color: rgba(187, 180, 48, 0.07);
+  border: 1.5px solid transparent;
+  transition: all 800ms;
+
+  &:hover {
+    background-color: rgba(239, 239, 25, 0.25);
+    border: 1.5px solid rgb(230, 220, 78);
+    box-shadow: 0 0 7px 0.3px rgb(230, 220, 78);
+  }
+}
+
+.greenIconContainer {
+  background-color: rgba(53, 187, 48, 0.07);
+  border: 1.5px solid transparent;
+  transition: all 800ms;
+
+  &:hover {
+    background-color: rgba(25, 239, 68, 0.2);
+    border: 1.5px solid rgb(107, 234, 135);
+    box-shadow: 0 0 7px 0.3px rgb(78, 230, 111);
+  }
+}
+
+.whiteIconContainer {
+  background-color: rgba(249, 251, 249, 0.07);
+  border: 1.5px solid transparent;
+  transition: all 800ms;
+
+  &:hover {
+    background-color: rgba(249, 251, 249, 0.25);
+    border: 1.5px solid rgb(223, 235, 226);
+    box-shadow: 0 0 7px 0.3px rgb(223, 235, 226);
+  }
+}
+
+.lightBlueIconContainer {
+  background-color: rgba(48, 166, 187, 0.07);
+  border: 1.5px solid transparent;
+  transition: all 800ms;
+
+  &:hover {
+    background-color: rgba(48, 166, 187, 0.35);
+    border: 1.5px solid rgb(78, 200, 230);
+    box-shadow: 0 0 7px 0.3px rgb(78, 200, 230);
+  }
+}
+
+.pinkIconContainer {
+  background-color: rgba(187, 48, 131, 0.07);
+  border: 1.5px solid transparent;
+  transition: all 800ms;
+
+  &:hover {
+    background-color: rgba(187, 48, 131, 0.35);
+    border: 1.5px solid rgb(230, 78, 149);
+    box-shadow: 0 0 7px 0.3px rgb(230, 78, 149);
+  }
+}
+
+//Styles for Icons Tooltip
+[data-title] {
+  position: relative;
+}
+
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  background-color: $backgroundBody;
+  color: $alienSymbolsColor;
+  font-size: 14px;
+  font-family: $normalTextFont;
+  position: absolute;
+  padding: 3px 20px;
+  bottom: 3em;
+  left: -65%;
+  white-space: nowrap;
+  box-shadow: 1px 1px 3px #222222;
+  opacity: 0;
+  border: 1px solid $alienSymbolsColor;
+  z-index: 4;
+  visibility: hidden;
+  border-radius: 6px;
+  box-shadow: 0 0 7px 0.3px $alienSymbolsColor;
+}
