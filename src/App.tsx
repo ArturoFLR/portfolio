@@ -124,7 +124,7 @@ function App() {
                     imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
                     imageAlt="Imagen de CHECKMATE!"
                     title="CHECKMATE!"
-                    description1="Proyecto personal."
+                    description1="Proyecto Personal."
                     description2="Juego de ajedrez online para uno o dos jugadores con varios niveles de dificultad, avatares y posibilidad de guardar y cargar partida."
                     techIcons={[
                       "html5",
@@ -160,7 +160,42 @@ function App() {
                     imageSrc="images/proyects/plantin/plant_in-1-miniature.webp"
                     imageAlt="Imagen de Plant-In!"
                     title="Plant-In"
-                    description1="Proyecto en Equipo."
+                    description1="Proyecto en Equipo para ID for Ideas."
+                    description2="Web App diseñada para promocionar las huertas agroecológicas dentro del territorio nacional Argentino. Principal responsable del Front-End."
+                    techIcons={[
+                      "netlify",
+                      "css3",
+                      "typescript",
+                      "react",
+                      "sass",
+                      "javascript",
+                    ]}
+                    online="https://plant-in.netlify.app/"
+                    github="https://github.com/Mgll3/agro-plantation-app"
+                  />
+
+                  <ProyectCard
+                    imageSrc="images/proyects/eatsquality/eatsquality-1-miniature.webp"
+                    imageAlt="Imagen de Eatsquality"
+                    title="Eatsquality"
+                    description1="Proyecto en Equipo para No Country."
+                    description2="Web App diseñada para promocionar las huertas agroecológicas dentro del territorio nacional Argentino. Principal responsable del Front-End."
+                    techIcons={[
+                      "netlify",
+                      "css3",
+                      "typescript",
+                      "react",
+                      "sass",
+                      "javascript",
+                    ]}
+                    github="https://github.com/No-Country/c17-113-ft-csharp"
+                  />
+
+                  <ProyectCard
+                    imageSrc="images/proyects/en256colores/en256colores-1-miniature.webp"
+                    imageAlt="Imagen de En 256 Colores"
+                    title="En 256 Colores"
+                    description1="Proyecto Personal."
                     description2="Web App diseñada para promocionar las huertas agroecológicas dentro del territorio nacional Argentino. Principal responsable del Front-End."
                     techIcons={[
                       "netlify",
