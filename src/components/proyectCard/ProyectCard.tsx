@@ -27,7 +27,7 @@ type ProyectCardProps = {
   title: string;
   description1: string;
   description2: string;
-  github: string;
+  github?: string;
   online?: string;
   techIcons: TechIconType[];
 };
@@ -74,9 +74,11 @@ function ProyectCard({
       </div>
 
       <div className={styles.linksContainer}>
-        <GenericLink hrefValue={github} icon="github">
-          Ver Código
-        </GenericLink>
+        {github && (
+          <GenericLink hrefValue={github} icon="github">
+            Ver Código
+          </GenericLink>
+        )}
         {online && (
           <GenericLink hrefValue={online} icon="launch">
             Ver Online
