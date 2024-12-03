@@ -131,6 +131,7 @@ function App() {
                       "icons/typescript.webp",
                       "icons/react.webp",
                       "icons/sass.webp",
+                      "icons/poo.webp",
                     ]}
                     online="https://arturoflr.github.io/checkmate/"
                     github="https://github.com/ArturoFLR/checkmate"
