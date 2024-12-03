@@ -148,8 +148,8 @@ function App() {
                       "html5",
                       "css3",
                       "typescript",
-                      "express",
                       "react",
+                      "reactrouter",
                       "sass",
                     ]}
                     online="https://www.lringenieros.es/"
@@ -163,12 +163,13 @@ function App() {
                     description1="Proyecto en Equipo para ID for Ideas."
                     description2="Web App diseñada para promocionar las huertas agroecológicas dentro del territorio nacional Argentino. Principal responsable del Front-End."
                     techIcons={[
-                      "netlify",
+                      "html5",
                       "css3",
                       "typescript",
                       "react",
-                      "sass",
-                      "javascript",
+                      "reactrouter",
+                      "tailwind",
+                      "netlify",
                     ]}
                     online="https://plant-in.netlify.app/"
                     github="https://github.com/Mgll3/agro-plantation-app"
@@ -179,14 +180,15 @@ function App() {
                     imageAlt="Imagen de Eatsquality"
                     title="Eatsquality"
                     description1="Proyecto en Equipo para No Country."
-                    description2="Web App diseñada para promocionar las huertas agroecológicas dentro del territorio nacional Argentino. Principal responsable del Front-End."
+                    description2="Web App de comida a domicilio. En menos de 4 semanas se pudo entregar un MVP con los roles de cliente y restaurante operativos."
                     techIcons={[
-                      "netlify",
+                      "html5",
                       "css3",
                       "typescript",
                       "react",
-                      "sass",
-                      "javascript",
+                      "reactrouter",
+                      "tailwind",
+                      "netlify",
                     ]}
                     github="https://github.com/No-Country/c17-113-ft-csharp"
                   />
@@ -196,17 +198,9 @@ function App() {
                     imageAlt="Imagen de En 256 Colores"
                     title="En 256 Colores"
                     description1="Proyecto Personal."
-                    description2="Web App diseñada para promocionar las huertas agroecológicas dentro del territorio nacional Argentino. Principal responsable del Front-End."
-                    techIcons={[
-                      "netlify",
-                      "css3",
-                      "typescript",
-                      "react",
-                      "sass",
-                      "javascript",
-                    ]}
-                    online="https://plant-in.netlify.app/"
-                    github="https://github.com/Mgll3/agro-plantation-app"
+                    description2="Sitio Web personal orientado a los videojuegos clásicos. Mi primera toma de contacto con el diseño web antes de plantearme un cambio laboral."
+                    techIcons={["html5", "css3", "javascript"]}
+                    online="https://www.en256colores.com/index.html"
                   />
                 </div>
               </section>
