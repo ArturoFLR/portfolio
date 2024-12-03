@@ -25,7 +25,8 @@ type ProyectCardProps = {
   imageSrc: string;
   imageAlt: string;
   title: string;
-  description: string;
+  description1: string;
+  description2: string;
   github: string;
   online?: string;
   techIcons: TechIconType[];
@@ -35,7 +36,8 @@ function ProyectCard({
   imageSrc,
   imageAlt,
   title,
-  description,
+  description1,
+  description2,
   github,
   online,
   techIcons,
@@ -64,8 +66,11 @@ function ProyectCard({
         <HeaderH3>{title}</HeaderH3>
       </div>
 
-      <div className={styles.descriptionPositioner}>
-        <Paragraph>{description}</Paragraph>
+      <div className={styles.description1Positioner}>
+        <Paragraph>{description1}</Paragraph>
+      </div>
+      <div className={styles.description2Positioner}>
+        <Paragraph>{description2}</Paragraph>
       </div>
 
       <div className={styles.linksContainer}>

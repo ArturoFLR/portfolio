@@ -124,7 +124,8 @@ function App() {
                     imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
                     imageAlt="Imagen de CHECKMATE!"
                     title="CHECKMATE!"
-                    description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
+                    description1="Proyecto personal."
+                    description2="Juego de ajedrez online para uno o dos jugadores con varios niveles de dificultad, avatares y posibilidad de guardar y cargar partida."
                     techIcons={[
                       "html5",
                       "css3",
@@ -138,10 +139,11 @@ function App() {
                   />
 
                   <ProyectCard
-                    imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
-                    imageAlt="Imagen de CHECKMATE!"
+                    imageSrc="images/proyects/lringenieros/lr_ingenieros-1-miniature.webp"
+                    imageAlt="Imagen de L&R Ingenieros"
                     title="L&R Ingenieros"
-                    description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
+                    description1="Trabajo Freelance."
+                    description2="Sitio Web oficial de L&R Ingenieros. Diseño UX/UI responsive, implementación con React y TypeScript y despliegue final con dominio propio en Netlify."
                     techIcons={[
                       "html5",
                       "css3",
@@ -150,14 +152,16 @@ function App() {
                       "react",
                       "sass",
                     ]}
-                    github="https://github.com/ArturoFLR/checkmate"
+                    online="https://www.lringenieros.es/"
+                    github="https://github.com/ArturoFLR/lr_ingenieros"
                   />
 
                   <ProyectCard
-                    imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
-                    imageAlt="Imagen de CHECKMATE!"
+                    imageSrc="images/proyects/plantin/plant_in-1-miniature.webp"
+                    imageAlt="Imagen de Plant-In!"
                     title="Plant-In"
-                    description="Proyecto personal. Juego de ajedrez online para uno o dos jugadores, con varios niveles de dificultas y posibilidad de guardar y cargar partida."
+                    description1="Proyecto en Equipo."
+                    description2="Web App diseñada para promocionar las huertas agroecológicas dentro del territorio nacional Argentino. Principal responsable del Front-End."
                     techIcons={[
                       "netlify",
                       "css3",
@@ -166,8 +170,8 @@ function App() {
                       "sass",
                       "javascript",
                     ]}
-                    online="https://arturoflr.github.io/checkmate/"
-                    github="https://github.com/ArturoFLR/checkmate"
+                    online="https://plant-in.netlify.app/"
+                    github="https://github.com/Mgll3/agro-plantation-app"
                   />
                 </div>
               </section>
