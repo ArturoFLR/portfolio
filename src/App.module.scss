@@ -61,15 +61,14 @@
   width: 80%;
   margin-top: 2rem;
   padding-left: 2rem;
-}
-
-.projectsSectionContainer {
   background: radial-gradient(
     ellipse at 50% 50%,
     rgba(80, 116, 146, 0.6),
     rgb(8, 11, 26) 60%
   );
+}
 
+.projectsSectionContainer {
   .proyectCardsContainer {
     display: flex;
     flex-wrap: wrap;
