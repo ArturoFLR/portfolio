@@ -4,6 +4,9 @@
   0% {
     transform: translate(2500%, 500%) scale(14);
   }
+  20% {
+    transform: translate(2500%, 500%) scale(14);
+  }
   100% {
     transform: translate(-70%, 40%) scale(0);
   }
@@ -15,10 +18,14 @@
     width: 0%;
     height: 0px;
   }
-  5% {
+  64% {
+    width: 0%;
+    height: 0px;
+  }
+  65% {
     height: 3px;
   }
-  10% {
+  70% {
     opacity: 1;
   }
   100% {
@@ -30,6 +37,9 @@
 
 @keyframes textAnim {
   0% {
+    opacity: 0;
+  }
+  65% {
     opacity: 0;
   }
   100% {
@@ -51,35 +61,44 @@
   }
 
   .text {
-    opacity: 0;
+    opacity: 1;
     margin-bottom: -1.2rem;
     color: $titlesTextColor;
     font-size: 6.5rem;
     letter-spacing: 1.5px;
     font-family: $titlesTextFont;
-    animation: textAnim ease-in-out forwards 2.5s 3.8s;
+  }
+
+  .textAnimation {
+    animation: textAnim ease-in-out 6.3s;
   }
 
   .iconContainer {
     width: 10px;
     height: 10px;
-    transform: translate(2500%, 500%) scale(14);
+    transform: translate(-70%, 40%) scale(0);
     filter: drop-shadow(0 0 1px $blueGlowEffect);
-    animation: loadingIconAnim ease-in-out forwards 2.5s 1.5s;
     z-index: 1;
   }
 
+  .iconContainerAnimation {
+    animation: loadingIconAnim ease-in-out 4s;
+  }
+
   .animatedLine {
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     bottom: 0px;
     left: 0px;
-    width: 0%;
-    height: 0px;
+    width: 100%;
+    height: 3px;
     border-radius: 15px;
     background-color: rgb(146, 196, 242);
     filter: drop-shadow(0 0 6px $blueGlowEffect);
-    animation: lineAnim ease-in-out forwards 2.5s 3.8s;
     z-index: 0;
+  }
+
+  .animatedLineAnimation {
+    animation: lineAnim ease-in-out 6.3s;
   }
 }

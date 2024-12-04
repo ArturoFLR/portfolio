@@ -59,7 +59,7 @@ function Home() {
   return (
     <main className={styles.mainTag}>
       <header className={styles.headerTag}>
-        <LoadingContainerHero />
+        <LoadingContainerHero animated={false} />
         <div className={styles.mainLetterTranslatorContainer} id="aboutMe">
           {mainState !== "loading1" && (
             <LetterTranslator
