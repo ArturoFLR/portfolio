@@ -14,7 +14,8 @@ export type TechIconType =
   | "sass"
   | "tailwind"
   | "typescript"
-  | "vscode";
+  | "vscode"
+  | "leaflet";
 
 type TechIconProps = {
   iconName: TechIconType;
@@ -123,6 +124,13 @@ function TechIcon({ iconName }: TechIconProps) {
       dataTitle = "Visual Studio Code";
       src = "icons/vscode.webp";
       alt = "VScode icon";
+      break;
+
+    case "leaflet":
+      colorClassname = styles.lightBlueIconContainer;
+      dataTitle = "Leaflet Maps";
+      src = "icons/leaflet.webp";
+      alt = "Leaflet icon";
       break;
 
     default:
