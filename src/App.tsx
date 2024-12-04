@@ -86,7 +86,7 @@ function App() {
         mainState === "loading4" ||
         mainState === "loaded") && (
         <>
-          <section className={styles.profilePositioner}>
+          <section className={styles.profilePositioner} id="aboutMe">
             <Profile />
 
             {(mainState === "loading4" || mainState === "loaded") && (
