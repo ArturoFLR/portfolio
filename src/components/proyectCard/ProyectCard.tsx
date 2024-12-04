@@ -8,6 +8,7 @@ import ProyectCardImage from "./proyectCardImage/ProyectCardImage";
 type ProyectCardProps = {
   imageSrc: string;
   imageAlt: string;
+  proyectRoute: string;
   title: string;
   description1: string;
   description2: string;
@@ -19,6 +20,7 @@ type ProyectCardProps = {
 function ProyectCard({
   imageSrc,
   imageAlt,
+  proyectRoute,
   title,
   description1,
   description2,
@@ -43,7 +45,11 @@ function ProyectCard({
   return (
     <article className={styles.proyectCardMainContainer}>
       <div className={styles.imagePositioner}>
-        <ProyectCardImage imageSrc={imageSrc} imageAlt={imageAlt} />
+        <ProyectCardImage
+          imageSrc={imageSrc}
+          imageAlt={imageAlt}
+          proyectRoute={proyectRoute}
+        />
       </div>
 
       <div className={styles.titlePositioner}>

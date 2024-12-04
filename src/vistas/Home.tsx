@@ -126,6 +126,7 @@ function Home() {
                   <ProyectCard
                     imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
                     imageAlt="Imagen de CHECKMATE!"
+                    proyectRoute="/checkmate"
                     title="CHECKMATE!"
                     description1="Proyecto Personal."
                     description2="Juego de ajedrez online para uno o dos jugadores con varios niveles de dificultad, avatares y posibilidad de guardar y cargar partida."
@@ -144,6 +145,7 @@ function Home() {
                   <ProyectCard
                     imageSrc="images/proyects/lringenieros/lr_ingenieros-1-miniature.webp"
                     imageAlt="Imagen de L&R Ingenieros"
+                    proyectRoute="/lringenieros"
                     title="L&R Ingenieros"
                     description1="Trabajo Freelance."
                     description2="Sitio Web oficial de L&R Ingenieros. Diseño UX/UI responsive, implementación con React y TypeScript y despliegue final con dominio propio en Netlify."
@@ -163,6 +165,7 @@ function Home() {
                   <ProyectCard
                     imageSrc="images/proyects/plantin/plant_in-1-miniature.webp"
                     imageAlt="Imagen de Plant-In!"
+                    proyectRoute="/plantin"
                     title="Plant-In"
                     description1="Proyecto en Equipo para ID for Ideas."
                     description2="Web App diseñada para promocionar las huertas agroecológicas dentro del territorio nacional Argentino. Principal responsable del Front-End."
@@ -182,6 +185,7 @@ function Home() {
                   <ProyectCard
                     imageSrc="images/proyects/eatsquality/eatsquality-1-miniature.webp"
                     imageAlt="Imagen de Eatsquality"
+                    proyectRoute="/eatsquality"
                     title="Eatsquality"
                     description1="Proyecto en Equipo para No Country."
                     description2="Web App de comida a domicilio. En menos de 4 semanas se pudo entregar un MVP con los roles de cliente y restaurante operativos."
@@ -199,6 +203,7 @@ function Home() {
                   <ProyectCard
                     imageSrc="images/proyects/en256colores/en256colores-1-miniature.webp"
                     imageAlt="Imagen de En 256 Colores"
+                    proyectRoute="en256colores"
                     title="En 256 Colores"
                     description1="Proyecto Personal."
                     description2="Sitio Web personal orientado a los videojuegos clásicos. Mi primera toma de contacto con el diseño web antes de plantearme un cambio laboral."
