@@ -1,7 +1,23 @@
 import styles from "./TechIcon.module.scss";
 
+export type TechIconType =
+  | "css3"
+  | "docker"
+  | "express"
+  | "git"
+  | "html5"
+  | "javascript"
+  | "netlify"
+  | "poo"
+  | "react"
+  | "reactrouter"
+  | "sass"
+  | "tailwind"
+  | "typescript"
+  | "vscode";
+
 type TechIconProps = {
-  iconName: string;
+  iconName: TechIconType;
 };
 
 function TechIcon({ iconName }: TechIconProps) {

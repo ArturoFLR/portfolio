@@ -1,25 +1,9 @@
 import HeaderH3 from "../headers/headerH3/HeaderH3";
 import GenericLink from "../links/genericLink/GenericLink";
 import Paragraph from "../paragraph/Paragraph";
-import TechIcon from "../techIcon/TechIcon";
+import TechIcon, { TechIconType } from "../techIcon/TechIcon";
 import styles from "./ProyectCard.module.scss";
 import ProyectCardImage from "./proyectCardImage/ProyectCardImage";
-
-type TechIconType =
-  | "css3"
-  | "docker"
-  | "express"
-  | "git"
-  | "html5"
-  | "javascript"
-  | "netlify"
-  | "poo"
-  | "react"
-  | "reactrouter"
-  | "sass"
-  | "tailwind"
-  | "typescript"
-  | "vscode";
 
 type ProyectCardProps = {
   imageSrc: string;

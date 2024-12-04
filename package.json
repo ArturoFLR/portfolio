@@ -18,7 +18,9 @@
     "npm": "^10.9.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-loader-spinner": "^6.1.6"
+    "react-helmet": "^6.1.0",
+    "react-loader-spinner": "^6.1.6",
+    "react-router": "^7.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
