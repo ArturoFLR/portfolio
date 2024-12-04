@@ -168,12 +168,12 @@ function App() {
                     description2="Web App diseñada para promocionar las huertas agroecológicas dentro del territorio nacional Argentino. Principal responsable del Front-End."
                     techIcons={[
                       "html5",
-                      "css3",
+                      "docker",
                       "typescript",
                       "react",
                       "reactrouter",
+                      "leaflet",
                       "tailwind",
-                      "docker",
                     ]}
                     online="https://plant-in.netlify.app/"
                     github="https://github.com/Mgll3/agro-plantation-app"

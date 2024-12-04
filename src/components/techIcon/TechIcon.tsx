@@ -127,7 +127,7 @@ function TechIcon({ iconName }: TechIconProps) {
       break;
 
     case "leaflet":
-      colorClassname = styles.lightBlueIconContainer;
+      colorClassname = styles.greenIconContainer;
       dataTitle = "Leaflet Maps";
       src = "icons/leaflet.webp";
       alt = "Leaflet icon";
