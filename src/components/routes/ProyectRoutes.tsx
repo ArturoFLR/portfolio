@@ -1,7 +1,7 @@
+import { Home } from "@mui/icons-material";
 import { Route, Routes } from "react-router";
-import Home from "./vistas/Home";
 
-function App() {
+function ProyectRoutes() {
   return (
     <Routes>
       {/* <Route path="*" element={<WrongPath />} /> */}
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default ProyectRoutes;
