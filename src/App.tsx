@@ -60,7 +60,7 @@ function App() {
     <main className={styles.mainTag}>
       <header className={styles.headerTag}>
         <LoadingContainerHero />
-        <div className={styles.mainLetterTranslatorContainer}>
+        <div className={styles.mainLetterTranslatorContainer} id="aboutMe">
           {mainState !== "loading1" && (
             <LetterTranslator
               text="Front-End  Developer"
@@ -86,11 +86,11 @@ function App() {
         mainState === "loading4" ||
         mainState === "loaded") && (
         <>
-          <section className={styles.profilePositioner} id="aboutMe">
+          <section className={styles.profilePositioner}>
             <Profile />
 
             {(mainState === "loading4" || mainState === "loaded") && (
-              <div className={styles.mainButtonsContainer}>
+              <div className={styles.mainButtonsContainer} id="proyects">
                 <GenericLink
                   hrefValue="https://github.com/ArturoFLR"
                   icon="github"
@@ -114,7 +114,7 @@ function App() {
 
           {mainState === "loaded" && (
             <>
-              <div className={styles.animatedLinePositioner} id="proyects">
+              <div className={styles.animatedLinePositioner}>
                 <AnimatedLine />
               </div>
 
