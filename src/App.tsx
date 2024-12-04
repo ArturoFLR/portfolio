@@ -8,6 +8,7 @@ import Profile from "./components/profile/Profile";
 import AnimatedLine from "./components/animatedLine/AnimatedLine";
 import HeaderH2 from "./components/headers/headerH2/HeaderH2";
 import ProyectCard from "./components/proyectCard/ProyectCard";
+import MainNav from "./components/mainNav/MainNav";
 
 type MainStateType =
   | "loading1"
@@ -70,6 +71,8 @@ function App() {
           )}
         </div>
 
+        {mainState !== "loading1" && mainState !== "loading2" && <MainNav />}
+
         {mainState !== "loaded" && (
           <div className={styles.skipAnimationButtonPositioner}>
             <SkipAnimationButton handleClick={handleSkipAnimationButtonClick}>
@@ -111,7 +114,7 @@ function App() {
 
           {mainState === "loaded" && (
             <>
-              <div className={styles.animatedLinePositioner}>
+              <div className={styles.animatedLinePositioner} id="proyects">
                 <AnimatedLine />
               </div>
 
@@ -151,6 +154,7 @@ function App() {
                       "react",
                       "reactrouter",
                       "sass",
+                      "netlify",
                     ]}
                     online="https://www.lringenieros.es/"
                     github="https://github.com/ArturoFLR/lr_ingenieros"
@@ -169,7 +173,7 @@ function App() {
                       "react",
                       "reactrouter",
                       "tailwind",
-                      "netlify",
+                      "docker",
                     ]}
                     online="https://plant-in.netlify.app/"
                     github="https://github.com/Mgll3/agro-plantation-app"
@@ -188,7 +192,6 @@ function App() {
                       "react",
                       "reactrouter",
                       "tailwind",
-                      "netlify",
                     ]}
                     github="https://github.com/No-Country/c17-113-ft-csharp"
                   />
@@ -205,7 +208,7 @@ function App() {
                 </div>
               </section>
 
-              <div className={styles.animatedLinePositioner}>
+              <div className={styles.animatedLinePositioner} id="technologies">
                 <AnimatedLine />
               </div>
 
