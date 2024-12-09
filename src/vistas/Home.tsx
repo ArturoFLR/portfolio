@@ -95,6 +95,7 @@ function Home() {
             {(mainState === "loading4" || mainState === "loaded") && (
               <div className={styles.mainButtonsContainer} id="proyects">
                 <GenericLink
+                  animated={true}
                   hrefValue="https://github.com/ArturoFLR"
                   icon="github"
                 >
@@ -102,13 +103,18 @@ function Home() {
                 </GenericLink>
 
                 <GenericLink
+                  animated={true}
                   hrefValue="https://www.linkedin.com/in/arturo-lopez-rosa/"
                   icon="linkedin"
                 >
                   LinkedIn
                 </GenericLink>
 
-                <GenericLink hrefValue="documents/cv2024.pdf" icon="document">
+                <GenericLink
+                  animated={true}
+                  hrefValue="documents/cv2024.pdf"
+                  icon="document"
+                >
                   Descargar CV
                 </GenericLink>
               </div>

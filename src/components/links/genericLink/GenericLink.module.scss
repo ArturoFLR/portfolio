@@ -27,7 +27,6 @@
   user-select: none;
   cursor: pointer;
   text-decoration: none;
-  animation: intro-glow 1s linear;
 
   .genericLinkContentContainer {
     display: flex;
@@ -48,7 +47,6 @@
     color: $normalTextColor;
     font-family: $buttonTextFont;
     transition: all 400ms;
-    animation: intro-fade-in 0.6s linear;
 
     &:hover {
       scale: 1.1;
@@ -75,4 +73,12 @@
       font-size: 1.6rem;
     }
   }
+
+  .genericLinkContentContainerAnimated {
+    animation: intro-fade-in 0.6s linear;
+  }
+}
+
+.genericLinkMainContainerAnimated {
+  animation: intro-glow 1s linear;
 }

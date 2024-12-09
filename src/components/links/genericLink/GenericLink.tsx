@@ -10,18 +10,26 @@ type GenericLinkProps = {
   hrefValue: string;
   icon: IconType;
   children: React.ReactNode;
+  animated: boolean;
 };
 
-function GenericLink({ icon, hrefValue, children }: GenericLinkProps) {
+function GenericLink({
+  icon,
+  hrefValue,
+  children,
+  animated,
+}: GenericLinkProps) {
   return (
     <a
-      className={styles.genericLinkMainContainer}
+      className={`${styles.genericLinkMainContainer} ${animated ? styles.genericLinkMainContainerAnimated : null}`}
       target={icon !== "document" ? "_blank" : ""}
       rel="noopener"
       href={hrefValue}
       download={icon === "document" ? "CV Arturo López Rosa 2024.pdf" : ""}
     >
-      <div className={styles.genericLinkContentContainer}>
+      <div
+        className={`${styles.genericLinkContentContainer} ${animated ? styles.genericLinkContentContainerAnimated : null}`}
+      >
         <div className={styles.iconContainer}>
           {icon === "github" && (
             <GitHubIcon color="inherit" fontSize="inherit" />
