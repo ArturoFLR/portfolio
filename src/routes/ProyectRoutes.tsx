@@ -1,6 +1,6 @@
 import { Home } from "@mui/icons-material";
 import { Route, Routes } from "react-router";
-import CheckMate from "../../vistas/CheckMate";
+import CheckMate from "../vistas/CheckMate";
 
 function ProyectRoutes() {
   return (

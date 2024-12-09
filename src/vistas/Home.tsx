@@ -59,7 +59,8 @@ function Home() {
   return (
     <main className={styles.mainTag}>
       <header className={styles.headerTag}>
-        <LoadingContainerHero animated={false} />
+        <LoadingContainerHero animated={true} />
+
         <div className={styles.mainLetterTranslatorContainer} id="aboutMe">
           {mainState !== "loading1" && (
             <LetterTranslator
@@ -71,7 +72,9 @@ function Home() {
           )}
         </div>
 
-        {mainState !== "loading1" && mainState !== "loading2" && <MainNav />}
+        {mainState !== "loading1" && mainState !== "loading2" && (
+          <MainNav animated={true} />
+        )}
 
         {mainState !== "loaded" && (
           <div className={styles.skipAnimationButtonPositioner}>
