@@ -130,7 +130,7 @@ function Home() {
               <section
                 className={`${styles.projectsSectionContainer} ${styles.fadeInAnimation} ${styles.sectionsCommonStyles}`}
               >
-                <HeaderH2>Proyectos</HeaderH2>
+                <HeaderH2 animated={true}>Proyectos</HeaderH2>
                 <div className={styles.proyectCardsContainer}>
                   <ProyectCard
                     imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
@@ -229,7 +229,7 @@ function Home() {
               <section
                 className={`${styles.techSectionContainer} ${styles.sectionsCommonStyles}`}
               >
-                <HeaderH2>Tecnologías</HeaderH2>
+                <HeaderH2 animated={true}>Tecnologías</HeaderH2>
               </section>
             </>
           )}
