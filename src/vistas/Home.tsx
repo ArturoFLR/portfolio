@@ -124,7 +124,7 @@ function Home() {
           {mainState === "loaded" && (
             <>
               <div className={styles.animatedLinePositioner}>
-                <AnimatedLine />
+                <AnimatedLine animated={true} />
               </div>
 
               <section
@@ -223,7 +223,7 @@ function Home() {
               </section>
 
               <div className={styles.animatedLinePositioner} id="technologies">
-                <AnimatedLine />
+                <AnimatedLine animated={true} />
               </div>
 
               <section
