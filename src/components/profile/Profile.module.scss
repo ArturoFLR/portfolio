@@ -33,20 +33,20 @@
   }
 }
 
-@keyframes intro-drop-glow {
-  0% {
-    filter: drop-shadow(0 0 0px $blueGlowEffect);
-    opacity: 0;
-  }
-  50% {
-    filter: drop-shadow(0 0 5px $blueGlowEffect);
-    opacity: 1;
-  }
-  100% {
-    filter: drop-shadow(0 0 0px $blueGlowEffect);
-    opacity: 1;
-  }
-}
+// @keyframes intro-drop-glow {
+//   0% {
+//     filter: drop-shadow(0 0 0px $blueGlowEffect);
+//     opacity: 0;
+//   }
+//   50% {
+//     filter: drop-shadow(0 0 5px $blueGlowEffect);
+//     opacity: 1;
+//   }
+//   100% {
+//     filter: drop-shadow(0 0 0px $blueGlowEffect);
+//     opacity: 1;
+//   }
+// }
 
 .profileMainContainer {
   display: flex;
@@ -66,12 +66,15 @@
     letter-spacing: 1px;
     line-height: 120%;
     color: $normalTextColor;
-    animation: longer-intro-fade-in 2s linear;
 
     span {
       font-size: 2.4rem;
       color: $highlightedText;
     }
+  }
+
+  .paragraphAnimated {
+    animation: longer-intro-fade-in 2s linear;
   }
 }
 
@@ -81,13 +84,19 @@
   height: 110px;
   border-radius: 100%;
   border: 2px solid $iconLightBlueColor;
-  animation: intro-box-glow 1s linear;
 
   .image {
     aspect-ratio: 600/512;
     width: 100%;
     scale: 1.3;
     transform: translateX(-1px) translateY(10px);
+  }
+
+  .imageAnimated {
     animation: intro-fade-in 0.5s linear;
   }
+}
+
+.imageContainerAnimated {
+  animation: intro-box-glow 1s linear;
 }

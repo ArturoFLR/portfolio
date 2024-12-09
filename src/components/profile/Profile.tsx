@@ -1,7 +1,11 @@
 import HeaderH2 from "../headers/headerH2/HeaderH2";
 import styles from "./Profile.module.scss";
 
-function Profile() {
+type ProfileProps = {
+  animated: boolean;
+};
+
+function Profile({ animated }: ProfileProps) {
   return (
     <div className={styles.profileMainContainer}>
       <div className={styles.textContainer}>
@@ -9,7 +13,9 @@ function Profile() {
           Sobre
           <span> mí</span>
         </HeaderH2>
-        <p className={styles.paragraph}>
+        <p
+          className={`${styles.paragraph} ${animated ? styles.paragraphAnimated : null}`}
+        >
           Desarrollador front-end <span>junior</span> especializado en{" "}
           <span>React y TypeScript.</span> Mi intensa formación autodidacta y
           varias colaboraciones en <span>equipos internacionales</span> me han
@@ -17,9 +23,11 @@ function Profile() {
           autonomía.
         </p>
       </div>
-      <div className={styles.imageContainer}>
+      <div
+        className={`${styles.imageContainer} ${animated ? styles.imageContainerAnimated : null}`}
+      >
         <img
-          className={styles.image}
+          className={`${styles.image} ${animated ? styles.imageAnimated : null}`}
           src="images/arturoImg.webp"
           alt="Fotografía de Arturo López"
         />

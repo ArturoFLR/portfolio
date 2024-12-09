@@ -90,7 +90,7 @@ function Home() {
         mainState === "loaded") && (
         <>
           <section className={styles.profilePositioner}>
-            <Profile />
+            <Profile animated={true} />
 
             {(mainState === "loading4" || mainState === "loaded") && (
               <div className={styles.mainButtonsContainer} id="proyects">
