@@ -1,13 +1,7 @@
-import { Route, Routes } from "react-router";
-import Home from "./vistas/Home";
+import ProyectRoutes from "./routes/ProyectRoutes";
 
 function App() {
-  return (
-    <Routes>
-      {/* <Route path="*" element={<WrongPath />} /> */}
-      <Route path="/" element={<Home />} />
-    </Routes>
-  );
+  return <ProyectRoutes />;
 }
 
 export default App;
