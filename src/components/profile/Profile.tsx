@@ -9,7 +9,7 @@ function Profile({ animated }: ProfileProps) {
   return (
     <div className={styles.profileMainContainer}>
       <div className={styles.textContainer}>
-        <HeaderH2>
+        <HeaderH2 animated={animated ? true : false}>
           Sobre
           <span> mí</span>
         </HeaderH2>

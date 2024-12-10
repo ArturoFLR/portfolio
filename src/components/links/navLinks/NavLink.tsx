@@ -6,16 +6,26 @@ type NavLinkType = "anchor" | "link";
 type NavLinkProps = {
   linkHref: string;
   linkType: NavLinkType;
+  animatedLinkState?: boolean;
   children: React.ReactNode;
 };
 
-function NavLink({ linkHref, linkType, children }: NavLinkProps) {
+function NavLink({
+  linkHref,
+  linkType,
+  animatedLinkState,
+  children,
+}: NavLinkProps) {
   return linkType === "anchor" ? (
     <a className={styles.navLink} href={linkHref}>
       {children}
     </a>
   ) : (
-    <Link className={styles.navLink} to={linkHref}>
+    <Link
+      className={styles.navLink}
+      to={linkHref}
+      state={{ animated: animatedLinkState }}
+    >
       {children}
     </Link>
   );

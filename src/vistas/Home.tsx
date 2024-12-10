@@ -16,7 +16,8 @@ type MainStateType =
   | "loading2"
   | "loading3"
   | "loading4"
-  | "loaded";
+  | "loaded"
+  | "noAnimations";
 
 function Home() {
   const [mainState, setMainState] = useState<MainStateType>("loading1");
@@ -27,10 +28,16 @@ function Home() {
 
   function handleSkipAnimationButtonClick() {
     clearTimeout(mainStateTimeout.current);
-    setMainState("loaded");
+    setMainState("noAnimations");
   }
 
   useEffect(() => {
+    if (location.state.animated === false) {
+      setMainState("noAnimations");
+      //This line resets the 'state' set by the <Link /> that refer to Home from other routes, since otherwise the 'animated: false' property of the 'state' is maintained even when reloaded with F5 and the Home animations will never be shown again.
+      window.history.replaceState({}, document.title);
+    }
+
     if (mainState === "loading1") {
       mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loading2");
@@ -64,7 +71,7 @@ function Home() {
     <main className={styles.mainTag}>
       <header className={styles.headerTag}>
         <LoadingContainerHero
-          animated={location.state.animated === true ? true : false}
+          animated={mainState === "noAnimations" ? false : true}
         />
 
         <div className={styles.mainLetterTranslatorContainer} id="aboutMe">
@@ -72,17 +79,17 @@ function Home() {
             <LetterTranslator
               text="Front-End  Developer"
               activate={true}
-              alienLettersTimer={100}
-              normalLettersTimer={150}
+              alienLettersTimer={mainState === "noAnimations" ? 10 : 100}
+              normalLettersTimer={mainState === "noAnimations" ? 15 : 150}
             />
           )}
         </div>
 
         {mainState !== "loading1" && mainState !== "loading2" && (
-          <MainNav animated={location.state.animated === true ? true : false} />
+          <MainNav animated={mainState === "noAnimations" ? false : true} />
         )}
 
-        {mainState !== "loaded" && (
+        {mainState !== "loaded" && mainState !== "noAnimations" && (
           <div className={styles.skipAnimationButtonPositioner}>
             <SkipAnimationButton handleClick={handleSkipAnimationButtonClick}>
               Saltar Intro
@@ -93,17 +100,18 @@ function Home() {
 
       {(mainState === "loading3" ||
         mainState === "loading4" ||
-        mainState === "loaded") && (
+        mainState === "loaded" ||
+        mainState === "noAnimations") && (
         <>
           <section className={styles.profilePositioner}>
-            <Profile
-              animated={location.state.animated === true ? true : false}
-            />
+            <Profile animated={mainState === "noAnimations" ? false : true} />
 
-            {(mainState === "loading4" || mainState === "loaded") && (
+            {(mainState === "loading4" ||
+              mainState === "loaded" ||
+              mainState === "noAnimations") && (
               <div className={styles.mainButtonsContainer} id="proyects">
                 <GenericLink
-                  animated={location.state.animated === true ? true : false}
+                  animated={mainState === "noAnimations" ? false : true}
                   hrefValue="https://github.com/ArturoFLR"
                   icon="github"
                 >
@@ -111,7 +119,7 @@ function Home() {
                 </GenericLink>
 
                 <GenericLink
-                  animated={location.state.animated === true ? true : false}
+                  animated={mainState === "noAnimations" ? false : true}
                   hrefValue="https://www.linkedin.com/in/arturo-lopez-rosa/"
                   icon="linkedin"
                 >
@@ -119,7 +127,7 @@ function Home() {
                 </GenericLink>
 
                 <GenericLink
-                  animated={location.state.animated === true ? true : false}
+                  animated={mainState === "noAnimations" ? false : true}
                   hrefValue="documents/cv2024.pdf"
                   icon="document"
                 >
@@ -129,11 +137,11 @@ function Home() {
             )}
           </section>
 
-          {mainState === "loaded" && (
+          {(mainState === "loaded" || mainState === "noAnimations") && (
             <>
               <div className={styles.animatedLinePositioner}>
                 <AnimatedLine
-                  animated={location.state.animated === true ? true : false}
+                  animated={mainState === "noAnimations" ? false : true}
                 />
               </div>
 
@@ -141,7 +149,7 @@ function Home() {
                 className={`${styles.projectsSectionContainer} ${styles.fadeInAnimation} ${styles.sectionsCommonStyles}`}
               >
                 <HeaderH2
-                  animated={location.state.animated === true ? true : false}
+                  animated={mainState === "noAnimations" ? false : true}
                 >
                   Proyectos
                 </HeaderH2>
@@ -238,7 +246,7 @@ function Home() {
 
               <div className={styles.animatedLinePositioner} id="technologies">
                 <AnimatedLine
-                  animated={location.state.animated === true ? true : false}
+                  animated={mainState === "noAnimations" ? false : true}
                 />
               </div>
 
@@ -246,7 +254,7 @@ function Home() {
                 className={`${styles.techSectionContainer} ${styles.sectionsCommonStyles}`}
               >
                 <HeaderH2
-                  animated={location.state.animated === true ? true : false}
+                  animated={mainState === "noAnimations" ? false : true}
                 >
                   Tecnologías
                 </HeaderH2>

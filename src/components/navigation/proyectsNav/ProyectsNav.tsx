@@ -1,11 +1,35 @@
+import { useLocation } from "react-router";
 import NavLink from "../../links/navLinks/NavLink";
 import styles from "./ProyectsNav.module.scss";
+import proyectsData from "../../../data/proyectsData";
 
 type ProyectsNavProps = {
   animated: boolean;
 };
 
 function ProyectsNav({ animated }: ProyectsNavProps) {
+  //This function normalizes the path, removing the trailing "/" if any. This is because both the paths "/project_name" and "/project_name/" are valid.
+  const normalizePath = (path: string) => {
+    return path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
+  };
+
+  //It is used to know which route we are on and, therefore, which project we are looking at, to modify the navigation links accordingly. This is done by searching at which index of the project path array the current path is located. The indexes of the routes array match those of the proyects names array.
+  const location = useLocation();
+  const normalizedPath = normalizePath(location.pathname);
+
+  const proyectIndex = proyectsData.proyectsRoutes.findIndex(
+    (element) => element === normalizedPath,
+  );
+
+  const prevLinkIndex =
+    proyectIndex === 0
+      ? proyectsData.proyectsRoutes.length - 1
+      : proyectIndex - 1;
+  const nextLinkIndex =
+    proyectIndex === proyectsData.proyectsRoutes.length - 1
+      ? 0
+      : proyectIndex + 1;
+
   return (
     <nav
       className={`${styles.proyectsNavMainContainer} ${animated ? styles.proyectsNavMainContainerAnimated : null}`}
@@ -13,18 +37,26 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
     >
       <ul className={styles.proyectsNavUlTag}>
         <ol className={styles.proyectsNavOlTag}>
-          <NavLink linkType="anchor" linkHref="#proyects">
-            Proyectos
+          <NavLink
+            linkType="link"
+            linkHref={proyectsData.proyectsRoutes[prevLinkIndex]}
+            animatedLinkState={false}
+          >
+            {proyectsData.proyectsNames[prevLinkIndex]}
           </NavLink>
         </ol>
         <ol className={styles.proyectsNavOlTag}>
-          <NavLink linkType="anchor" linkHref="#technologies">
-            Tecnologías
+          <NavLink linkType="link" linkHref="/" animatedLinkState={false}>
+            Home
           </NavLink>
         </ol>
         <ol className={styles.proyectsNavOlTag}>
-          <NavLink linkType="anchor" linkHref="#aboutMe">
-            Sobre mí
+          <NavLink
+            linkType="link"
+            linkHref={proyectsData.proyectsRoutes[nextLinkIndex]}
+            animatedLinkState={false}
+          >
+            {proyectsData.proyectsNames[nextLinkIndex]}
           </NavLink>
         </ol>
       </ul>

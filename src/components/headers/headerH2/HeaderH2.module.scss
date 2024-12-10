@@ -3,9 +3,11 @@
 @keyframes intro-drop-glow {
   0% {
     filter: drop-shadow(0 0 0px $blueGlowEffect);
+    opacity: 0;
   }
   50% {
     filter: drop-shadow(0 0 5px $blueGlowEffect);
+    opacity: 1;
   }
   100% {
     filter: drop-shadow(0 0 0px $blueGlowEffect);
@@ -23,5 +25,5 @@
   }
 }
 .h2tagAnimated {
-  animation: intro-drop-glow 1s 1.7s linear;
+  animation: intro-drop-glow 1s linear;
 }
