@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Home.module.scss";
 import LoadingContainerHero from "../components/loadingContainers/loadingContainerHero/LoadingContainerHero";
 import LetterTranslator from "../components/letterTranslator/LetterTranslator";
-import MainNav from "../components/mainNav/MainNav";
+import MainNav from "../components/navigation/mainNav/MainNav";
 import SkipAnimationButton from "../components/buttons/skipAnimationButton/SkipAnimationButton";
 import Profile from "../components/profile/Profile";
 import GenericLink from "../components/links/genericLink/GenericLink";

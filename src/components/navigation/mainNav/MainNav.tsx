@@ -1,4 +1,4 @@
-import NavLink from "../links/navLinks/NavLink";
+import NavLink from "../../links/navLinks/NavLink";
 import styles from "./MainNav.module.scss";
 
 type MainNavProps = {
