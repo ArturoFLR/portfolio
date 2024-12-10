@@ -14,7 +14,11 @@ function ProyectCardImage({
   proyectRoute,
 }: ProyectCardImageProps) {
   return (
-    <Link className={styles.proyectCardImageMainContainer} to={proyectRoute}>
+    <Link
+      className={styles.proyectCardImageMainContainer}
+      to={proyectRoute}
+      state={{ animated: true }}
+    >
       <div className={styles.moreDetailsContainer}>
         <div className={styles.iconContainer}>
           <ZoomInIcon color="inherit" fontSize="inherit" />

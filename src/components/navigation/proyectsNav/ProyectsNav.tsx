@@ -1,28 +1,28 @@
 import NavLink from "../../links/navLinks/NavLink";
-import styles from "./MainNav.module.scss";
+import styles from "./ProyectsNav.module.scss";
 
-type MainNavProps = {
+type ProyectsNavProps = {
   animated: boolean;
 };
 
-function MainNav({ animated }: MainNavProps) {
+function ProyectsNav({ animated }: ProyectsNavProps) {
   return (
     <nav
-      className={`${styles.mainNavMainContainer} ${animated ? styles.mainNavMainContainerAnimated : null}`}
+      className={`${styles.proyectsNavMainContainer} ${animated ? styles.proyectsNavMainContainerAnimated : null}`}
       role="navigation"
     >
-      <ul className={styles.mainNavUlTag}>
-        <ol className={styles.mainNavOlTag}>
+      <ul className={styles.proyectsNavUlTag}>
+        <ol className={styles.proyectsNavOlTag}>
           <NavLink linkType="anchor" linkHref="#proyects">
             Proyectos
           </NavLink>
         </ol>
-        <ol className={styles.mainNavOlTag}>
+        <ol className={styles.proyectsNavOlTag}>
           <NavLink linkType="anchor" linkHref="#technologies">
             Tecnologías
           </NavLink>
         </ol>
-        <ol className={styles.mainNavOlTag}>
+        <ol className={styles.proyectsNavOlTag}>
           <NavLink linkType="anchor" linkHref="#aboutMe">
             Sobre mí
           </NavLink>
@@ -32,4 +32,4 @@ function MainNav({ animated }: MainNavProps) {
   );
 }
 
-export default MainNav;
+export default ProyectsNav;

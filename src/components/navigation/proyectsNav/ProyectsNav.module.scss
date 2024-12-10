@@ -9,14 +9,14 @@
   }
 }
 
-.mainNavMainContainer {
+.proyectsNavMainContainer {
   position: fixed;
   top: 0px;
   // border: 1px solid white;
   backdrop-filter: blur(5px) brightness(60%);
   z-index: 10;
 
-  .mainNavUlTag {
+  .proyectsNavUlTag {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +26,6 @@
   }
 }
 
-.mainNavMainContainerAnimated {
+.proyectsNavMainContainerAnimated {
   animation: fade-in 1.5s ease-out;
 }

@@ -9,6 +9,7 @@ import GenericLink from "../components/links/genericLink/GenericLink";
 import AnimatedLine from "../components/animatedLine/AnimatedLine";
 import HeaderH2 from "../components/headers/headerH2/HeaderH2";
 import ProyectCard from "../components/proyectCard/ProyectCard";
+import { useLocation } from "react-router";
 
 type MainStateType =
   | "loading1"
@@ -20,6 +21,9 @@ type MainStateType =
 function Home() {
   const [mainState, setMainState] = useState<MainStateType>("loading1");
   const mainStateTimeout = useRef<number>(0);
+  const location = useLocation();
+
+  if (location.state === null) location.state = { animated: true };
 
   function handleSkipAnimationButtonClick() {
     clearTimeout(mainStateTimeout.current);
@@ -59,7 +63,9 @@ function Home() {
   return (
     <main className={styles.mainTag}>
       <header className={styles.headerTag}>
-        <LoadingContainerHero animated={true} />
+        <LoadingContainerHero
+          animated={location.state.animated === true ? true : false}
+        />
 
         <div className={styles.mainLetterTranslatorContainer} id="aboutMe">
           {mainState !== "loading1" && (
@@ -73,7 +79,7 @@ function Home() {
         </div>
 
         {mainState !== "loading1" && mainState !== "loading2" && (
-          <MainNav animated={true} />
+          <MainNav animated={location.state.animated === true ? true : false} />
         )}
 
         {mainState !== "loaded" && (
@@ -90,12 +96,14 @@ function Home() {
         mainState === "loaded") && (
         <>
           <section className={styles.profilePositioner}>
-            <Profile animated={true} />
+            <Profile
+              animated={location.state.animated === true ? true : false}
+            />
 
             {(mainState === "loading4" || mainState === "loaded") && (
               <div className={styles.mainButtonsContainer} id="proyects">
                 <GenericLink
-                  animated={true}
+                  animated={location.state.animated === true ? true : false}
                   hrefValue="https://github.com/ArturoFLR"
                   icon="github"
                 >
@@ -103,7 +111,7 @@ function Home() {
                 </GenericLink>
 
                 <GenericLink
-                  animated={true}
+                  animated={location.state.animated === true ? true : false}
                   hrefValue="https://www.linkedin.com/in/arturo-lopez-rosa/"
                   icon="linkedin"
                 >
@@ -111,7 +119,7 @@ function Home() {
                 </GenericLink>
 
                 <GenericLink
-                  animated={true}
+                  animated={location.state.animated === true ? true : false}
                   hrefValue="documents/cv2024.pdf"
                   icon="document"
                 >
@@ -124,13 +132,19 @@ function Home() {
           {mainState === "loaded" && (
             <>
               <div className={styles.animatedLinePositioner}>
-                <AnimatedLine animated={true} />
+                <AnimatedLine
+                  animated={location.state.animated === true ? true : false}
+                />
               </div>
 
               <section
                 className={`${styles.projectsSectionContainer} ${styles.fadeInAnimation} ${styles.sectionsCommonStyles}`}
               >
-                <HeaderH2 animated={true}>Proyectos</HeaderH2>
+                <HeaderH2
+                  animated={location.state.animated === true ? true : false}
+                >
+                  Proyectos
+                </HeaderH2>
                 <div className={styles.proyectCardsContainer}>
                   <ProyectCard
                     imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
@@ -223,13 +237,19 @@ function Home() {
               </section>
 
               <div className={styles.animatedLinePositioner} id="technologies">
-                <AnimatedLine animated={true} />
+                <AnimatedLine
+                  animated={location.state.animated === true ? true : false}
+                />
               </div>
 
               <section
                 className={`${styles.techSectionContainer} ${styles.sectionsCommonStyles}`}
               >
-                <HeaderH2 animated={true}>Tecnologías</HeaderH2>
+                <HeaderH2
+                  animated={location.state.animated === true ? true : false}
+                >
+                  Tecnologías
+                </HeaderH2>
               </section>
             </>
           )}

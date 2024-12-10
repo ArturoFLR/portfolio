@@ -65,12 +65,12 @@ function ProyectCard({
 
       <div className={styles.linksContainer}>
         {github && (
-          <GenericLink hrefValue={github} icon="github">
+          <GenericLink animated={true} hrefValue={github} icon="github">
             Ver Código
           </GenericLink>
         )}
         {online && (
-          <GenericLink hrefValue={online} icon="launch">
+          <GenericLink animated={true} hrefValue={online} icon="launch">
             Ver Online
           </GenericLink>
         )}
