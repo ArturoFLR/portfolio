@@ -2,6 +2,7 @@ import { useLocation } from "react-router";
 import NavLink from "../../links/navLinks/NavLink";
 import styles from "./ProyectsNav.module.scss";
 import proyectsData from "../../../data/proyectsData";
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 
 type ProyectsNavProps = {
   animated: boolean;
@@ -42,7 +43,13 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
             linkHref={proyectsData.proyectsRoutes[prevLinkIndex]}
             animatedLinkState={false}
           >
-            {proyectsData.proyectsNames[prevLinkIndex]}
+            <div className={styles.prevLinkContainer}>
+              <div className={styles.prevLinkIconContainer}>
+                <DoubleArrowIcon color="inherit" fontSize="inherit" />
+              </div>
+
+              {proyectsData.proyectsNames[prevLinkIndex]}
+            </div>
           </NavLink>
         </ol>
         <ol className={styles.proyectsNavOlTag}>
@@ -56,7 +63,13 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
             linkHref={proyectsData.proyectsRoutes[nextLinkIndex]}
             animatedLinkState={false}
           >
-            {proyectsData.proyectsNames[nextLinkIndex]}
+            <div className={styles.nextLinkContainer}>
+              {proyectsData.proyectsNames[nextLinkIndex]}
+
+              <div className={styles.nextLinkIconContainer}>
+                <DoubleArrowIcon color="inherit" fontSize="inherit" />
+              </div>
+            </div>
           </NavLink>
         </ol>
       </ul>

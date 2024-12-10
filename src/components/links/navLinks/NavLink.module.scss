@@ -1,7 +1,7 @@
 @use "../../../fontsAndVariables" as *;
 
 .navLink {
-  display: inline-block;
+  display: flex;
   font-family: $titlesTextFont;
   font-size: 2rem;
   font-weight: 600;

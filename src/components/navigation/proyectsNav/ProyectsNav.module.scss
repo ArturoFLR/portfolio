@@ -20,9 +20,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 4rem;
+    column-gap: 12rem;
     width: 99vw;
     height: 50px;
+  }
+
+  .prevLinkContainer {
+    position: relative;
+    display: flex;
+
+    .prevLinkIconContainer {
+      position: absolute;
+      bottom: -0.3rem;
+      left: -3rem;
+      font-size: 2.5rem;
+      transform: rotate(180deg);
+    }
+  }
+
+  .nextLinkContainer {
+    position: relative;
+    display: flex;
+
+    .nextLinkIconContainer {
+      position: absolute;
+      top: -0.2rem;
+      right: -3rem;
+      font-size: 2.5rem;
+    }
   }
 }
 
