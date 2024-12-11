@@ -1,1 +1,9 @@
 @use "../fontsAndVariables" as *;
+
+.mainTag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 2rem;
+}

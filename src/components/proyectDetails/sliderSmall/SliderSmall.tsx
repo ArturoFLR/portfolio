@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./SliderSmall.module.scss";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 type SliderSmallProps = {
   imagesList: string[];
@@ -32,6 +34,30 @@ function SliderSmall({
     nextImgIndex = shownImageIndex + 1;
   }
 
+  function handlePrevImgClick() {
+    let newIndex: number;
+
+    if (shownImageIndex === 0) {
+      newIndex = imagesList.length - 1;
+    } else {
+      newIndex = shownImageIndex - 1;
+    }
+    console.log(newIndex);
+    setShownImageIndex(newIndex);
+  }
+
+  function handleNextImgClick() {
+    let newIndex: number;
+
+    if (shownImageIndex === imagesList.length - 1) {
+      newIndex = 0;
+    } else {
+      newIndex = shownImageIndex + 1;
+    }
+    console.log(newIndex);
+    setShownImageIndex(newIndex);
+  }
+
   useEffect(() => {
     function checkNewResolution() {
       if (window.innerWidth <= 600 && !isMobileResolution) {
@@ -49,45 +75,86 @@ function SliderSmall({
   }, [isMobileResolution]);
 
   return (
-    <div className={styles.sliderSmallMainContainer}>
-      <div className={styles.prevImageMainContainer}>
-        <button aria-label="Ver imagen a pantalla completa">
-          <img
-            src={
-              isMobileResolution
-                ? imagesMobileList[previousImgIndex]
-                : imagesList[previousImgIndex]
-            }
-            alt="Captura del proyecto"
-          />
-        </button>
+    <div className={styles.sliderMainFrame}>
+      <div className={styles.allImagesContainer}>
+        <div className={styles.prevImageMainContainer}>
+          <button
+            type="button"
+            className={styles.allButtons}
+            aria-label="Ver imagen a pantalla completa"
+          >
+            <img
+              className={styles.allImgTags}
+              src={
+                isMobileResolution
+                  ? imagesMobileList[previousImgIndex]
+                  : imagesList[previousImgIndex]
+              }
+              alt="Captura del proyecto"
+            />
+          </button>
+        </div>
+
+        <div className={styles.shownImageMainContainer}>
+          <button
+            type="button"
+            className={styles.allButtons}
+            aria-label="Ver imagen a pantalla completa"
+          >
+            <img
+              className={styles.allImgTags}
+              src={
+                isMobileResolution
+                  ? imagesMobileList[shownImageIndex]
+                  : imagesList[shownImageIndex]
+              }
+              alt="Captura del proyecto"
+            />
+          </button>
+        </div>
+
+        <div className={styles.nextImageMainContainer}>
+          <button
+            type="button"
+            className={styles.allButtons}
+            aria-label="Ver imagen a pantalla completa"
+          >
+            <img
+              className={styles.allImgTags}
+              src={
+                isMobileResolution
+                  ? imagesMobileList[nextImgIndex]
+                  : imagesList[nextImgIndex]
+              }
+              alt="Captura del proyecto"
+            />
+          </button>
+        </div>
       </div>
 
-      <div className={styles.shownImageMainContainer}>
-        <button aria-label="Ver imagen a pantalla completa">
-          <img
-            src={
-              isMobileResolution
-                ? imagesMobileList[shownImageIndex]
-                : imagesList[shownImageIndex]
-            }
-            alt="Captura del proyecto"
-          />
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={handlePrevImgClick}
+        className={styles.prevImgIcon}
+      >
+        <ArrowLeftIcon
+          color="inherit"
+          fontSize="inherit"
+          style={{ display: "block" }}
+        />
+      </button>
 
-      <div className={styles.nextImageMainContainer}>
-        <button aria-label="Ver imagen a pantalla completa">
-          <img
-            src={
-              isMobileResolution
-                ? imagesMobileList[nextImgIndex]
-                : imagesList[nextImgIndex]
-            }
-            alt="Captura del proyecto"
-          />
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={handleNextImgClick}
+        className={styles.nextImgIcon}
+      >
+        <ArrowRightIcon
+          color="inherit"
+          fontSize="inherit"
+          style={{ display: "block" }}
+        />
+      </button>
     </div>
   );
 }

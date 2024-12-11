@@ -1,1 +1,60 @@
 @use "../../../fontsAndVariables" as *;
+
+.sliderMainFrame {
+  position: relative;
+  width: 800px;
+  border: 22px solid red;
+  border-radius: 10px;
+
+  .allImagesContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    // overflow: hidden;
+    // left: -50%;
+  }
+}
+
+.prevImageMainContainer,
+.shownImageMainContainer,
+.nextImageMainContainer {
+  width: 100%;
+}
+
+.allButtons {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+}
+
+.allImgTags {
+  width: 100%;
+}
+
+.prevImgIcon,
+.nextImgIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 45%;
+  overflow: hidden;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  color: white;
+  font-size: 7rem;
+  background-color: $orangeText;
+  border: 0px;
+  border-radius: 100%;
+}
+
+.prevImgIcon {
+  left: -2rem;
+}
+
+.nextImgIcon {
+  right: -2rem;
+}
