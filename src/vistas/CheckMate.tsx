@@ -1,6 +1,8 @@
-import { Link, useLocation } from "react-router";
+import { useLocation } from "react-router";
 import styles from "./CheckMate.module.scss";
 import ProyectsNav from "../components/navigation/proyectsNav/ProyectsNav";
+import SliderSmall from "../components/proyectDetails/sliderSmall/SliderSmall";
+import proyectsData from "../data/proyectsData";
 
 function CheckMate() {
   const location = useLocation();
@@ -9,9 +11,10 @@ function CheckMate() {
   return (
     <main className={styles.mainTag}>
       <ProyectsNav animated={location.state.animated === true ? true : false} />
-      <div className={styles.proyectMainContainer}>
-        <Link to="/">Volver a Home</Link>
-      </div>
+      <SliderSmall
+        imagesList={proyectsData.checkmateImagesAndComments.images}
+        changeComments={() => console.log("click!")}
+      />
     </main>
   );
 }

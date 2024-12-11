@@ -14,27 +14,62 @@ const proyectsRoutes: string[] = [
   "/en256colores",
 ];
 
-const proyectsImagesUrl: string[] = [];
+type ImagesAndComments = {
+  images: string[];
+  imagesMobile: string[];
+  comments: string[];
+};
 
-const proyectCheckmateComments: string[] = [];
+const checkmateImagesAndComments: ImagesAndComments = {
+  images: [
+    "images/proyects/checkmate/checkmate-1-big.webp",
+    "images/proyects/checkmate/checkmate-2-big.webp",
+    "images/proyects/checkmate/checkmate-3-big.webp",
+    "images/proyects/checkmate/checkmate-4-big.webp",
+    "images/proyects/checkmate/checkmate-5-big.webp",
+  ],
+  imagesMobile: [
+    "images/proyects/checkmate/checkmate-1-miniature.webp",
+    "images/proyects/checkmate/checkmate-2-miniature.webp",
+    "images/proyects/checkmate/checkmate-3-miniature.webp",
+    "images/proyects/checkmate/checkmate-4-miniature.webp",
+    "images/proyects/checkmate/checkmate-5-miniature.webp",
+  ],
+  comments: [],
+};
 
-const proyectLringenierosComments: string[] = [];
+const lringenierosImagesAndComments: ImagesAndComments = {
+  images: [],
+  imagesMobile: [],
+  comments: [],
+};
 
-const proyectPlantinComments: string[] = [];
+const platinImagesAndComments: ImagesAndComments = {
+  images: [],
+  imagesMobile: [],
+  comments: [],
+};
 
-const proyectEatsqualityComments: string[] = [];
+const eatsqualityImagesAndComments: ImagesAndComments = {
+  images: [],
+  imagesMobile: [],
+  comments: [],
+};
 
-const proyectEn256coloresComments: string[] = [];
+const en256coloresImagesAndComments: ImagesAndComments = {
+  images: [],
+  imagesMobile: [],
+  comments: [],
+};
 
 const proyectsData = {
   proyectsNames: proyectsNames,
   proyectsRoutes: proyectsRoutes,
-  proyectsImagesUrl: proyectsImagesUrl,
-  proyectCheckmateComments: proyectCheckmateComments,
-  proyectLringenierosComments: proyectLringenierosComments,
-  proyectPlantinComments: proyectPlantinComments,
-  proyectEatsqualityComments: proyectEatsqualityComments,
-  proyectEn256coloresComments: proyectEn256coloresComments,
+  checkmateImagesAndComments: checkmateImagesAndComments,
+  lringenierosImagesAndComments: lringenierosImagesAndComments,
+  platinImagesAndComments: platinImagesAndComments,
+  eatsqualityImagesAndComments: eatsqualityImagesAndComments,
+  en256coloresImagesAndComments: en256coloresImagesAndComments,
 };
 
 export default proyectsData;
