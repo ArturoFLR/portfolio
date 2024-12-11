@@ -13,6 +13,7 @@ function CheckMate() {
       <ProyectsNav animated={location.state.animated === true ? true : false} />
       <SliderSmall
         imagesList={proyectsData.checkmateImagesAndComments.images}
+        imagesMobileList={proyectsData.checkmateImagesAndComments.imagesMobile}
         changeComments={() => console.log("click!")}
       />
     </main>
