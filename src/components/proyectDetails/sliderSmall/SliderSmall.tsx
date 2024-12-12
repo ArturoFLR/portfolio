@@ -119,7 +119,9 @@ function SliderSmall({
             </button>
           </div>
 
-          <div className={styles.shownImageMainContainer}>
+          <div
+            className={`${styles.shownImageMainContainer} ${styles.tvTurningOn} ${styles.imageDistortion}`}
+          >
             <button
               type="button"
               className={styles.allButtons}
@@ -179,6 +181,10 @@ function SliderSmall({
             style={{ display: "block" }}
           />
         </button>
+      </div>
+
+      <div className={styles.sparkAnimated}>
+        <img src="../../../../public/images/gifs/sparks.gif" alt="" />
       </div>
     </div>
   );

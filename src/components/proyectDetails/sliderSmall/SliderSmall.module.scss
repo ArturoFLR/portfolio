@@ -18,17 +18,97 @@
   }
 }
 
+@keyframes tv-noise {
+  0% {
+    transform: translateX(10%) translateY(-10%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(-10%) translateY(10%);
+    opacity: 1;
+  }
+}
+
+@keyframes image-distortion {
+  0% {
+    filter: hue-rotate(0deg) brightness(100%) contrast(100%);
+    transform: scale(1) skew(0deg);
+    opacity: 0.5;
+  }
+  10% {
+    filter: hue-rotate(880deg) brightness(80%) contrast(200%);
+    transform: scale(1) skew(0deg);
+  }
+  21% {
+    filter: hue-rotate(880deg) brightness(80%) contrast(100%);
+    transform: scale(1) skew(0deg);
+  }
+  24% {
+    filter: hue-rotate(40deg) brightness(30%) contrast(100%);
+    transform: scale(1) skew(50deg);
+  }
+
+  30% {
+    transform: translateY(50px);
+  }
+  31% {
+    transform: translateY(-50px);
+  }
+  32% {
+    transform: translateY(50px);
+  }
+  33% {
+    transform: translateY(-50px);
+  }
+  34% {
+    transform: translateY(50px);
+  }
+  35% {
+    transform: translateY(-50px);
+  }
+  36% {
+    transform: translateY(50px);
+  }
+  37% {
+    transform: translateY(-50px);
+  }
+  97% {
+    transform: translateY(50px);
+  }
+  98% {
+    filter: hue-rotate(0deg) brightness(200%) contrast(90%);
+    transform: scale(1) skew(5deg);
+  }
+  100% {
+    filter: hue-rotate(0deg) brightness(100%) contrast(100%);
+    transform: scale(1) skew(40deg);
+    opacity: 1;
+  }
+}
+
+@keyframes stop-animations {
+  0%,
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .sliderMainFrame {
   position: relative;
   padding: 25px;
   background-image: linear-gradient(45deg, #393946, #221f2b);
   border: 2px solid black;
   border-radius: 10px;
-  overflow: hidden;
+  // overflow: hidden;
 
   .sliderMainContainer {
     width: 800px;
+    height: 450px;
     overflow: hidden;
+    border: 1px solid black;
 
     .allImagesContainer {
       display: flex;
@@ -54,7 +134,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../../../../public/images/backgrounds/asfalt-light.png"); /* Imagen de ruido */
+  background: url("images/backgrounds/asfalt-light.png"); /* Imagen de ruido */
   mix-blend-mode: hard-light; /* Mezcla el ruido con el degradado */
   opacity: 0.7; /* Ajusta la intensidad */
   pointer-events: none;
@@ -63,7 +143,34 @@
 .prevImageMainContainer,
 .shownImageMainContainer,
 .nextImageMainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  backdrop-filter: blur(20px) brightness(80%);
+}
+
+.tvTurningOn {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+    background-image: url("../../../../public/images/backgrounds/bedge-grunge.png");
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+    animation:
+      tv-noise 0.2s linear infinite both,
+      stop-animations 1.5s linear forwards;
+  }
+}
+
+.imageDistortion {
+  animation: image-distortion 1.5s linear;
 }
 
 .allButtons {
@@ -74,7 +181,8 @@
 }
 
 .allImgTags {
-  width: 100%;
+  max-width: 100%;
+  max-height: 450px;
 }
 
 .prevImgIcon,
@@ -92,12 +200,14 @@
   color: white;
   font-size: 6rem;
   background-image: linear-gradient(45deg, #6d6d91, #0a0811);
-  border: 3px solid black;
+  box-shadow: 1px 1px 6px 1px rgb(14, 14, 14);
+  border: 2px solid black;
   border-radius: 100%;
   transition: all 200ms;
 
   &:hover {
     filter: drop-shadow(0 0 3px $blueGlowEffect);
+    box-shadow: 0px 0px 0px 0px rgb(26, 26, 26);
   }
 
   &:active {
@@ -116,7 +226,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../../../../public/images/backgrounds/asfalt-light.png"); /* Imagen de ruido */
+  background: url("images/backgrounds/asfalt-light.png"); /* Imagen de ruido */
   mix-blend-mode: hard-light; /* Mezcla el ruido con el degradado */
   opacity: 0.8; /* Ajusta la intensidad */
   pointer-events: none;
@@ -128,4 +238,13 @@
 
 .nextImgIcon {
   right: 0.6rem;
+}
+
+.sparkAnimated {
+  position: absolute;
+  bottom: 0%;
+  left: -10%;
+  width: 200px;
+  transform: rotate(180deg);
+  z-index: 11;
 }
