@@ -27,13 +27,15 @@ const checkmateImagesAndComments: ImagesAndComments = {
     "images/proyects/checkmate/checkmate-3-big.webp",
     "images/proyects/checkmate/checkmate-4-big.webp",
     "images/proyects/checkmate/checkmate-5-big.webp",
+    "images/proyects/checkmate/checkmate-6-big.webp",
   ],
   imagesMobile: [
     "images/proyects/checkmate/checkmate-1-miniature.webp",
-    "images/proyects/checkmate/checkmate-2-miniature.webp",
+    "images/proyects/checkmate/checkmate-2-big.webp",
     "images/proyects/checkmate/checkmate-3-miniature.webp",
     "images/proyects/checkmate/checkmate-4-miniature.webp",
     "images/proyects/checkmate/checkmate-5-miniature.webp",
+    "images/proyects/checkmate/checkmate-6-miniature.webp",
   ],
   comments: [],
 };
