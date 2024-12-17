@@ -1,5 +1,14 @@
 @use "../../../fontsAndVariables" as *;
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes prev-image {
   0% {
     left: -100%;
@@ -103,6 +112,7 @@
   border: 2px solid black;
   border-radius: 10px;
   // overflow: hidden;
+  animation: fade-in 1s linear;
 
   .sliderMainContainer {
     width: 800px;
@@ -244,6 +254,7 @@
 .sparkAnimated2 {
   position: absolute;
   z-index: 11;
+  pointer-events: none;
 
   img {
     width: 100%;
