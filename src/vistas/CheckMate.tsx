@@ -22,6 +22,10 @@ function CheckMate() {
     "typescript",
     "react",
     "sass",
+    "jest",
+    "cypress",
+    "axios",
+    "vite",
   ];
 
   function techIconsGenerator() {

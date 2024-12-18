@@ -15,7 +15,11 @@ export type TechIconType =
   | "tailwind"
   | "typescript"
   | "vscode"
-  | "leaflet";
+  | "leaflet"
+  | "jest"
+  | "cypress"
+  | "axios"
+  | "vite";
 
 type TechIconProps = {
   iconName: TechIconType;
@@ -131,6 +135,34 @@ function TechIcon({ iconName }: TechIconProps) {
       dataTitle = "Leaflet Maps";
       src = "icons/leaflet.webp";
       alt = "Leaflet icon";
+      break;
+
+    case "jest":
+      colorClassname = styles.pinkIconContainer;
+      dataTitle = "Jest";
+      src = "icons/jest.webp";
+      alt = "Jest icon";
+      break;
+
+    case "cypress":
+      colorClassname = styles.greenIconContainer;
+      dataTitle = "Cypress";
+      src = "icons/cypress.webp";
+      alt = "Cypress icon";
+      break;
+
+    case "axios":
+      colorClassname = styles.violetIconContainer;
+      dataTitle = "Axios";
+      src = "icons/axios.webp";
+      alt = "Axios icon";
+      break;
+
+    case "vite":
+      colorClassname = styles.orangeIconContainer;
+      dataTitle = "Vite";
+      src = "icons/vite.webp";
+      alt = "Vite icon";
       break;
 
     default:

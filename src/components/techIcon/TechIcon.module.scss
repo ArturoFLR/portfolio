@@ -111,6 +111,30 @@
   }
 }
 
+.violetIconContainer {
+  background-color: rgba(187, 48, 173, 0.07);
+  border: 1.5px solid transparent;
+  transition: all 800ms;
+
+  &:hover {
+    background-color: rgba(187, 48, 131, 0.35);
+    border: 1.5px solid rgb(228, 119, 217);
+    box-shadow: 0 0 7px 0.3px rgb(230, 37, 211);
+  }
+}
+
+.orangeIconContainer {
+  background-color: rgba(187, 127, 48, 0.07);
+  border: 1.5px solid transparent;
+  transition: all 800ms;
+
+  &:hover {
+    background-color: rgba(187, 127, 48, 0.35);
+    border: 1.5px solid rgb(228, 204, 119);
+    box-shadow: 0 0 7px 0.3px rgb(230, 182, 37);
+  }
+}
+
 //Styles for Icons Tooltip
 [data-title] {
   position: relative;
