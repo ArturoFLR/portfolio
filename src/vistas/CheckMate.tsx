@@ -13,12 +13,19 @@ function CheckMate() {
   return (
     <main className={styles.mainTag}>
       <ProyectsNav animated={location.state.animated === true ? true : false} />
-      <SliderSmall
-        animated={true}
-        imagesList={proyectsData.checkmateImagesAndComments.images}
-        imagesMobileList={proyectsData.checkmateImagesAndComments.imagesMobile}
-        changeComments={changeComments}
-      />
+
+      <div className={styles.sliderSmallAndCommentsContainer}>
+        <div className={styles.sliderSmallContainer}>
+          <SliderSmall
+            animated={true}
+            imagesList={proyectsData.checkmateImagesAndComments.images}
+            imagesMobileList={
+              proyectsData.checkmateImagesAndComments.imagesMobile
+            }
+            changeComments={changeComments}
+          />
+        </div>
+      </div>
     </main>
   );
 }
