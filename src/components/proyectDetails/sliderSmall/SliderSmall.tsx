@@ -47,6 +47,8 @@ function SliderSmall({
   //END
 
   function handlePrevImgClick() {
+    clearTimeout(noiseAnimationTimeout.current);
+    clearTimeout(firstSparkTimeout.current);
     sliderContainerElement.current?.classList.remove(styles.prevImageAnimation);
     sliderContainerElement.current?.classList.remove(styles.nextImageAnimation);
     sliderContainerElement.current?.classList.add(styles.prevImageAnimation);
@@ -67,6 +69,8 @@ function SliderSmall({
   }
 
   function handleNextImgClick() {
+    clearTimeout(noiseAnimationTimeout.current);
+    clearTimeout(firstSparkTimeout.current);
     sliderContainerElement.current?.classList.remove(styles.prevImageAnimation);
     sliderContainerElement.current?.classList.remove(styles.nextImageAnimation);
     sliderContainerElement.current?.classList.add(styles.nextImageAnimation);
