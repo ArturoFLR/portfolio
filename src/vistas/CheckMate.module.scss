@@ -9,5 +9,15 @@
 }
 
 .sliderSmallAndCommentsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 90%;
+
+  .sliderSmallContainer {
+  }
+
+  .commentsViewerContainer {
+    width: 40%;
+  }
 }

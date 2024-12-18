@@ -1,0 +1,56 @@
+@use "../../../fontsAndVariables" as *;
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.commentsViewerMainContainer {
+  width: 100%;
+  height: 400px;
+}
+
+.letterTranslatorPositioner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 1.6rem;
+}
+
+.olTagContainer {
+  opacity: 0;
+  animation: fade-in 1s 1.5s linear forwards;
+}
+
+.olTag {
+  list-style-type: disc;
+  color: $normalTextColor;
+}
+
+.olTagFadeIn {
+  animation: fade-in 0.3s linear;
+}
+
+.olTagFadeOut {
+  animation: fade-out 0.3s linear forwards;
+}
+
+.paragraph {
+  margin-bottom: 3rem;
+  font-family: $normalTextFont;
+  font-size: 2rem;
+  line-height: 120%;
+  letter-spacing: 1.5px;
+}
