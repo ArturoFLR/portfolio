@@ -51,8 +51,9 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
                   style={{ display: "block" }}
                 />
               </div>
-
-              {proyectsData.proyectsNames[prevLinkIndex]}
+              <div className={styles.prevLinkTextContainer}>
+                {proyectsData.proyectsNames[prevLinkIndex]}
+              </div>
             </div>
           </NavLink>
         </ol>
@@ -68,7 +69,9 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
             animatedLinkState={false}
           >
             <div className={styles.nextLinkContainer}>
-              {proyectsData.proyectsNames[nextLinkIndex]}
+              <div className={styles.nextLinkTextContainer}>
+                {proyectsData.proyectsNames[nextLinkIndex]}
+              </div>
 
               <div className={styles.nextLinkIconContainer}>
                 <DoubleArrowIcon

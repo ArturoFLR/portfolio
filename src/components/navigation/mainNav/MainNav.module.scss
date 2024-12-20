@@ -31,6 +31,8 @@
 
 // **********************************************RESPONSIVE
 
+//***********************************HD
+
 @media (min-width: 1920px) {
   .mainNavMainContainer {
     .mainNavUlTag {
@@ -54,6 +56,20 @@
     .mainNavUlTag {
       column-gap: 23rem;
       padding: 3.3rem 0rem;
+    }
+  }
+}
+
+// ************************************MOBILE
+
+@media (max-width: 600px) {
+  .mainNavMainContainer {
+    .mainNavUlTag {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      column-gap: 0rem;
+      padding: 1rem 0rem;
     }
   }
 }
