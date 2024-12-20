@@ -45,7 +45,11 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
           >
             <div className={styles.prevLinkContainer}>
               <div className={styles.prevLinkIconContainer}>
-                <DoubleArrowIcon color="inherit" fontSize="inherit" />
+                <DoubleArrowIcon
+                  color="inherit"
+                  fontSize="inherit"
+                  style={{ display: "block" }}
+                />
               </div>
 
               {proyectsData.proyectsNames[prevLinkIndex]}
@@ -67,7 +71,11 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
               {proyectsData.proyectsNames[nextLinkIndex]}
 
               <div className={styles.nextLinkIconContainer}>
-                <DoubleArrowIcon color="inherit" fontSize="inherit" />
+                <DoubleArrowIcon
+                  color="inherit"
+                  fontSize="inherit"
+                  style={{ display: "block" }}
+                />
               </div>
             </div>
           </NavLink>

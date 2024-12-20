@@ -24,6 +24,7 @@ function CheckMate() {
     "sass",
     "axios",
     "vite",
+    "git",
   ];
 
   function techIconsGenerator() {
@@ -57,16 +58,14 @@ function CheckMate() {
       <ProyectsNav animated={location.state.animated === true ? true : false} />
 
       <div className={styles.sliderSmallAndCommentsContainer}>
-        <div className={styles.sliderSmallContainer}>
-          <SliderSmall
-            animated={true}
-            imagesList={proyectsData.checkmateImagesAndComments.images}
-            imagesMobileList={
-              proyectsData.checkmateImagesAndComments.imagesMobile
-            }
-            changeComments={changeComments}
-          />
-        </div>
+        <SliderSmall
+          animated={true}
+          imagesList={proyectsData.checkmateImagesAndComments.images}
+          imagesMobileList={
+            proyectsData.checkmateImagesAndComments.imagesMobile
+          }
+          changeComments={changeComments}
+        />
 
         <div className={styles.commentsViewerContainer}>
           <CommentsViewer

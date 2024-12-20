@@ -168,6 +168,8 @@ function Home() {
                       "typescript",
                       "react",
                       "sass",
+                      "vite",
+                      "git",
                     ]}
                     online="https://arturoflr.github.io/checkmate/"
                     github="https://github.com/ArturoFLR/checkmate"
@@ -188,6 +190,8 @@ function Home() {
                       "reactrouter",
                       "sass",
                       "netlify",
+                      "vite",
+                      "git",
                     ]}
                     online="https://www.lringenieros.es/"
                     github="https://github.com/ArturoFLR/lr_ingenieros"
@@ -201,13 +205,15 @@ function Home() {
                     description1="Proyecto en Equipo para ID for Ideas."
                     description2="Web App diseñada para promocionar las huertas agroecológicas dentro del territorio nacional Argentino. Principal responsable del Front-End."
                     techIcons={[
-                      "html5",
                       "docker",
                       "typescript",
                       "react",
                       "reactrouter",
                       "leaflet",
                       "tailwind",
+                      "vite",
+                      "git",
+                      "azure",
                     ]}
                     online="https://plant-in.netlify.app/"
                     github="https://github.com/Mgll3/agro-plantation-app"
@@ -222,11 +228,13 @@ function Home() {
                     description2="Web App de comida a domicilio. En menos de 4 semanas se pudo entregar un MVP con los roles de cliente y restaurante operativos."
                     techIcons={[
                       "html5",
-                      "css3",
                       "typescript",
                       "react",
                       "reactrouter",
                       "tailwind",
+                      "vite",
+                      "git",
+                      "jira",
                     ]}
                     github="https://github.com/No-Country/c17-113-ft-csharp"
                   />

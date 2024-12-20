@@ -20,6 +20,7 @@
 .commentsViewerMainContainer {
   width: 100%;
   height: 100%;
+  padding-top: 3rem;
 }
 
 .letterTranslatorPositioner {
@@ -53,4 +54,47 @@
   font-size: 2rem;
   line-height: 120%;
   letter-spacing: 1.5px;
+}
+
+// **********************************************RESPONSIVE
+
+@media (min-width: 1920px) {
+  .commentsViewerMainContainer {
+    padding-top: 3.5rem;
+  }
+
+  .letterTranslatorPositioner {
+    padding-bottom: 2.6rem;
+  }
+
+  .paragraph {
+    margin-bottom: 3.5rem;
+    font-size: 2.4rem;
+    line-height: 130%;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .letterTranslatorPositioner {
+    padding-bottom: 3.6rem;
+  }
+
+  .paragraph {
+    margin-bottom: 4rem;
+    font-size: 3.2rem;
+    letter-spacing: 1.9px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .letterTranslatorPositioner {
+    padding-bottom: 5.6rem;
+  }
+
+  .paragraph {
+    margin-bottom: 8rem;
+    font-size: 4.2rem;
+    line-height: 140%;
+  }
 }

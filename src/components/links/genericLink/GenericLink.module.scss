@@ -36,7 +36,7 @@
     width: 100%;
     height: 100%;
     opacity: 1;
-    padding: 0.2rem 0.8rem 0rem 0.8rem;
+    padding: 0.3rem 0.9rem;
     border: 1px solid $normalTextColor;
     border-radius: 20px;
     background-image: linear-gradient(
@@ -66,7 +66,7 @@
     }
 
     .iconContainer {
-      font-size: 2.1rem;
+      font-size: 1.9rem;
     }
 
     .linkText {
@@ -81,4 +81,92 @@
 
 .genericLinkMainContainerAnimated {
   animation: intro-glow 1s linear;
+}
+
+// **********************************************RESPONSIVE
+
+@media (min-width: 1920px) {
+  .genericLinkMainContainer {
+    .genericLinkContentContainer {
+      column-gap: 1.2rem;
+      padding: 0.4rem 1rem;
+
+      &:hover {
+        filter: drop-shadow(0 0 4px $blueGlowEffect);
+      }
+
+      .iconContainer {
+        font-size: 2.4rem;
+      }
+
+      .linkText {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  .genericLinkMainContainer {
+    .genericLinkContentContainer {
+      column-gap: 1.2rem;
+      padding: 0.6rem 1.3rem;
+      border: 1px solid $normalTextColor;
+
+      &:hover {
+        filter: drop-shadow(0 0 6px $blueGlowEffect);
+      }
+
+      .iconContainer {
+        font-size: 3rem;
+      }
+
+      .linkText {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  .genericLinkMainContainer {
+    .genericLinkContentContainer {
+      column-gap: 1.2rem;
+      padding: 0.6rem 1.3rem;
+
+      &:hover {
+        filter: drop-shadow(0 0 6px $blueGlowEffect);
+      }
+
+      .iconContainer {
+        font-size: 3rem;
+      }
+
+      .linkText {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 3840px) {
+  .genericLinkMainContainer {
+    .genericLinkContentContainer {
+      column-gap: 1.2rem;
+      padding: 0.8rem 1.5rem;
+      border: 1.5px solid $normalTextColor;
+
+      &:hover {
+        filter: drop-shadow(0 0 8px $blueGlowEffect);
+      }
+
+      .iconContainer {
+        font-size: 4.7rem;
+      }
+
+      .linkText {
+        font-size: 4.7rem;
+      }
+    }
+  }
 }

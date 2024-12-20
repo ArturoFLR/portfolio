@@ -12,7 +12,6 @@
 .mainNavMainContainer {
   position: fixed;
   top: 0px;
-  // border: 1px solid white;
   backdrop-filter: blur(5px) brightness(60%);
   z-index: 10;
 
@@ -20,12 +19,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 4rem;
+    column-gap: 10rem;
     width: 99vw;
-    height: 50px;
+    padding: 1.5rem 0rem;
   }
 }
 
 .mainNavMainContainerAnimated {
   animation: fade-in 1.5s ease-out;
+}
+
+// **********************************************RESPONSIVE
+
+@media (min-width: 1920px) {
+  .mainNavMainContainer {
+    .mainNavUlTag {
+      column-gap: 14rem;
+      padding: 1.8rem 0rem;
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  .mainNavMainContainer {
+    .mainNavUlTag {
+      column-gap: 16rem;
+      padding: 2.3rem 0rem;
+    }
+  }
+}
+
+@media (min-width: 3840px) {
+  .mainNavMainContainer {
+    .mainNavUlTag {
+      column-gap: 23rem;
+      padding: 3.3rem 0rem;
+    }
+  }
 }

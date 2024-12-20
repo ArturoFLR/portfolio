@@ -32,19 +32,35 @@ function GenericLink({
       >
         <div className={styles.iconContainer}>
           {icon === "github" && (
-            <GitHubIcon color="inherit" fontSize="inherit" />
+            <GitHubIcon
+              color="inherit"
+              fontSize="inherit"
+              style={{ display: "block" }}
+            />
           )}
 
           {icon === "linkedin" && (
-            <LinkedInIcon color="inherit" fontSize="inherit" />
+            <LinkedInIcon
+              color="inherit"
+              fontSize="inherit"
+              style={{ display: "block" }}
+            />
           )}
 
           {icon === "document" && (
-            <PictureAsPdfIcon color="inherit" fontSize="inherit" />
+            <PictureAsPdfIcon
+              color="inherit"
+              fontSize="inherit"
+              style={{ display: "block" }}
+            />
           )}
 
           {icon === "launch" && (
-            <LaunchIcon color="inherit" fontSize="inherit" />
+            <LaunchIcon
+              color="inherit"
+              fontSize="inherit"
+              style={{ display: "block" }}
+            />
           )}
         </div>
         <p className={styles.linkText}>{children}</p>

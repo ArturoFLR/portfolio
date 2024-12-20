@@ -11,7 +11,7 @@
 
   .techIcon {
     width: 22px;
-    height: 20px;
+    max-height: 22px;
   }
 }
 
@@ -164,4 +164,55 @@
   visibility: hidden;
   border-radius: 6px;
   box-shadow: 0 0 7px 0.3px $alienSymbolsColor;
+}
+
+// **********************************************RESPONSIVE
+
+@media (min-width: 1920px) {
+  .techIconContainer {
+    width: 45px;
+    height: 45px;
+
+    .techIcon {
+      width: 25px;
+      max-height: 25px;
+    }
+  }
+
+  [data-title]:after {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .techIconContainer {
+    width: 60px;
+    height: 60px;
+
+    .techIcon {
+      width: 33px;
+      max-height: 33px;
+    }
+  }
+
+  [data-title]:after {
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .techIconContainer {
+    width: 80px;
+    height: 80px;
+    border-radius: 30%;
+
+    .techIcon {
+      width: 50px;
+      max-height: 50px;
+    }
+  }
+
+  [data-title]:after {
+    font-size: 2.5rem;
+  }
 }

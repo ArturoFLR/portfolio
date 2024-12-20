@@ -19,7 +19,9 @@ export type TechIconType =
   | "jest"
   | "cypress"
   | "axios"
-  | "vite";
+  | "vite"
+  | "azure"
+  | "jira";
 
 type TechIconProps = {
   iconName: TechIconType;
@@ -163,6 +165,20 @@ function TechIcon({ iconName }: TechIconProps) {
       dataTitle = "Vite";
       src = "icons/vite.webp";
       alt = "Vite icon";
+      break;
+
+    case "azure":
+      colorClassname = styles.greenIconContainer;
+      dataTitle = "Azure";
+      src = "icons/azure.webp";
+      alt = "Azure icon";
+      break;
+
+    case "jira":
+      colorClassname = styles.blueIconContainer;
+      dataTitle = "Jira";
+      src = "icons/jira.webp";
+      alt = "Jira icon";
       break;
 
     default:
