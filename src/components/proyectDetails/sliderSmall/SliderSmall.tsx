@@ -197,6 +197,7 @@ function SliderSmall({
 
         <button
           type="button"
+          aria-label="Imagen Anterior"
           onClick={handlePrevImgClick}
           className={styles.prevImgIcon}
         >
@@ -209,6 +210,7 @@ function SliderSmall({
 
         <button
           type="button"
+          aria-label="Imagen Siguiente"
           onClick={handleNextImgClick}
           className={styles.nextImgIcon}
         >

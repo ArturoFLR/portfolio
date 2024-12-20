@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import CommentsViewer from "../components/proyectDetails/commentsViewer/CommentsViewer";
 import TechIcon, { TechIconType } from "../components/techIcon/TechIcon";
 import GenericLink from "../components/links/genericLink/GenericLink";
+import LetterTranslator from "../components/letterTranslator/LetterTranslator";
 
 function CheckMate() {
   const [actualIndex, setActualIndex] = useState<number>(0);
@@ -57,7 +58,24 @@ function CheckMate() {
     <main className={styles.mainTag}>
       <ProyectsNav animated={location.state.animated === true ? true : false} />
 
+      <h1 className={styles.letterTranslatorContainer}>
+        <LetterTranslator
+          text="CHECKMATE!"
+          activate={true}
+          alienLettersTimer={70}
+          normalLettersTimer={100}
+        />
+      </h1>
+
       <div className={styles.sliderSmallAndCommentsContainer}>
+        <div className={styles.commentsViewerContainer}>
+          <CommentsViewer
+            comments={
+              proyectsData.checkmateImagesAndComments.comments[actualIndex]
+            }
+          />
+        </div>
+
         <SliderSmall
           animated={true}
           imagesList={proyectsData.checkmateImagesAndComments.images}
@@ -66,14 +84,6 @@ function CheckMate() {
           }
           changeComments={changeComments}
         />
-
-        <div className={styles.commentsViewerContainer}>
-          <CommentsViewer
-            comments={
-              proyectsData.checkmateImagesAndComments.comments[actualIndex]
-            }
-          />
-        </div>
       </div>
 
       <div className={styles.linksAndTechIconsContainer}>

@@ -28,14 +28,14 @@ function CommentsViewer({ comments }: CommentsViewerProps) {
 
   return (
     <div className={styles.commentsViewerMainContainer}>
-      <div className={styles.letterTranslatorPositioner}>
+      <h1 className={styles.letterTranslatorPositioner}>
         <LetterTranslator
           text="CHECKMATE!"
           activate={true}
           alienLettersTimer={70}
           normalLettersTimer={100}
         />
-      </div>
+      </h1>
       <div className={styles.olTagContainer}>
         <ol
           className={`${styles.olTag} ${fading === "in" ? styles.olTagFadeIn : styles.olTagFadeOut}`}
@@ -43,7 +43,11 @@ function CommentsViewer({ comments }: CommentsViewerProps) {
           {currentComments.map((element, index) => {
             return (
               <li key={index}>
-                <p className={styles.paragraph}>{element}</p>
+                <p
+                  className={`${styles.paragraph} ${index === currentComments.length - 1 ? styles.lastParagraph : ""}`}
+                >
+                  {element}
+                </p>
               </li>
             );
           })}

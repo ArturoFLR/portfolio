@@ -56,7 +56,13 @@
   letter-spacing: 1.5px;
 }
 
+.lastParagraph {
+  margin-bottom: 0rem;
+}
+
 // **********************************************RESPONSIVE
+
+//***********************************HD
 
 @media (min-width: 1920px) {
   .commentsViewerMainContainer {
@@ -96,5 +102,25 @@
     margin-bottom: 8rem;
     font-size: 4.2rem;
     line-height: 140%;
+  }
+}
+
+// ************************************MOBILE
+
+@media (max-width: 1440px) {
+  .paragraph {
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .letterTranslatorPositioner {
+    display: none;
+  }
+
+  .paragraph {
+    margin-bottom: 2rem;
+    font-size: 2rem;
   }
 }

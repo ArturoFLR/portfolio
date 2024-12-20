@@ -18,8 +18,13 @@
   padding: 5rem 0rem 2rem 0rem;
 }
 
+.letterTranslatorContainer {
+  display: none;
+}
+
 .sliderSmallAndCommentsContainer {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   column-gap: 4rem;
   width: 90%;
@@ -44,12 +49,16 @@
 
   .techIconsContainer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     column-gap: 1.6rem;
     margin-top: 2.5rem;
   }
 }
 
 // **********************************************RESPONSIVE
+
+//***********************************HD
 
 @media (min-width: 1920px) {
   .linksAndTechIconsContainer {
@@ -81,6 +90,80 @@
     .techIconsContainer {
       column-gap: 2.5rem;
       margin-top: 5rem;
+    }
+  }
+}
+
+// ************************************MOBILE
+
+@media (max-width: 1550px) {
+  .sliderSmallAndCommentsContainer {
+    column-gap: 4rem;
+    width: 97%;
+
+    .commentsViewerContainer {
+      width: 45%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .mainTag {
+    padding: 7rem 0rem 2rem 0rem;
+  }
+
+  .letterTranslatorContainer {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .sliderSmallAndCommentsContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 2rem;
+    width: 95%;
+
+    .commentsViewerContainer {
+      width: 70%;
+    }
+  }
+
+  .linksAndTechIconsContainer {
+    margin-top: 4vh;
+
+    .linksContainer {
+      column-gap: 3rem;
+    }
+
+    .techIconsContainer {
+      column-gap: 1rem;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .sliderSmallAndCommentsContainer {
+    row-gap: 0.5rem;
+
+    .commentsViewerContainer {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderSmallAndCommentsContainer {
+    width: 99%;
+    .commentsViewerContainer {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .linksAndTechIconsContainer {
+    .techIconsContainer {
+      width: 90%;
     }
   }
 }

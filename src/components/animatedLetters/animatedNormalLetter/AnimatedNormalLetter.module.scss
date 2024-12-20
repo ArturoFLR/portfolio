@@ -45,3 +45,23 @@
   background-color: rgba(237, 240, 247, 0.9);
   animation: flashEffect 0.2s linear forwards;
 }
+
+// **********************************************RESPONSIVE
+
+@media (min-width: 1920px) {
+  .normalLetterContainer {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .normalLetterContainer {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .normalLetterContainer {
+    font-size: 7rem;
+  }
+}
