@@ -176,7 +176,7 @@ function Home() {
                   />
 
                   <ProyectCard
-                    imageSrc="images/proyects/lringenieros/lr_ingenieros-1-miniature.webp"
+                    imageSrc="images/proyects/lringenieros/l&rIngenieros-1-miniature.webp"
                     imageAlt="Imagen de L&R Ingenieros"
                     proyectRoute="/lringenieros"
                     title="L&R Ingenieros"
