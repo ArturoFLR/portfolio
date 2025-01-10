@@ -10,6 +10,7 @@
 }
 
 .mainTag {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,7 +110,8 @@
 
 @media (max-width: 1200px) {
   .mainTag {
-    padding: 7rem 0rem 2rem 0rem;
+    justify-content: flex-start;
+    padding: 7rem 0rem 12rem 0rem;
   }
 
   .letterTranslatorContainer {
@@ -129,14 +131,25 @@
   }
 
   .linksAndTechIconsContainer {
-    margin-top: 4vh;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5rem 0rem 1rem 0rem;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(8, 11, 26) 25%,
+      rgb(8, 11, 26) 100%
+    );
+    margin-top: 0vh;
 
     .linksContainer {
       column-gap: 3rem;
     }
 
     .techIconsContainer {
-      column-gap: 1rem;
+      column-gap: 0.5rem;
+      margin-top: 1rem;
     }
   }
 }
@@ -163,7 +176,7 @@
 @media (max-width: 500px) {
   .linksAndTechIconsContainer {
     .techIconsContainer {
-      width: 90%;
+      width: 98%;
     }
   }
 }

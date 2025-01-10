@@ -108,6 +108,10 @@
 // ************************************MOBILE
 
 @media (max-width: 1440px) {
+  .commentsViewerMainContainer {
+    min-height: 22vh;
+  }
+
   .paragraph {
     margin-bottom: 2rem;
     font-size: 1.7rem;
