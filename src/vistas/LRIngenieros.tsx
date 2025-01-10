@@ -50,6 +50,11 @@ function LRIngenieros() {
   }
 
   useEffect(() => {
+    if (location.state.animated === false) {
+      //This line resets the 'state' set by the <Link /> that refer to Home from other routes, since otherwise the 'animated: false' property of the 'state' is maintained even when reloaded with F5 and the Home animations will never be shown again.
+      window.history.replaceState({}, document.title);
+    }
+
     return () => {
       clearTimeout(changeCommentsTimeout.current);
     };
@@ -79,7 +84,7 @@ function LRIngenieros() {
         </div>
 
         <SliderSmall
-          animated={true}
+          animated={location.state.animated === true ? true : false}
           imagesList={proyectsData.lringenierosImagesAndComments.images}
           imagesMobileList={
             proyectsData.lringenierosImagesAndComments.imagesMobile
