@@ -225,11 +225,11 @@ function SliderSmall({
       {showSparks === true && (
         <>
           <div className={styles.sparkAnimated}>
-            <img src="../../../../public/images/gifs/sparks.png" alt="" />
+            <img src="images/gifs/sparks.png" alt="" />
           </div>
 
           <div className={styles.sparkAnimated2}>
-            <img src="../../../../public/images/gifs/sparks.png" alt="" />
+            <img src="images/gifs/sparks.png" alt="" />
           </div>
         </>
       )}
