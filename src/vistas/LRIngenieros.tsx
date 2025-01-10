@@ -71,6 +71,7 @@ function LRIngenieros() {
       <div className={styles.sliderSmallAndCommentsContainer}>
         <div className={styles.commentsViewerContainer}>
           <CommentsViewer
+            proyectTitle="L&R Ingenieros"
             comments={
               proyectsData.lringenierosImagesAndComments.comments[actualIndex]
             }

@@ -70,6 +70,7 @@ function CheckMate() {
       <div className={styles.sliderSmallAndCommentsContainer}>
         <div className={styles.commentsViewerContainer}>
           <CommentsViewer
+            proyectTitle="CHECKMATE!"
             comments={
               proyectsData.checkmateImagesAndComments.comments[actualIndex]
             }

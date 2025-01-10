@@ -3,10 +3,11 @@ import LetterTranslator from "../../letterTranslator/LetterTranslator";
 import styles from "./CommentsViewer.module.scss";
 
 type CommentsViewerProps = {
+  proyectTitle: string;
   comments: string[];
 };
 
-function CommentsViewer({ comments }: CommentsViewerProps) {
+function CommentsViewer({ proyectTitle, comments }: CommentsViewerProps) {
   const [currentComments, setCurrentComments] = useState<string[]>(comments);
   const [fading, setFading] = useState("in"); //Controls the fade-in and fade-out animations when the component is re-rendered
   const fadingTimeout = useRef<number>(0);
@@ -30,7 +31,7 @@ function CommentsViewer({ comments }: CommentsViewerProps) {
     <div className={styles.commentsViewerMainContainer}>
       <h1 className={styles.letterTranslatorPositioner}>
         <LetterTranslator
-          text="CHECKMATE!"
+          text={proyectTitle}
           activate={true}
           alienLettersTimer={70}
           normalLettersTimer={100}
