@@ -77,7 +77,22 @@ const lringenierosImagesAndComments: ImagesAndComments = {
     "images/proyects/lringenieros/l&rIngenieros-3-miniature.webp",
     "images/proyects/lringenieros/l&rIngenieros-4-big.webp",
   ],
-  comments: [],
+  comments: [
+    [
+      "Sitio Web corporativo para L&R Ingenieros, especializados en la realización de proyectos de instalaciones en edificación.",
+      "Diseño UX/UI e implementación mediante React y TypeScript.",
+      "Desarrollo de un slider animado y personalizado para la página de inicio, sin utilizar librerías de terceros.",
+    ],
+    [
+      "Efectos animados activados por el desplazamiento del usuario mediante scroll (scroll-triggered effects).",
+    ],
+    [
+      "Visor de imágenes de proyectos personalizado. Cuando se detecta más de una imagen en el proyecto se activa el modo slider, permitiendo al usuario navegar entre ellas.",
+    ],
+    [
+      "Diseño completamente responsive y funcional en todo tipo de dispositivos, desde móviles a televisiones 4K.",
+    ],
+  ],
 };
 
 const platinImagesAndComments: ImagesAndComments = {
