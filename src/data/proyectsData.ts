@@ -65,8 +65,18 @@ const checkmateImagesAndComments: ImagesAndComments = {
 };
 
 const lringenierosImagesAndComments: ImagesAndComments = {
-  images: [],
-  imagesMobile: [],
+  images: [
+    "images/proyects/lringenieros/l&rIngenieros-1-big.webp",
+    "images/proyects/lringenieros/l&rIngenieros-2-big.webp",
+    "images/proyects/lringenieros/l&rIngenieros-3-big.webp",
+    "images/proyects/lringenieros/l&rIngenieros-4-big.webp",
+  ],
+  imagesMobile: [
+    "images/proyects/lringenieros/l&rIngenieros-1-miniature.webp",
+    "images/proyects/lringenieros/l&rIngenieros-2-miniature.webp",
+    "images/proyects/lringenieros/l&rIngenieros-3-miniature.webp",
+    "images/proyects/lringenieros/l&rIngenieros-4-big.webp",
+  ],
   comments: [],
 };
 
