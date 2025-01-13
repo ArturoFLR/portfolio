@@ -80,6 +80,8 @@ function En256Colores() {
             comments={
               proyectsData.en256coloresImagesAndComments.comments[actualIndex]
             }
+            alienLettersTimer={50}
+            normalLettersTimer={80}
           />
         </div>
 

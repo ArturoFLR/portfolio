@@ -68,8 +68,8 @@ function LRIngenieros() {
         <LetterTranslator
           text="L&R Ingenieros"
           activate={true}
-          alienLettersTimer={70}
-          normalLettersTimer={100}
+          alienLettersTimer={50}
+          normalLettersTimer={80}
         />
       </h1>
 
@@ -80,6 +80,8 @@ function LRIngenieros() {
             comments={
               proyectsData.lringenierosImagesAndComments.comments[actualIndex]
             }
+            alienLettersTimer={50}
+            normalLettersTimer={80}
           />
         </div>
 

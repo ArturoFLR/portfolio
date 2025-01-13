@@ -79,6 +79,8 @@ function CheckMate() {
             comments={
               proyectsData.checkmateImagesAndComments.comments[actualIndex]
             }
+            alienLettersTimer={70}
+            normalLettersTimer={100}
           />
         </div>
 
