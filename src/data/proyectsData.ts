@@ -108,9 +108,44 @@ const eatsqualityImagesAndComments: ImagesAndComments = {
 };
 
 const en256coloresImagesAndComments: ImagesAndComments = {
-  images: [],
-  imagesMobile: [],
-  comments: [],
+  images: [
+    "images/proyects/lringenieros/l&rIngenieros-1-big.webp",
+    "images/proyects/lringenieros/l&rIngenieros-2-big.webp",
+    "images/proyects/lringenieros/l&rIngenieros-3-big.webp",
+    "images/proyects/lringenieros/l&rIngenieros-4-big.webp",
+    "images/proyects/lringenieros/l&rIngenieros-5-big.webp",
+    "images/proyects/lringenieros/l&rIngenieros-6-big.webp",
+  ],
+  imagesMobile: [
+    "images/proyects/lringenieros/l&rIngenieros-1-miniature.webp",
+    "images/proyects/lringenieros/l&rIngenieros-2-miniature.webp",
+    "images/proyects/lringenieros/l&rIngenieros-3-miniature.webp",
+    "images/proyects/lringenieros/l&rIngenieros-4-miniature.webp",
+    "images/proyects/lringenieros/l&rIngenieros-5-miniature.webp",
+    "images/proyects/lringenieros/l&rIngenieros-6-big.webp",
+  ],
+  comments: [
+    [
+      "Página web sobre videojuegos clásicos, creada como pasatiempo personal. Realizada con HTML, CSS y JavaScript, sin ningún tipo de librería o framework.",
+      "Fue mi primera toma de contacto con el mundo del desarrollo web, y la experiencia me resultó tan interesante que a la larga me hizo plantearme seriamente un cambio laboral.",
+    ],
+    [
+      "A pesar de desconocer en aquel momento herramientas como CSS Grid o Flexbox, se logró una maquetación de cierta complejidad mediante el uso de la propiedad 'float' y el posicionamiento relativo y absoluto.",
+    ],
+    [
+      "El objetivo de la página, desde el punto de vista del diseño, era emular la estética de las revistas de videojuegos de los años 80 y 90, con multitud de imágenes en diversas configuraciones.",
+      "Para ello se crearon diversas clases CSS reutilizables que permitían utilizar una o varias imágenes alineadas horizontal o verticalmente, con o sin pie de foto, fácilmente.",
+    ],
+    [
+      "También se utilizaron elementos 'aside' con información adicional sobre tecnologías, creadores, anécdotas...",
+    ],
+    [
+      "La página cuenta con un visor de imágenes que se convierte en slider si el usuario pulsa sobre una serie con varias imágenes.",
+    ],
+    [
+      "Diseño completamente responsive y funcional en todo tipo de dispositivos. Los elementos 'aside' son minimizados en la versión móvil para facilitar la navegación, siendo posible desplegarlos pulsando con el ratón.",
+    ],
+  ],
 };
 
 const proyectsData = {
