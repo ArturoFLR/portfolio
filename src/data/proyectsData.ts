@@ -109,20 +109,20 @@ const eatsqualityImagesAndComments: ImagesAndComments = {
 
 const en256coloresImagesAndComments: ImagesAndComments = {
   images: [
-    "images/proyects/lringenieros/l&rIngenieros-1-big.webp",
-    "images/proyects/lringenieros/l&rIngenieros-2-big.webp",
-    "images/proyects/lringenieros/l&rIngenieros-3-big.webp",
-    "images/proyects/lringenieros/l&rIngenieros-4-big.webp",
-    "images/proyects/lringenieros/l&rIngenieros-5-big.webp",
-    "images/proyects/lringenieros/l&rIngenieros-6-big.webp",
+    "images/proyects/en256colores/en256colores-1-big.webp",
+    "images/proyects/en256colores/en256colores-2-big.webp",
+    "images/proyects/en256colores/en256colores-3-big.webp",
+    "images/proyects/en256colores/en256colores-4-big.webp",
+    "images/proyects/en256colores/en256colores-5-big.webp",
+    "images/proyects/en256colores/en256colores-6-big.webp",
   ],
   imagesMobile: [
-    "images/proyects/lringenieros/l&rIngenieros-1-miniature.webp",
-    "images/proyects/lringenieros/l&rIngenieros-2-miniature.webp",
-    "images/proyects/lringenieros/l&rIngenieros-3-miniature.webp",
-    "images/proyects/lringenieros/l&rIngenieros-4-miniature.webp",
-    "images/proyects/lringenieros/l&rIngenieros-5-miniature.webp",
-    "images/proyects/lringenieros/l&rIngenieros-6-big.webp",
+    "images/proyects/en256colores/en256colores-1-miniature.webp",
+    "images/proyects/en256colores/en256colores-2-miniature.webp",
+    "images/proyects/en256colores/en256colores-3-miniature.webp",
+    "images/proyects/en256colores/en256colores-4-miniature.webp",
+    "images/proyects/en256colores/en256colores-5-miniature.webp",
+    "images/proyects/en256colores/en256colores-6-big.webp",
   ],
   comments: [
     [
@@ -143,7 +143,8 @@ const en256coloresImagesAndComments: ImagesAndComments = {
       "La página cuenta con un visor de imágenes que se convierte en slider si el usuario pulsa sobre una serie con varias imágenes.",
     ],
     [
-      "Diseño completamente responsive y funcional en todo tipo de dispositivos. Los elementos 'aside' son minimizados en la versión móvil para facilitar la navegación, siendo posible desplegarlos pulsando con el ratón.",
+      "Diseño completamente responsive y funcional en todo tipo de dispositivos.",
+      "Los elementos 'aside' son minimizados en la versión móvil para facilitar la navegación, siendo posible desplegarlos pulsando con el ratón.",
     ],
   ],
 };
