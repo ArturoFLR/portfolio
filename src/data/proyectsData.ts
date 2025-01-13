@@ -102,9 +102,50 @@ const platinImagesAndComments: ImagesAndComments = {
 };
 
 const eatsqualityImagesAndComments: ImagesAndComments = {
-  images: [],
-  imagesMobile: [],
-  comments: [],
+  images: [
+    "images/proyects/eatsquality/eatsquality-1-big.webp",
+    "images/proyects/eatsquality/eatsquality-2-big.webp",
+    "images/proyects/eatsquality/eatsquality-3-big.webp",
+    "images/proyects/eatsquality/eatsquality-4-big.webp",
+    "images/proyects/eatsquality/eatsquality-5-big.webp",
+    "images/proyects/eatsquality/eatsquality-6-big.webp",
+  ],
+  imagesMobile: [
+    "images/proyects/eatsquality/eatsquality-1-miniature.webp",
+    "images/proyects/eatsquality/eatsquality-2-miniature.webp",
+    "images/proyects/eatsquality/eatsquality-3-miniature.webp",
+    "images/proyects/eatsquality/eatsquality-4-miniature.webp",
+    "images/proyects/eatsquality/eatsquality-5-miniature.webp",
+    "images/proyects/eatsquality/eatsquality-6-miniature.webp",
+  ],
+  comments: [
+    [
+      "Proyecto gestionado por la web No Country, en la que se crean grupos de trabajo formados por diversos perfiles (front-end, back-end, ux/ui...) y se les asigna un jefe de proyecto, con el objetivo de desarrollar una proyecto en 5 semanas. En este caso se decidió crear una Web App de comida a domicilio.",
+      "En la 2º semana el equipo de back-end dejó el proyecto, por lo que tuve que hacerme cargo también de este aspecto con NodeJs + Express.",
+      "A pesar de los contratiempos, se pudo entregar un MVP funcional con los roles de cliente y restaurante en el plazo establecido.",
+    ],
+    [
+      "El cliente puede acceder al menú de cada restaurante para crear su pedido.",
+      "Este puede ser modificado en cualquier momento, añadiendo o eliminando productos, o cancelándolo si es necesario.",
+      "Un usuario puede tener a la vez los roles de cliente y restaurante, pudiendo cambiar entre ellos en cualquier momento sin necesidad de deslogarse. La interfaz de usuario se adaptará en consecuencia.",
+    ],
+    [
+      'Desde el apartado "comidas" se pueden realizar pedidos a varios restaurantes a la vez, generándose en la base de datos un pedido independiente para cada restaurante implicado.',
+    ],
+    [
+      "El cliente puede ver el estado de sus pedidos en curso, así como el histórico de pedidos anteriores.",
+      "Cuando el restaurante modifica el estado, la información se actualiza inmediatamente en la vista de cliente.",
+    ],
+    [
+      "El restaurante también puede consultar los pedidos pendientes y realizados, así como modificar su estado.",
+      "En cada pedido se muestran los datos necesarios para hacer la entrega o contactar con el cliente.",
+    ],
+    [
+      "El restaurante puede crear y modificar su menú, añadiendo o eliminando categorías de comidas, productos y precios.",
+      "Esto se realiza mediante un formulario que genera dinámicamente los campos necesarios.",
+      "El formulario implementa validación de campos.",
+    ],
+  ],
 };
 
 const en256coloresImagesAndComments: ImagesAndComments = {

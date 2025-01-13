@@ -3,6 +3,7 @@ import CheckMate from "../vistas/CheckMate";
 import Home from "../vistas/Home";
 import LRIngenieros from "../vistas/LRIngenieros";
 import En256Colores from "../vistas/En256Colores";
+import EatsQuality from "../vistas/EatsQuality";
 
 function ProyectRoutes() {
   return (
@@ -12,6 +13,7 @@ function ProyectRoutes() {
       <Route path="/checkmate" element={<CheckMate />} />
       <Route path="/lringenieros" element={<LRIngenieros />} />
       <Route path="/en256colores" element={<En256Colores />} />
+      <Route path="/eatsquality" element={<EatsQuality />} />
     </Routes>
   );
 }
