@@ -93,7 +93,9 @@ function LRIngenieros() {
         />
       </div>
 
-      <div className={styles.linksAndTechIconsContainer}>
+      <div
+        className={`${styles.linksAndTechIconsContainer} ${location.state.animated === true ? styles.linksAndTechIconsContainerAnimated : null}`}
+      >
         <div className={styles.linksContainer}>
           <GenericLink
             animated={true}

@@ -4,6 +4,9 @@
   0% {
     opacity: 0;
   }
+  75% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
@@ -39,9 +42,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   margin-top: 9vh;
-  animation: fade-in 1s 2s linear forwards;
 
   .linksContainer {
     display: flex;
@@ -55,6 +57,10 @@
     column-gap: 1.6rem;
     margin-top: 2.5rem;
   }
+}
+
+.linksAndTechIconsContainerAnimated {
+  animation: fade-in 2.3s linear;
 }
 
 // **********************************************RESPONSIVE
