@@ -1,4 +1,4 @@
-import styles from "./LRIngenieros.module.scss";
+import styles from "./ProyectsStyles.module.scss";
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router";
 import TechIcon, { TechIconType } from "../components/techIcon/TechIcon";

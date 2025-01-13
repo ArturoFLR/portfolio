@@ -1,5 +1,5 @@
 import { useLocation } from "react-router";
-import styles from "./CheckMate.module.scss";
+import styles from "./ProyectsStyles.module.scss";
 import ProyectsNav from "../components/navigation/proyectsNav/ProyectsNav";
 import SliderSmall from "../components/proyectDetails/sliderSmall/SliderSmall";
 import proyectsData from "../data/proyectsData";
