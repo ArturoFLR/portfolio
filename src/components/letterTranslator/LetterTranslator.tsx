@@ -8,6 +8,7 @@ type LetterTranslatorProps = {
   activate: boolean;
   alienLettersTimer: number;
   normalLettersTimer: number;
+  forMainPage?: boolean;
 };
 
 function LetterTranslator({
@@ -15,6 +16,7 @@ function LetterTranslator({
   activate,
   alienLettersTimer,
   normalLettersTimer,
+  forMainPage = false,
 }: LetterTranslatorProps) {
   const textArray: string[] = [];
   for (let i = 0; i < text.length; i++) {
@@ -32,9 +34,17 @@ function LetterTranslator({
     if (textToShow.length > 0) {
       textToShow.map((element, index) => {
         if (element === "*") {
-          result.push(<AnimatedAlienLetter key={index} />);
+          result.push(
+            <AnimatedAlienLetter key={index} forMainPage={forMainPage} />,
+          );
         } else {
-          result.push(<AnimatedNormalLetter key={index} letter={element} />);
+          result.push(
+            <AnimatedNormalLetter
+              key={index}
+              letter={element}
+              forMainPage={forMainPage}
+            />,
+          );
         }
       });
     }

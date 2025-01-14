@@ -9,11 +9,23 @@
   filter: drop-shadow(0 0 7px #87ebb4);
 }
 
+// Esta clase sólo se aplica si la prop forMainPage es true
+.alienLetterContForMainPage {
+  font-size: 2rem;
+}
+
 // **********************************************RESPONSIVE
+
+//***********************************HD
 
 @media (min-width: 1920px) {
   .alienLetterContainer {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+  }
+
+  .alienLetterContForMainPage {
+    width: 1.8rem;
+    font-size: 2.6rem;
   }
 }
 
@@ -22,11 +34,21 @@
     width: 2.3rem;
     font-size: 3.5rem;
   }
+
+  .alienLetterContForMainPage {
+    width: 3rem;
+    font-size: 4rem;
+  }
 }
 
 @media (min-width: 3840px) {
   .alienLetterContainer {
     width: 3.3rem;
     font-size: 5rem;
+  }
+
+  .alienLetterContForMainPage {
+    width: 5rem;
+    font-size: 6.5rem;
   }
 }

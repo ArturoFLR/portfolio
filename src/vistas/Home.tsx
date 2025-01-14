@@ -81,6 +81,7 @@ function Home() {
               activate={true}
               alienLettersTimer={mainState === "noAnimations" ? 10 : 100}
               normalLettersTimer={mainState === "noAnimations" ? 15 : 150}
+              forMainPage={true}
             />
           )}
         </div>

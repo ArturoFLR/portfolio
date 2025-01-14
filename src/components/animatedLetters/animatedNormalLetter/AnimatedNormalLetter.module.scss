@@ -35,6 +35,11 @@
   animation: textGlow 1s 0.05s linear;
 }
 
+// Esta clase sólo se aplica si la prop forMainPage es true
+.normalLetterContForMainPage {
+  font-size: 3rem;
+}
+
 .flashEffectContainer {
   position: absolute;
   top: 0;
@@ -48,9 +53,15 @@
 
 // **********************************************RESPONSIVE
 
+//***********************************HD
+
 @media (min-width: 1920px) {
   .normalLetterContainer {
     font-size: 3.5rem;
+  }
+
+  .normalLetterContForMainPage {
+    font-size: 4rem;
   }
 }
 
@@ -58,10 +69,18 @@
   .normalLetterContainer {
     font-size: 5rem;
   }
+
+  .normalLetterContForMainPage {
+    font-size: 6.5rem;
+  }
 }
 
 @media (min-width: 3840px) {
   .normalLetterContainer {
     font-size: 7rem;
+  }
+
+  .normalLetterContForMainPage {
+    font-size: 12rem;
   }
 }

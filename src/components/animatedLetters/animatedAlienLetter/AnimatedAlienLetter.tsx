@@ -2,7 +2,13 @@ import alienCharacters from "./alienCharacters";
 import styles from "./AnimatedAlienLetter.module.scss";
 import { useEffect, useRef, useState } from "react";
 
-function AnimatedAlienLetter() {
+type AnimatedAlienLetterProps = {
+  forMainPage?: boolean;
+};
+
+function AnimatedAlienLetter({
+  forMainPage = false,
+}: AnimatedAlienLetterProps) {
   const [showedCharacter, setShowedCharacter] = useState<number>(0);
   let changeInterval = useRef<number>(0);
 
@@ -16,7 +22,9 @@ function AnimatedAlienLetter() {
   }, []);
 
   return (
-    <span className={styles.alienLetterContainer}>
+    <span
+      className={`${styles.alienLetterContainer} ${forMainPage ? styles.alienLetterContForMainPage : null}`}
+    >
       {alienCharacters[showedCharacter]}
     </span>
   );

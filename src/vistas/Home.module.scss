@@ -83,3 +83,45 @@
 
 // .techSectionContainer {
 // }
+
+// **********************************************RESPONSIVE
+
+//***********************************HD
+
+@media (min-width: 1920px) {
+  .mainTag {
+    padding: 12rem 0rem;
+  }
+
+  .headerTag {
+    .mainLetterTranslatorContainer {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  .mainTag {
+    padding: 15rem 0rem;
+  }
+
+  .headerTag {
+    .mainLetterTranslatorContainer {
+      margin-top: 4rem;
+    }
+  }
+}
+
+@media (min-width: 3840px) {
+  .mainTag {
+    padding: 22rem 0rem;
+  }
+
+  .headerTag {
+    .mainLetterTranslatorContainer {
+      overflow: visible;
+      height: 10rem;
+      margin-top: 12rem;
+    }
+  }
+}
