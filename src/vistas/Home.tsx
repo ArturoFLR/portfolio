@@ -162,8 +162,6 @@ function Home() {
                     description1="Proyecto Personal."
                     description2="Juego de ajedrez online para uno o dos jugadores con varios niveles de dificultad, avatares y posibilidad de guardar y cargar partida."
                     techIcons={[
-                      "html5",
-                      "css3",
                       "poo",
                       "typescript",
                       "react",
@@ -183,14 +181,11 @@ function Home() {
                     description1="Trabajo Freelance."
                     description2="Sitio Web oficial de L&R Ingenieros. Diseño UX/UI responsive, implementación con React y TypeScript y despliegue final con dominio propio en Netlify."
                     techIcons={[
-                      "html5",
-                      "css3",
                       "typescript",
                       "react",
                       "reactrouter",
                       "sass",
                       "netlify",
-                      "vite",
                       "git",
                     ]}
                     online="https://www.lringenieros.es/"
@@ -205,14 +200,12 @@ function Home() {
                     description1="Proyecto en Equipo para ID for Ideas."
                     description2="Web App diseñada para promocionar las huertas agroecológicas dentro del territorio nacional Argentino. Principal responsable del Front-End."
                     techIcons={[
-                      "docker",
                       "typescript",
                       "react",
-                      "reactrouter",
+                      "docker",
                       "leaflet",
                       "tailwind",
-                      "vite",
-                      "git",
+                      "netlify",
                       "azure",
                     ]}
                     online="https://plant-in.netlify.app/"
@@ -227,7 +220,6 @@ function Home() {
                     description1="Proyecto en Equipo para No Country."
                     description2="Web App de comida a domicilio. En menos de 4 semanas se pudo entregar un MVP con los roles de cliente y restaurante operativos."
                     techIcons={[
-                      "html5",
                       "typescript",
                       "react",
                       "reactrouter",
@@ -246,7 +238,7 @@ function Home() {
                     title="En 256 Colores"
                     description1="Proyecto Personal."
                     description2="Sitio Web personal orientado a los videojuegos clásicos. Mi primera toma de contacto con el diseño web antes de plantearme un cambio laboral."
-                    techIcons={["html5", "css3", "javascript"]}
+                    techIcons={["html5", "css3", "javascript", "vscode"]}
                     online="https://www.en256colores.com/index.html"
                   />
                 </div>
