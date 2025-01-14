@@ -18,13 +18,13 @@ function EatsQuality() {
 
   const techIcons: TechIconType[] = [
     "html5",
-    "css3",
     "typescript",
     "react",
     "reactrouter",
-    "sass",
+    "tailwind",
+    "express",
+    "jira",
     "vite",
-    "netlify",
     "vscode",
     "git",
   ];

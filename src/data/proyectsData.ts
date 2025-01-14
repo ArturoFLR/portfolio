@@ -121,7 +121,7 @@ const eatsqualityImagesAndComments: ImagesAndComments = {
   comments: [
     [
       "Proyecto gestionado por la web No Country, en la que se crean grupos de trabajo formados por diversos perfiles (front-end, back-end, ux/ui...) y se les asigna un jefe de proyecto, con el objetivo de desarrollar una proyecto en 5 semanas. En este caso se decidió crear una Web App de comida a domicilio.",
-      "En la 2º semana el equipo de back-end dejó el proyecto, por lo que tuve que hacerme cargo también de este aspecto con NodeJs + Express.",
+      "En la 2º semana el equipo de back-end dejó el proyecto, por lo que tuve que hacerme cargo también de este aspecto (NodeJs + Express)<.",
       "A pesar de los contratiempos, se pudo entregar un MVP funcional con los roles de cliente y restaurante en el plazo establecido.",
     ],
     [
@@ -130,6 +130,8 @@ const eatsqualityImagesAndComments: ImagesAndComments = {
       "Un usuario puede tener a la vez los roles de cliente y restaurante, pudiendo cambiar entre ellos en cualquier momento sin necesidad de deslogarse. La interfaz de usuario se adaptará en consecuencia.",
     ],
     [
+      "La mayor parte del equipo estaba formado por personas residentes en Sudamérica, lo que supuso un reto añadido a la hora de coordinar horarios y comunicaciones.",
+      "Durante el proyecto se utilizó Jira para la gestión de tareas mediante metodología Scrum y se realizaban reuniones diarias para evaluar el progreso y los problemas encontrados.",
       'Desde el apartado "comidas" se pueden realizar pedidos a varios restaurantes a la vez, generándose en la base de datos un pedido independiente para cada restaurante implicado.',
     ],
     [

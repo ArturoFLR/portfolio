@@ -16,18 +16,7 @@ function En256Colores() {
   const location = useLocation();
   if (location.state === null) location.state = { animated: true };
 
-  const techIcons: TechIconType[] = [
-    "html5",
-    "css3",
-    "typescript",
-    "react",
-    "reactrouter",
-    "sass",
-    "vite",
-    "netlify",
-    "vscode",
-    "git",
-  ];
+  const techIcons: TechIconType[] = ["html5", "css3", "javascript", "vscode"];
 
   function techIconsGenerator() {
     const iconElementList: React.ReactNode[] = [];
