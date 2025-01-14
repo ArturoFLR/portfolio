@@ -52,3 +52,29 @@
     font-size: 6.5rem;
   }
 }
+
+//***********************************LOWER RESOLUTIONS
+
+@media (max-width: 700px) {
+  .alienLetterContForMainPage {
+    width: 1rem;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 590px) {
+}
+
+@media (max-width: 520px) {
+  .alienLetterContForMainPage {
+    width: 0.7rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .alienLetterContForMainPage {
+    width: 0.7rem;
+    font-size: 1.3rem;
+  }
+}

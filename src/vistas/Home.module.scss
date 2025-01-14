@@ -125,3 +125,32 @@
     }
   }
 }
+
+//***********************************LOWER RESOLUTIONS
+
+@media (max-width: 700px) {
+  .headerTag {
+    .mainLetterTranslatorContainer {
+      margin-top: -1rem;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+}
+
+@media (max-width: 520px) {
+  .headerTag {
+    .mainLetterTranslatorContainer {
+      margin-top: -1.5rem;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .headerTag {
+    .mainLetterTranslatorContainer {
+      margin-top: -1.8rem;
+    }
+  }
+}
