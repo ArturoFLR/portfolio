@@ -87,7 +87,21 @@
 
 //***********************************LOWER RESOLUTIONS
 
+@media (max-width: 1200px) {
+  .normalLetterContainer {
+    font-size: 5rem;
+  }
+
+  .normalLetterContForMainPage {
+    font-size: 3rem;
+  }
+}
+
 @media (max-width: 700px) {
+  .normalLetterContainer {
+    font-size: 4rem;
+  }
+
   .normalLetterContForMainPage {
     font-size: 2.3rem;
   }
@@ -97,6 +111,10 @@
 }
 
 @media (max-width: 520px) {
+  .normalLetterContainer {
+    font-size: 3rem;
+  }
+
   .normalLetterContForMainPage {
     font-size: 1.9rem;
   }

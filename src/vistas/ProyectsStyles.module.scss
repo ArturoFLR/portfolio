@@ -101,7 +101,7 @@
   }
 }
 
-// ************************************MOBILE
+// ************************************LOW-RES & MOBILE
 
 @media (max-width: 1550px) {
   .sliderSmallAndCommentsContainer {
@@ -180,6 +180,14 @@
 }
 
 @media (max-width: 500px) {
+  .mainTag {
+    padding: 5.5rem 0rem 12rem 0rem;
+  }
+
+  .letterTranslatorContainer {
+    margin-bottom: 0.5rem;
+  }
+
   .linksAndTechIconsContainer {
     .techIconsContainer {
       width: 98%;
