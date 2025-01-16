@@ -63,7 +63,8 @@
   }
 }
 
-.imageContainer {
+.imageContainer,
+.imageContainerMobile {
   overflow: hidden;
   width: 110px;
   height: 110px;
@@ -80,6 +81,10 @@
   .imageAnimated {
     animation: intro-fade-in 0.5s linear;
   }
+}
+
+.imageContainerMobile {
+  display: none;
 }
 
 .imageContainerAnimated {
@@ -163,5 +168,90 @@
   .imageContainer {
     width: 270px;
     height: 270px;
+  }
+}
+
+//***********************************LOWER RESOLUTIONS
+
+@media (max-width: 800px) {
+  .profileMainContainer {
+    width: 90%;
+  }
+
+  .textContainer {
+    width: 100%;
+
+    .paragraph {
+      margin-top: 1.9rem;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+
+      span {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  .imageContainer {
+    display: none;
+  }
+
+  .imageContainerMobile {
+    display: block;
+    float: right;
+    width: 110px;
+    height: 110px;
+    margin: 1rem 0rem 1rem 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .textContainer {
+    .paragraph {
+      margin-top: 1.5rem;
+      font-size: 2.1rem;
+      letter-spacing: 1px;
+      line-height: 120%;
+
+      span {
+        font-size: 2.3rem;
+      }
+    }
+  }
+
+  .imageContainerMobile {
+    width: 90px;
+    height: 90px;
+    margin: 1rem 0rem 1rem 1rem;
+    border: 1px solid $iconLightBlueColor;
+
+    .image {
+      scale: 1.4;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .textContainer {
+    .paragraph {
+      margin-top: 1.5rem;
+      font-size: 1.9rem;
+      letter-spacing: 1px;
+      line-height: 120%;
+
+      span {
+        font-size: 2.1rem;
+      }
+    }
+  }
+
+  .imageContainerMobile {
+    width: 75px;
+    height: 75px;
+    margin: 1rem 0rem 1rem 1rem;
+
+    .image {
+      scale: 1.5;
+    }
   }
 }

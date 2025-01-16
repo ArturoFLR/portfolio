@@ -13,6 +13,17 @@ function Profile({ animated }: ProfileProps) {
           Sobre
           <span> mí</span>
         </HeaderH2>
+
+        <div
+          className={`${styles.imageContainerMobile} ${animated ? styles.imageContainerAnimated : null}`}
+        >
+          <img
+            className={`${styles.image} ${animated ? styles.imageAnimated : null}`}
+            src="images/arturoImg.webp"
+            alt="Fotografía de Arturo López"
+          />
+        </div>
+
         <p
           className={`${styles.paragraph} ${animated ? styles.paragraphAnimated : null}`}
         >
