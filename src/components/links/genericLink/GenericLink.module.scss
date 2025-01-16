@@ -153,8 +153,9 @@
   .genericLinkMainContainer {
     .genericLinkContentContainer {
       column-gap: 1.2rem;
-      padding: 0.8rem 1.5rem;
+      padding: 0.8rem 2rem;
       border: 1.5px solid $normalTextColor;
+      border-radius: 35px;
 
       &:hover {
         filter: drop-shadow(0 0 8px $blueGlowEffect);

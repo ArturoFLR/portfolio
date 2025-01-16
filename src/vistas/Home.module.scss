@@ -98,6 +98,16 @@
       margin-top: 1rem;
     }
   }
+
+  .profilePositioner {
+    margin-top: 14rem;
+  }
+
+  .mainButtonsContainer {
+    column-gap: 6rem;
+    width: 100%;
+    margin: 3rem 0rem 0rem 4rem;
+  }
 }
 
 @media (min-width: 2560px) {
@@ -109,6 +119,10 @@
     .mainLetterTranslatorContainer {
       margin-top: 4rem;
     }
+  }
+
+  .profilePositioner {
+    margin-top: 22rem;
   }
 }
 
@@ -123,6 +137,16 @@
       height: 10rem;
       margin-top: 12rem;
     }
+  }
+
+  .profilePositioner {
+    margin-top: 32rem;
+  }
+
+  .mainButtonsContainer {
+    column-gap: 6rem;
+    width: 100%;
+    margin: 4rem 0rem 0rem 4rem;
   }
 }
 

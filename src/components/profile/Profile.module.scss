@@ -85,3 +85,83 @@
 .imageContainerAnimated {
   animation: intro-box-glow 1s linear;
 }
+
+// **********************************************RESPONSIVE
+
+//***********************************HD
+
+@media (min-width: 1920px) {
+  .profileMainContainer {
+    width: 950px;
+  }
+
+  .textContainer {
+    width: 780px;
+
+    .paragraph {
+      margin-top: 1.9rem;
+      font-size: 2.5rem;
+      letter-spacing: 1.3px;
+      line-height: 130%;
+
+      span {
+        font-size: 2.7rem;
+      }
+    }
+  }
+
+  .imageContainer {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .profileMainContainer {
+    width: 1350px;
+  }
+
+  .textContainer {
+    width: 1100px;
+
+    .paragraph {
+      margin-top: 2rem;
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+
+      span {
+        font-size: 3.8rem;
+      }
+    }
+  }
+
+  .imageContainer {
+    width: 210px;
+    height: 210px;
+    border: 3px solid $iconLightBlueColor;
+  }
+}
+
+@media (min-width: 3840px) {
+  .profileMainContainer {
+    width: 2050px;
+  }
+
+  .textContainer {
+    width: 1650px;
+
+    .paragraph {
+      margin-top: 2.5rem;
+      font-size: 4.7rem;
+
+      span {
+        font-size: 5.2rem;
+      }
+    }
+  }
+
+  .imageContainer {
+    width: 270px;
+    height: 270px;
+  }
+}

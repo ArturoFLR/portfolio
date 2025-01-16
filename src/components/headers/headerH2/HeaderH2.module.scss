@@ -27,3 +27,25 @@
 .h2tagAnimated {
   animation: intro-drop-glow 1s linear;
 }
+
+// **********************************************RESPONSIVE
+
+//***********************************HD
+
+@media (min-width: 1920px) {
+  .h2Tag {
+    font-size: 4.6rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .h2Tag {
+    font-size: 5.5rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .h2Tag {
+    font-size: 8rem;
+  }
+}
