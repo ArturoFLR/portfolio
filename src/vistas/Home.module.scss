@@ -108,6 +108,10 @@
     width: 100%;
     margin: 3rem 0rem 0rem 4rem;
   }
+
+  .animatedLinePositioner {
+    margin-top: 18rem;
+  }
 }
 
 @media (min-width: 2560px) {
@@ -123,6 +127,10 @@
 
   .profilePositioner {
     margin-top: 22rem;
+  }
+
+  .animatedLinePositioner {
+    margin-top: 24rem;
   }
 }
 
@@ -148,6 +156,10 @@
     width: 100%;
     margin: 5rem 0rem 0rem 4rem;
   }
+
+  .animatedLinePositioner {
+    margin-top: 40rem;
+  }
 }
 
 //***********************************LOWER RESOLUTIONS
@@ -171,6 +183,10 @@
       top: 5rem;
       right: 0.3rem;
     }
+  }
+
+  .animatedLinePositioner {
+    width: 90%;
   }
 }
 
@@ -196,6 +212,10 @@
       margin-top: -1rem;
     }
   }
+
+  .animatedLinePositioner {
+    margin-top: 9rem;
+  }
 }
 
 @media (max-width: 590px) {
@@ -217,6 +237,10 @@
     .mainLetterTranslatorContainer {
       margin-top: -1.5rem;
     }
+  }
+
+  .animatedLinePositioner {
+    margin-top: 8rem;
   }
 }
 
