@@ -99,9 +99,71 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: $orangeText;
   font-size: 2rem;
   font-weight: 500;
   font-family: $buttonTextFont;
   z-index: 3;
+}
+
+// **********************************************RESPONSIVE
+
+//***********************************HD
+
+@media (min-width: 1920px) {
+  .mainContainer {
+    width: 130px;
+    height: 130px;
+  }
+
+  .content {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .mainContainer {
+    width: 180px;
+    height: 180px;
+  }
+
+  .content {
+    font-size: 3.2rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .mainContainer {
+    width: 240px;
+    height: 240px;
+  }
+
+  .content {
+    font-size: 4.3rem;
+  }
+}
+
+//***********************************LOWER RESOLUTIONS
+
+@media (max-width: 900px) {
+  .mainContainer {
+    width: 90px;
+    height: 90px;
+  }
+
+  .content {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .mainContainer {
+    width: 60px;
+    height: 60px;
+  }
+
+  .content {
+    font-size: 1.6rem;
+  }
 }

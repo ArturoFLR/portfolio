@@ -32,7 +32,7 @@
 
   .skipAnimationButtonPositioner {
     position: absolute;
-    top: 3vh;
+    top: 6vh;
     right: 10vw;
   }
 }
@@ -128,6 +128,24 @@
 
 //***********************************LOWER RESOLUTIONS
 
+@media (max-width: 1024px) {
+  .headerTag {
+    .skipAnimationButtonPositioner {
+      top: 5rem;
+      right: 4rem;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .headerTag {
+    .skipAnimationButtonPositioner {
+      top: 5rem;
+      right: 0.3rem;
+    }
+  }
+}
+
 @media (max-width: 700px) {
   .headerTag {
     .mainLetterTranslatorContainer {
@@ -137,6 +155,11 @@
 }
 
 @media (max-width: 590px) {
+  .headerTag {
+    .skipAnimationButtonPositioner {
+      top: 4rem;
+    }
+  }
 }
 
 @media (max-width: 520px) {
