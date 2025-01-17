@@ -56,11 +56,13 @@ function ProyectCard({
         <HeaderH3>{title}</HeaderH3>
       </div>
 
-      <div className={styles.description1Positioner}>
-        <Paragraph>{description1}</Paragraph>
-      </div>
-      <div className={styles.description2Positioner}>
-        <Paragraph>{description2}</Paragraph>
+      <div className={styles.descriptionsPositioner}>
+        <div className={styles.description1Positioner}>
+          <Paragraph>{description1}</Paragraph>
+        </div>
+        <div className={styles.description2Positioner}>
+          <Paragraph>{description2}</Paragraph>
+        </div>
       </div>
 
       <div className={styles.linksContainer}>

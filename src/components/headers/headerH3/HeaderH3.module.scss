@@ -10,3 +10,25 @@
     color: $blueGlowEffect;
   }
 }
+
+// **********************************************RESPONSIVE
+
+//***********************************HD
+
+@media (min-width: 1920px) {
+  .h3Tag {
+    font-size: 3.1rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .h3Tag {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .h3Tag {
+    font-size: 6.1rem;
+  }
+}

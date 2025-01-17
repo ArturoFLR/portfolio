@@ -132,6 +132,13 @@
   .animatedLinePositioner {
     margin-top: 24rem;
   }
+
+  .sectionsCommonStyles {
+    margin-top: 5rem;
+  }
+  .sectionHeaderContainer {
+    padding-left: 2vw;
+  }
 }
 
 @media (min-width: 3840px) {
@@ -160,9 +167,46 @@
   .animatedLinePositioner {
     margin-top: 40rem;
   }
+
+  .sectionsCommonStyles {
+    margin-top: 7rem;
+  }
+
+  .projectsSectionContainer {
+    .proyectCardsContainer {
+      column-gap: 6rem;
+      row-gap: 6rem;
+      margin: 16rem 0rem 6rem 0rem;
+      padding: 3rem;
+    }
+  }
 }
 
 //***********************************LOWER RESOLUTIONS
+
+@media (max-width: 1650px) {
+  .animatedLinePositioner {
+    width: 90%;
+  }
+
+  .sectionsCommonStyles {
+    width: 90%;
+    padding-left: 0rem;
+  }
+
+  .projectsSectionContainer {
+    .proyectCardsContainer {
+      column-gap: 3rem;
+      row-gap: 3rem;
+      margin: 3rem 0rem 0rem 0rem;
+      padding: 2rem;
+    }
+  }
+
+  .sectionHeaderContainer {
+    padding-left: 2vw;
+  }
+}
 
 @media (max-width: 1024px) {
   .headerTag {
@@ -188,6 +232,19 @@
   .animatedLinePositioner {
     width: 90%;
   }
+
+  .sectionsCommonStyles {
+    width: 90%;
+  }
+
+  .projectsSectionContainer {
+    .proyectCardsContainer {
+      column-gap: 2.5rem;
+      row-gap: 2.5rem;
+      margin: 2.5rem 0rem 0rem 0rem;
+      padding: 1rem;
+    }
+  }
 }
 
 @media (max-width: 800px) {
@@ -203,6 +260,19 @@
     column-gap: 4rem;
     width: 90%;
     margin: 2rem 0rem 0rem 2rem;
+  }
+
+  .sectionsCommonStyles {
+    width: 100%;
+    background: radial-gradient(
+      ellipse at 50% 50%,
+      rgba(80, 116, 146, 0.6),
+      rgb(8, 11, 26) 75%
+    );
+  }
+
+  .sectionHeaderContainer {
+    padding-left: 8vw;
   }
 }
 

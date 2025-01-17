@@ -60,3 +60,43 @@
     }
   }
 }
+
+// **********************************************RESPONSIVE
+
+//***********************************HD
+
+@media (min-width: 1920px) {
+  .proyectCardImageMainContainer {
+    .moreDetailsContainer {
+      font-size: 3rem;
+
+      .iconContainer {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  .proyectCardImageMainContainer {
+    .moreDetailsContainer {
+      font-size: 4rem;
+
+      .iconContainer {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 3840px) {
+  .proyectCardImageMainContainer {
+    .moreDetailsContainer {
+      font-size: 5.5rem;
+
+      .iconContainer {
+        font-size: 6.5rem;
+      }
+    }
+  }
+}

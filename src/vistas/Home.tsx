@@ -149,11 +149,14 @@ function Home() {
               <section
                 className={`${styles.projectsSectionContainer} ${styles.fadeInAnimation} ${styles.sectionsCommonStyles}`}
               >
-                <HeaderH2
-                  animated={mainState === "noAnimations" ? false : true}
-                >
-                  Proyectos
-                </HeaderH2>
+                <div className={styles.sectionHeaderContainer}>
+                  <HeaderH2
+                    animated={mainState === "noAnimations" ? false : true}
+                  >
+                    Proyectos
+                  </HeaderH2>
+                </div>
+
                 <div className={styles.proyectCardsContainer}>
                   <ProyectCard
                     imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
@@ -254,11 +257,13 @@ function Home() {
               <section
                 className={`${styles.techSectionContainer} ${styles.sectionsCommonStyles}`}
               >
-                <HeaderH2
-                  animated={mainState === "noAnimations" ? false : true}
-                >
-                  Tecnologías
-                </HeaderH2>
+                <div className={styles.sectionHeaderContainer}>
+                  <HeaderH2
+                    animated={mainState === "noAnimations" ? false : true}
+                  >
+                    Tecnologías
+                  </HeaderH2>
+                </div>
               </section>
             </>
           )}

@@ -7,3 +7,25 @@
   line-height: 120%;
   color: $normalTextColor;
 }
+
+// **********************************************RESPONSIVE
+
+//***********************************HD
+
+@media (min-width: 1920px) {
+  .pTag {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .pTag {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .pTag {
+    font-size: 4.3rem;
+  }
+}
