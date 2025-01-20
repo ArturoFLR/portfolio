@@ -25,9 +25,10 @@ export type TechIconType =
 
 type TechIconProps = {
   iconName: TechIconType;
+  bigVersion?: boolean;
 };
 
-function TechIcon({ iconName }: TechIconProps) {
+function TechIcon({ iconName, bigVersion = false }: TechIconProps) {
   let colorClassname: string = "";
   let dataTitle: string = "";
   let src: string = "";
@@ -187,7 +188,7 @@ function TechIcon({ iconName }: TechIconProps) {
 
   return (
     <div
-      className={`${styles.techIconContainer} ${colorClassname}`}
+      className={`${styles.techIconContainer} ${colorClassname} ${bigVersion ? styles.bigIconContainer : ""}`}
       data-title={dataTitle}
     >
       <img className={styles.techIcon} src={src} alt={alt} />

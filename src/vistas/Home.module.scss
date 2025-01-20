@@ -61,14 +61,15 @@
   width: 85%;
   margin-top: 2rem;
   padding-left: 2rem;
+}
+
+.projectsSectionContainer {
   background: radial-gradient(
     ellipse at 50% 50%,
     rgba(80, 116, 146, 0.6),
     rgb(8, 11, 26) 60%
   );
-}
 
-.projectsSectionContainer {
   .proyectCardsContainer {
     display: flex;
     flex-wrap: wrap;
@@ -79,6 +80,21 @@
     margin: 3rem 0rem;
     padding: 3rem;
   }
+}
+
+.techItemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 40%;
+  column-gap: 4rem;
+  row-gap: 4rem;
+  margin: 10rem auto 4rem;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(80, 116, 146, 0.218),
+    rgb(8, 11, 26) 74%
+  );
 }
 
 // .techSectionContainer {
@@ -112,6 +128,13 @@
   .animatedLinePositioner {
     margin-top: 18rem;
   }
+
+  .techItemsContainer {
+    width: 42%;
+    column-gap: 5rem;
+    row-gap: 5rem;
+    margin: 11rem auto 4rem;
+  }
 }
 
 @media (min-width: 2560px) {
@@ -138,6 +161,10 @@
   }
   .sectionHeaderContainer {
     padding-left: 2vw;
+  }
+
+  .techItemsContainer {
+    margin: 17rem auto 4rem;
   }
 }
 
@@ -180,6 +207,13 @@
       padding: 3rem;
     }
   }
+
+  .techItemsContainer {
+    width: 40%;
+    column-gap: 6rem;
+    row-gap: 6rem;
+    margin: 22rem auto 6rem;
+  }
 }
 
 //***********************************LOWER RESOLUTIONS
@@ -208,6 +242,21 @@
   }
 }
 
+@media (max-width: 1500px) {
+  .techItemsContainer {
+    width: 43%;
+    column-gap: 3.5rem;
+    row-gap: 3.5rem;
+    margin: 10rem auto 4rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .techItemsContainer {
+    width: 47%;
+  }
+}
+
 @media (max-width: 1024px) {
   .headerTag {
     .skipAnimationButtonPositioner {
@@ -218,6 +267,13 @@
 
   .profilePositioner {
     margin-top: 8rem;
+  }
+
+  .techItemsContainer {
+    width: 55%;
+    column-gap: 2.8rem;
+    row-gap: 2.8rem;
+    margin: 9rem auto 3rem;
   }
 }
 
@@ -245,6 +301,13 @@
       padding: 1rem;
     }
   }
+
+  .techItemsContainer {
+    width: 71%;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+    margin: 8rem auto 2rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -264,11 +327,6 @@
 
   .sectionsCommonStyles {
     width: 100%;
-    background: radial-gradient(
-      ellipse at 50% 50%,
-      rgba(80, 116, 146, 0.6),
-      rgb(8, 11, 26) 75%
-    );
   }
 
   .sectionHeaderContainer {
@@ -285,6 +343,11 @@
 
   .animatedLinePositioner {
     margin-top: 9rem;
+  }
+
+  .techItemsContainer {
+    width: 80%;
+    margin: 7rem auto 0rem;
   }
 }
 
@@ -303,6 +366,13 @@
     column-gap: 3rem;
     width: 95%;
     margin: 2rem 0rem 0rem 2rem;
+  }
+
+  .techItemsContainer {
+    width: 85%;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+    margin: 7rem auto 0rem;
   }
 }
 

@@ -10,6 +10,7 @@ import AnimatedLine from "../components/animatedLine/AnimatedLine";
 import HeaderH2 from "../components/headers/headerH2/HeaderH2";
 import ProyectCard from "../components/proyectCard/ProyectCard";
 import { useLocation } from "react-router";
+import TechIcon, { TechIconType } from "../components/techIcon/TechIcon";
 
 type MainStateType =
   | "loading1"
@@ -25,6 +26,30 @@ function Home() {
   const location = useLocation();
 
   if (location.state === null) location.state = { animated: true };
+
+  const techIcons: TechIconType[] = [
+    "css3",
+    "docker",
+    "express",
+    "git",
+    "html5",
+    "javascript",
+    "netlify",
+    "poo",
+    "react",
+    "reactrouter",
+    "sass",
+    "tailwind",
+    "typescript",
+    "vscode",
+    "leaflet",
+    "jest",
+    "cypress",
+    "axios",
+    "vite",
+    "azure",
+    "jira",
+  ];
 
   function handleSkipAnimationButtonClick() {
     clearTimeout(mainStateTimeout.current);
@@ -263,6 +288,18 @@ function Home() {
                   >
                     Tecnologías
                   </HeaderH2>
+                </div>
+
+                <div className={styles.techItemsContainer}>
+                  {techIcons.map((element, index) => {
+                    return (
+                      <TechIcon
+                        key={index}
+                        iconName={element}
+                        bigVersion={true}
+                      />
+                    );
+                  })}
                 </div>
               </section>
             </>
