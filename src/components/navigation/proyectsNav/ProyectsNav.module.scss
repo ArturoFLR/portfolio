@@ -22,6 +22,16 @@
     column-gap: 12rem;
     width: 99vw;
     padding: 1.5rem 0rem;
+
+    .prevLinkContainer {
+      display: flex;
+      justify-content: flex-end;
+      min-width: 30vw;
+    }
+
+    .nextLinkContainer {
+      min-width: 30vw;
+    }
   }
 
   .prevLinkContainer,
@@ -111,6 +121,12 @@
       justify-content: space-around;
       column-gap: 0rem;
       padding: 1rem 0rem;
+
+      .prevLinkContainer,
+      .nextLinkContainer {
+        display: block;
+        min-width: fit-content;
+      }
     }
 
     .prevLinkIconContainer,

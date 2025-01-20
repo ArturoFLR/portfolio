@@ -59,7 +59,7 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
         </ol>
         <ol className={styles.proyectsNavOlTag}>
           <NavLink linkType="link" linkHref="/" animatedLinkState={false}>
-            Home
+            <div className={styles.homeLinkContainer}>Home</div>
           </NavLink>
         </ol>
         <ol className={styles.proyectsNavOlTag}>
