@@ -15,7 +15,7 @@ html {
 
 body {
   overflow-x: hidden;
-  min-height: 110vh;
+  min-height: 100vh;
   font-size: 1.6rem;
   background-color: rgb(8, 11, 26);
 }
@@ -26,7 +26,7 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 110vh;
+  min-height: 100vh;
   background: radial-gradient(
     circle at 45% -120%,
     rgba(138, 198, 248, 0.6),
