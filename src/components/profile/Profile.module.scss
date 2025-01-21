@@ -33,6 +33,17 @@
   }
 }
 
+@keyframes lightbulb-glow {
+  0% {
+    filter: drop-shadow(0px 0px 1px $orangeGlowEffect)
+      drop-shadow(0px 0px 4px $orangeGlowEffect);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 11px $orangeGlowEffect)
+      drop-shadow(0px 0px 11px $orangeGlowEffect);
+  }
+}
+
 .profileMainContainer {
   display: flex;
   justify-content: space-between;
@@ -61,6 +72,47 @@
   .paragraphAnimated {
     animation: longer-intro-fade-in 2s linear;
   }
+}
+
+.learningSectionContainer {
+  margin: 2rem 0rem 1rem 1rem;
+  font-family: $normalTextFont;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 1.8rem;
+
+  .learningSectionMainTextAndIconContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    .learningSectionMainText {
+      color: $normalTextColor;
+    }
+  }
+
+  ol {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+    color: $highlightedText;
+
+    .learningSectionLoadingIcon {
+      margin-right: 1rem;
+      color: $highlightedText;
+      font-size: 1rem;
+      filter: drop-shadow(0 0 16px $orangeGlowEffect);
+      animation: lightbulb-glow 1.5s linear alternate infinite;
+    }
+  }
+
+  ol:first-child {
+    margin-bottom: 1.2rem;
+  }
+}
+
+.learningSectionContainerAnimated {
+  animation: longer-intro-fade-in 2s linear;
 }
 
 .imageContainer,
@@ -115,6 +167,10 @@
     }
   }
 
+  .learningSectionContainer {
+    font-size: 2.1rem;
+  }
+
   .imageContainer {
     width: 140px;
     height: 140px;
@@ -140,6 +196,28 @@
     }
   }
 
+  .learningSectionContainer {
+    margin: 2rem 0rem 2rem 2.5rem;
+    font-size: 3rem;
+
+    .learningSectionMainTextAndIconContainer {
+      margin-bottom: 2rem;
+    }
+
+    ol {
+      margin-left: 5rem;
+
+      .learningSectionLoadingIcon {
+        margin-right: 1.5rem;
+        font-size: 1.8rem;
+      }
+    }
+
+    ol:first-child {
+      margin-bottom: 1.5rem;
+    }
+  }
+
   .imageContainer {
     width: 210px;
     height: 210px;
@@ -162,6 +240,28 @@
       span {
         font-size: 5.2rem;
       }
+    }
+  }
+
+  .learningSectionContainer {
+    margin: 2rem 0rem 2rem 4rem;
+    font-size: 4rem;
+
+    .learningSectionMainTextAndIconContainer {
+      margin-bottom: 3rem;
+    }
+
+    ol {
+      margin-left: 6rem;
+
+      .learningSectionLoadingIcon {
+        margin-right: 2rem;
+        font-size: 2rem;
+      }
+    }
+
+    ol:first-child {
+      margin-bottom: 2rem;
     }
   }
 
@@ -192,6 +292,23 @@
     }
   }
 
+  .learningSectionContainer {
+    margin: 1rem 0rem 1rem 1rem;
+    font-size: 1.8rem;
+
+    .learningSectionMainTextAndIconContainer {
+      margin-bottom: 1rem;
+    }
+
+    ol {
+      margin-left: 3rem;
+    }
+
+    ol:first-child {
+      margin-bottom: 0.8rem;
+    }
+  }
+
   .imageContainer {
     display: none;
   }
@@ -219,6 +336,23 @@
     }
   }
 
+  .learningSectionContainer {
+    margin: 1rem 0rem 1rem 0rem;
+    font-size: 1.7rem;
+
+    .learningSectionMainTextAndIconContainer {
+      margin-bottom: 1rem;
+    }
+
+    ol {
+      margin-left: 2rem;
+    }
+
+    ol:first-child {
+      margin-bottom: 0.8rem;
+    }
+  }
+
   .imageContainerMobile {
     width: 90px;
     height: 90px;
@@ -243,6 +377,10 @@
         font-size: 2rem;
       }
     }
+  }
+
+  .learningSectionContainer {
+    font-size: 1.6rem;
   }
 
   .imageContainerMobile {
