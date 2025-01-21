@@ -8,6 +8,7 @@ type SliderSmallProps = {
   imagesList: string[];
   imagesMobileList: string[];
   changeComments: (newIndex: number) => void;
+  handlePictureOnClick: (pictureUrl: string) => void;
 };
 
 function SliderSmall({
@@ -15,6 +16,7 @@ function SliderSmall({
   imagesList,
   imagesMobileList,
   changeComments,
+  handlePictureOnClick,
 }: SliderSmallProps) {
   const [shownImageIndex, setShownImageIndex] = useState<number>(0);
   const [isMobileResolution, setIsMobileResolution] = useState<boolean>(
@@ -160,6 +162,7 @@ function SliderSmall({
             className={styles.shownImageMainContainer}
           >
             <button
+              onClick={() => handlePictureOnClick(imagesList[shownImageIndex])}
               type="button"
               className={styles.allButtons}
               aria-label="Ver imagen a pantalla completa"

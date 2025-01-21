@@ -1,1 +1,34 @@
-@use "../../fontsAndVariables" as *;
+@use "../../../fontsAndVariables" as *;
+
+.pictureViewerScreenDarkener {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.pictureViewerFrame {
+  position: relative;
+  width: 70%;
+  aspect-ratio: 16/9;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pictureViewerCloseButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    background-color: white;
+    color: $iconLightBlueColor;
+    font-family: $buttonTextFont;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

@@ -8,9 +8,12 @@ import CommentsViewer from "../components/proyectDetails/commentsViewer/Comments
 import TechIcon, { TechIconType } from "../components/techIcon/TechIcon";
 import GenericLink from "../components/links/genericLink/GenericLink";
 import LetterTranslator from "../components/letterTranslator/LetterTranslator";
+import PictureViewer from "../components/proyectDetails/pictureViewer/PictureViewer";
 
 function CheckMate() {
   const [actualIndex, setActualIndex] = useState<number>(0);
+  const [showPictureViewer, setShowPictureViewer] = useState<boolean>(false);
+  const [pictureUrlForViewer, setPictureUrlForViewer] = useState<string>("");
   const changeCommentsTimeout = useRef<number>(0);
 
   const location = useLocation();
@@ -46,6 +49,11 @@ function CheckMate() {
     changeCommentsTimeout.current = window.setTimeout(() => {
       setActualIndex(newIndex);
     }, 1300);
+  }
+
+  function handlePictureOnClick(pictureUrl: string) {
+    setPictureUrlForViewer(pictureUrl);
+    setShowPictureViewer(true);
   }
 
   useEffect(() => {
@@ -91,6 +99,7 @@ function CheckMate() {
             proyectsData.checkmateImagesAndComments.imagesMobile
           }
           changeComments={changeComments}
+          handlePictureOnClick={handlePictureOnClick}
         />
       </div>
 
@@ -117,6 +126,10 @@ function CheckMate() {
 
         <div className={styles.techIconsContainer}>{techIconsGenerator()}</div>
       </div>
+
+      {showPictureViewer ? (
+        <PictureViewer pictureUrl={pictureUrlForViewer} />
+      ) : null}
     </main>
   );
 }
