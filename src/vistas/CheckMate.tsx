@@ -56,6 +56,10 @@ function CheckMate() {
     setShowPictureViewer(true);
   }
 
+  function handlePictureViewerClose() {
+    setShowPictureViewer(false);
+  }
+
   useEffect(() => {
     if (location.state.animated === false) {
       //This line resets the 'state' set by the <Link /> that refer to Home from other routes, since otherwise the 'animated: false' property of the 'state' is maintained even when reloaded with F5 and the Home animations will never be shown again.
@@ -128,7 +132,10 @@ function CheckMate() {
       </div>
 
       {showPictureViewer ? (
-        <PictureViewer pictureUrl={pictureUrlForViewer} />
+        <PictureViewer
+          pictureUrl={pictureUrlForViewer}
+          handlePictureViewerClose={handlePictureViewerClose}
+        />
       ) : null}
     </main>
   );

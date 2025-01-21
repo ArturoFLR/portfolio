@@ -2,33 +2,61 @@
 
 .pictureViewerScreenDarkener {
   position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
+  background-color: $backgroundDarkener;
+  z-index: 100;
+}
+
+.pictureViewerContainer {
+  position: relative;
+  width: 65%;
 }
 
 .pictureViewerFrame {
-  position: relative;
-  width: 70%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   aspect-ratio: 16/9;
+  border: 3px solid $orangeText;
+  border-radius: 20px;
+  background-image: linear-gradient(45deg, #393946, #221f2b);
 
   img {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
   .pictureViewerCloseButton {
     position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0.5rem;
-    background-color: white;
-    color: $iconLightBlueColor;
+    top: -7vh;
+    right: -4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    color: $orangeText;
     font-family: $buttonTextFont;
-    font-size: 1.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    background-color: transparent;
+    border: 3px solid $orangeText;
+    border-radius: 100%;
     cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:hover {
+      filter: drop-shadow(0 0 0.5rem $orangeGlowEffect);
+      scale: 1.1;
+    }
   }
 }
