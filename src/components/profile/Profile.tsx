@@ -1,5 +1,4 @@
 import styles from "./Profile.module.scss";
-import { RotatingLines } from "react-loader-spinner";
 import HeaderH2 from "../headers/headerH2/HeaderH2";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 
@@ -40,9 +39,6 @@ function Profile({ animated }: ProfileProps) {
           className={`${styles.learningSectionContainer} ${animated ? styles.learningSectionContainerAnimated : null}`}
         >
           <div className={styles.learningSectionMainTextAndIconContainer}>
-            {/* <div className={styles.learningSectionMainIcon}>
-              <LightbulbIcon color="inherit" fontSize="inherit" />
-            </div> */}
             <p className={styles.learningSectionMainText}>Ahora Aprendiendo:</p>
           </div>
 
