@@ -17,8 +17,8 @@
 .h1Tag {
   font-family: $titlesTextFont;
   font-weight: 900;
-  font-size: 4rem;
-  color: $titlesTextColor;
+  font-size: 5rem;
+  color: $alienSymbolsColor;
 
   span {
     color: $blueGlowEffect;
@@ -26,4 +26,40 @@
 }
 .h1tagAnimated {
   animation: intro-drop-glow 1s linear;
+}
+
+// **********************************************RESPONSIVE
+
+//***********************************HD
+
+@media (min-width: 2560px) {
+  .h1Tag {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .h1Tag {
+    font-size: 9rem;
+  }
+}
+
+// ************************************MOBILE
+
+@media (max-width: 1500px) {
+  .h1Tag {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .h1Tag {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .h1Tag {
+    font-size: 3.2rem;
+  }
 }

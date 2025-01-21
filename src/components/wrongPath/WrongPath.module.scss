@@ -1,0 +1,69 @@
+@use "../../fontsAndVariables" as *;
+
+.mainTag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 10vh 10vw;
+}
+
+.h2Positioner {
+  margin-top: 2rem;
+}
+
+.mainTextPositioner {
+  display: flex;
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  margin-top: 4rem;
+  font-size: 2rem;
+  font-family: $normalTextFont;
+  letter-spacing: 1px;
+  color: $normalTextColor;
+}
+
+// **********************************************RESPONSIVE
+
+//***********************************HD
+
+@media (min-width: 1920px) {
+  .mainTextPositioner {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .mainTextPositioner {
+    font-size: 3.6rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .mainTextPositioner {
+    font-size: 4.8rem;
+  }
+}
+
+// ************************************MOBILE
+
+@media (max-width: 780px) {
+  // .mainTag {
+  //   padding: 10vh 5vw;
+  // }
+
+  .mainTextPositioner {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainTextPositioner {
+    font-size: 1.7rem;
+  }
+}
