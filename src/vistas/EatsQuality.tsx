@@ -8,9 +8,12 @@ import CommentsViewer from "../components/proyectDetails/commentsViewer/Comments
 import SliderSmall from "../components/proyectDetails/sliderSmall/SliderSmall";
 import GenericLink from "../components/links/genericLink/GenericLink";
 import proyectsData from "../data/proyectsData";
+import PictureViewer from "../components/proyectDetails/pictureViewer/PictureViewer";
 
 function EatsQuality() {
   const [actualIndex, setActualIndex] = useState<number>(0);
+  const [showPictureViewer, setShowPictureViewer] = useState<boolean>(false);
+  const [pictureUrlForViewer, setPictureUrlForViewer] = useState<string>("");
   const changeCommentsTimeout = useRef<number>(0);
 
   const location = useLocation();
@@ -47,6 +50,15 @@ function EatsQuality() {
     changeCommentsTimeout.current = window.setTimeout(() => {
       setActualIndex(newIndex);
     }, 1300);
+  }
+
+  function handlePictureOnClick(pictureUrl: string) {
+    setPictureUrlForViewer(pictureUrl);
+    setShowPictureViewer(true);
+  }
+
+  function handlePictureViewerClose() {
+    setShowPictureViewer(false);
   }
 
   useEffect(() => {
@@ -92,6 +104,7 @@ function EatsQuality() {
             proyectsData.eatsqualityImagesAndComments.imagesMobile
           }
           changeComments={changeComments}
+          handlePictureOnClick={handlePictureOnClick}
         />
       </div>
 
@@ -110,6 +123,13 @@ function EatsQuality() {
 
         <div className={styles.techIconsContainer}>{techIconsGenerator()}</div>
       </div>
+
+      {showPictureViewer ? (
+        <PictureViewer
+          pictureUrl={pictureUrlForViewer}
+          handlePictureViewerClose={handlePictureViewerClose}
+        />
+      ) : null}
     </main>
   );
 }
