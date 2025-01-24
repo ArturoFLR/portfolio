@@ -154,7 +154,7 @@ function Home() {
 
                 <GenericLink
                   animated={mainState === "noAnimations" ? false : true}
-                  hrefValue="documents/cv2024.pdf"
+                  hrefValue="documents/cv2025.pdf"
                   icon="document"
                 >
                   Descargar CV
