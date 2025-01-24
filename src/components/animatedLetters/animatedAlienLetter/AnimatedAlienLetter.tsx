@@ -9,7 +9,9 @@ type AnimatedAlienLetterProps = {
 function AnimatedAlienLetter({
   forMainPage = false,
 }: AnimatedAlienLetterProps) {
-  const [showedCharacter, setShowedCharacter] = useState<number>(0);
+  const initialCharacter = Math.floor(Math.random() * alienCharacters2.length);
+  const [showedCharacter, setShowedCharacter] =
+    useState<number>(initialCharacter);
   let changeInterval = useRef<number>(0);
 
   useEffect(() => {
