@@ -5,6 +5,7 @@ import LRIngenieros from "../vistas/LRIngenieros";
 import En256Colores from "../vistas/En256Colores";
 import EatsQuality from "../vistas/EatsQuality";
 import WrongPath from "../components/wrongPath/WrongPath";
+import PlantIn from "../vistas/PlantIn";
 
 function ProyectRoutes() {
   return (
@@ -15,6 +16,7 @@ function ProyectRoutes() {
       <Route path="/lringenieros" element={<LRIngenieros />} />
       <Route path="/en256colores" element={<En256Colores />} />
       <Route path="/eatsquality" element={<EatsQuality />} />
+      <Route path="/plantin" element={<PlantIn />} />
     </Routes>
   );
 }
