@@ -96,9 +96,73 @@ const lringenierosImagesAndComments: ImagesAndComments = {
 };
 
 const platinImagesAndComments: ImagesAndComments = {
-  images: [],
-  imagesMobile: [],
-  comments: [],
+  images: [
+    "images/proyects/plantin/plant_in-1-big.webp",
+    "images/proyects/plantin/plant_in-2-big.webp",
+    "images/proyects/plantin/plant_in-3-big.webp",
+    "images/proyects/plantin/plant_in-4-big.webp",
+    "images/proyects/plantin/plant_in-5-big.webp",
+    "images/proyects/plantin/plant_in-6-big.webp",
+    "images/proyects/plantin/plant_in-7-big.webp",
+    "images/proyects/plantin/plant_in-8-big.webp",
+    "images/proyects/plantin/plant_in-9-big.webp",
+    "images/proyects/plantin/plant_in-10-big.webp",
+    "images/proyects/plantin/plant_in-11-big.webp",
+    "images/proyects/plantin/plant_in-12-big.webp",
+  ],
+  imagesMobile: [
+    "images/proyects/plantin/plant_in-1-miniature.webp",
+    "images/proyects/plantin/plant_in-2-miniature.webp",
+    "images/proyects/plantin/plant_in-3-miniature.webp",
+    "images/proyects/plantin/plant_in-4-miniature.webp",
+    "images/proyects/plantin/plant_in-5-miniature.webp",
+    "images/proyects/plantin/plant_in-6-miniature.webp",
+    "images/proyects/plantin/plant_in-7-miniature.webp",
+    "images/proyects/plantin/plant_in-8-miniature.webp",
+    "images/proyects/plantin/plant_in-9-miniature.webp",
+    "images/proyects/plantin/plant_in-10-miniature.webp",
+    "images/proyects/plantin/plant_in-11-miniature.webp",
+    "images/proyects/plantin/plant_in-12-big.webp",
+  ],
+  comments: [
+    [
+      "Proyecto gestionado a través de la web ID for Ideas, en la que se crean grupos de trabajo formados por diversos perfiles (front-end, back-end, ux/ui...) con el objetivo de desarrollar una proyecto. En este caso se decidió crear una Web App para promocionar las huertas agroecológicas en territorio Argentino.",
+      "Implementada con React, TypeScript y Tailwind CSS.",
+      "Se han implementado los roles de visitante, usuario registrado, productor y administrador, cada uno con sus propias funcionalidades y restricciones.",
+    ],
+    [
+      "Es posible probar las funcionalidades de los distintos roles pulsando en el icono 'DEMO' en la página principal.",
+      "La interfaz de usuario se adapta a los distintos roles, mostrando u ocultando elementos según sea necesario.",
+    ],
+    [
+      "La página cuenta con protección de rutas para evitar que un usuario no autorizado acceda a secciones restringidas. ",
+      "Todos los formularios de la página están controlados e implementan validación de campos.",
+    ],
+    [
+      "Al dar de alta su huerta, el usuario puede añadir múltiples imágenes de la misma.",
+      "El Front valida el formato y tamaño de las imágenes, permitiendo arrastrar directamente los ficheros sobre el formulario.",
+    ],
+    ["Geolocalización implementada mediante OpenStreetMap y Leaflet."],
+    [
+      "Los usuarios pueden ver las distintas huertas registradas filtrando por multitud de parámetros.",
+      "Cada publicación cuenta con un sistema de valoraciones.",
+    ],
+    ["Los estilos han sido implementados con Tailwind CSS."],
+    [
+      "Todos los sliders de la página son personalizados y se han implementado desde cero, sin utilizar librerías externas.",
+    ],
+    [
+      "Las publicaciones de los productores no se muestran directamente, antes deben ser aprobadas o rechazadas por los administradores.",
+    ],
+    [
+      "Los administradores pueden gestionar también las peticiones de usuarios para convertirse en productores.",
+    ],
+    ["Vista de una petición de usuario para convertirse en productor."],
+    [
+      "Diseño completamente responsive y funcional en todo tipo de dispositivos, desde móviles a televisiones 4K.",
+      "En la versión móvil los sliders incorporan la función de swipe para navegar entre las imágenes.",
+    ],
+  ],
 };
 
 const eatsqualityImagesAndComments: ImagesAndComments = {
@@ -121,7 +185,7 @@ const eatsqualityImagesAndComments: ImagesAndComments = {
   comments: [
     [
       "Proyecto gestionado por la web No Country, en la que se crean grupos de trabajo formados por diversos perfiles (front-end, back-end, ux/ui...) y se les asigna un jefe de proyecto, con el objetivo de desarrollar una proyecto en 5 semanas. En este caso se decidió crear una Web App de comida a domicilio.",
-      "En la 2º semana el equipo de back-end dejó el proyecto, por lo que tuve que hacerme cargo también de este aspecto (NodeJs + Express)<.",
+      "En la 2º semana el equipo de back-end dejó el proyecto, por lo que tuve que hacerme cargo también de este aspecto (NodeJs + Express).",
       "A pesar de los contratiempos, se pudo entregar un MVP funcional con los roles de cliente y restaurante en el plazo establecido.",
     ],
     [
