@@ -25,7 +25,7 @@ function GenericLink({
       target={icon !== "document" ? "_blank" : ""}
       rel="noopener"
       href={hrefValue}
-      download={icon === "document" ? "CV Arturo López Rosa 2024.pdf" : ""}
+      download={icon === "document" ? "CV Arturo López Rosa 2025.pdf" : ""}
     >
       <div
         className={`${styles.genericLinkContentContainer} ${animated ? styles.genericLinkContentContainerAnimated : null}`}
