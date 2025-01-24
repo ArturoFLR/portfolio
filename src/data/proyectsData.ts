@@ -127,10 +127,11 @@ const platinImagesAndComments: ImagesAndComments = {
   comments: [
     [
       "Proyecto gestionado a través de la web ID for Ideas, en la que se crean grupos de trabajo formados por diversos perfiles (front-end, back-end, ux/ui...) con el objetivo de desarrollar una proyecto. En este caso se decidió crear una Web App para promocionar las huertas agroecológicas en territorio Argentino.",
-      "Implementada con React, TypeScript y Tailwind CSS.",
-      "Se han implementado los roles de visitante, usuario registrado, productor y administrador, cada uno con sus propias funcionalidades y restricciones.",
+      "Realizada mediante React Js, TypeScript y Tailwind CSS.",
+      "Se utilizó SCRUM gestionado mediante Azure Boards para mejorar nuestra eficiencia y coordinación.",
     ],
     [
+      "Se han implementado los roles de visitante, usuario registrado, productor y administrador, cada uno con sus propias funcionalidades y restricciones.",
       "Es posible probar las funcionalidades de los distintos roles pulsando en el icono 'DEMO' en la página principal.",
       "La interfaz de usuario se adapta a los distintos roles, mostrando u ocultando elementos según sea necesario.",
     ],
