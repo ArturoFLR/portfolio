@@ -66,25 +66,25 @@ function Home() {
     if (mainState === "loading1") {
       mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loading2");
-      }, 5500);
+      }, 5000);
     }
 
     if (mainState === "loading2") {
       mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loading3");
-      }, 5300);
+      }, 4000);
     }
 
     if (mainState === "loading3") {
       mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loading4");
-      }, 2000);
+      }, 0);
     }
 
     if (mainState === "loading4") {
       mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loaded");
-      }, 1000);
+      }, 500);
     }
 
     return () => {
@@ -104,8 +104,8 @@ function Home() {
             <LetterTranslator
               text="Front-End  Developer"
               activate={true}
-              alienLettersTimer={mainState === "noAnimations" ? 10 : 100}
-              normalLettersTimer={mainState === "noAnimations" ? 15 : 150}
+              alienLettersTimer={mainState === "noAnimations" ? 10 : 50}
+              normalLettersTimer={mainState === "noAnimations" ? 15 : 130}
               forMainPage={true}
             />
           )}

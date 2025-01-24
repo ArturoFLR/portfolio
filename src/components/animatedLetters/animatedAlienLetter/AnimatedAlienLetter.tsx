@@ -1,4 +1,4 @@
-import alienCharacters from "./alienCharacters";
+import alienCharacters2 from "./alienCharacters2";
 import styles from "./AnimatedAlienLetter.module.scss";
 import { useEffect, useRef, useState } from "react";
 
@@ -14,8 +14,8 @@ function AnimatedAlienLetter({
 
   useEffect(() => {
     changeInterval.current = window.setInterval(() => {
-      setShowedCharacter(Math.floor(Math.random() * alienCharacters.length));
-    }, 110);
+      setShowedCharacter(Math.floor(Math.random() * alienCharacters2.length));
+    }, 100);
     return () => {
       clearTimeout(changeInterval.current);
     };
@@ -25,7 +25,7 @@ function AnimatedAlienLetter({
     <span
       className={`${styles.alienLetterContainer} ${forMainPage ? styles.alienLetterContForMainPage : null}`}
     >
-      {alienCharacters[showedCharacter]}
+      {alienCharacters2[showedCharacter]}
     </span>
   );
 }
