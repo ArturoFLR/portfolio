@@ -145,7 +145,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("images/backgrounds/asfalt-light.png"); /* Imagen de ruido */
+  background: url("/images/backgrounds/asfalt-light.png"); /* Imagen de ruido */
   mix-blend-mode: hard-light; /* Mezcla el ruido con el degradado */
   opacity: 0.7; /* Ajusta la intensidad */
   pointer-events: none;
@@ -171,7 +171,7 @@
     opacity: 0;
     width: 200%;
     height: 200%;
-    background-image: url("images/backgrounds/bedge-grunge.png");
+    background-image: url("/images/backgrounds/bedge-grunge.png");
     background-size: cover;
     z-index: 10;
     pointer-events: none;
@@ -240,7 +240,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("images/backgrounds/asfalt-light.png"); /* Imagen de ruido */
+  background: url("/images/backgrounds/asfalt-light.png"); /* Imagen de ruido */
   mix-blend-mode: hard-light; /* Mezcla el ruido con el degradado */
   opacity: 0.8; /* Ajusta la intensidad */
   pointer-events: none;
