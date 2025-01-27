@@ -100,3 +100,52 @@
     }
   }
 }
+
+//***********************************LOWER RESOLUTIONS
+
+@media (max-width: 650px) {
+  .proyectCardImageMainContainer {
+    .image {
+      box-shadow: 0px 0px 5px 1px $blueGlowEffect;
+    }
+  }
+}
+
+//*********************************** TOUCH SCREENS
+
+@keyframes magnifying_glass_pulsating {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.3;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .proyectCardImageMainContainer {
+    .moreDetailsContainer {
+      position: absolute;
+      top: 80%;
+      left: 70%;
+      flex-direction: row;
+      justify-content: flex-start;
+      opacity: 1;
+      width: 100%;
+      height: 120%;
+      transform: rotate(45deg);
+      background-color: rgba(0, 0, 0, 0.68);
+
+      p {
+        display: none;
+      }
+
+      .iconContainer {
+        transform: rotate(-45deg);
+        margin: 0rem 0rem 1.5rem 1.5rem;
+        filter: drop-shadow(0px 0px 7px $orangeGlowEffect);
+        animation: magnifying_glass_pulsating 1s linear alternate infinite;
+      }
+    }
+  }
+}
