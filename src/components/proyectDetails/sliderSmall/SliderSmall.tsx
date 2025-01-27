@@ -19,6 +19,10 @@ function SliderSmall({
   handlePictureOnClick,
 }: SliderSmallProps) {
   const [shownImageIndex, setShownImageIndex] = useState<number>(0);
+
+  // It´s necesary to use a ref to store the current value of the shownImageIndex because the value of the state is not updated correctly in the swipe functions
+  const shownImageIndexRef = useRef<number>(shownImageIndex);
+
   const [isMobileResolution, setIsMobileResolution] = useState<boolean>(
     window.innerWidth > 600 ? false : true,
   );
@@ -30,6 +34,13 @@ function SliderSmall({
   const nextImgTimeout = useRef<number>(0);
   const noiseAnimationTimeout = useRef<number>(0);
   const firstSparkTimeout = useRef<number>(0);
+
+  // This variable is used to prevent the user from clicking the next or previous image button or doing swipe while the animation is active
+  const isAnimationActive = useRef<boolean>(false);
+
+  // Theese variables are used to store the initial and final coordinates of the touch event (swipe)
+  const touchStartX = useRef<number>(0); // Initial touch coordinate
+  const touchEndX = useRef<number>(0); // Final touch coordinate
 
   //This part defines in which index of the array the images that will be on both sides of the displayed image should be searched.
   let previousImgIndex: number = 0;
@@ -48,49 +59,92 @@ function SliderSmall({
   }
   //END
 
-  function handlePrevImgClick() {
-    clearTimeout(noiseAnimationTimeout.current);
-    clearTimeout(firstSparkTimeout.current);
+  function resetAnimationClasses() {
     sliderContainerElement.current?.classList.remove(styles.prevImageAnimation);
     sliderContainerElement.current?.classList.remove(styles.nextImageAnimation);
+  }
+
+  function handlePrevImgClick(currentIndex = shownImageIndex) {
+    if (isAnimationActive.current) return;
+    isAnimationActive.current = true;
+
+    clearTimeout(noiseAnimationTimeout.current);
+    clearTimeout(firstSparkTimeout.current);
+
+    resetAnimationClasses();
     sliderContainerElement.current?.classList.add(styles.prevImageAnimation);
 
     let newIndex: number;
-
-    if (shownImageIndex === 0) {
+    if (currentIndex === 0) {
       newIndex = imagesList.length - 1;
     } else {
-      newIndex = shownImageIndex - 1;
+      newIndex = currentIndex - 1;
     }
 
     changeComments(newIndex);
 
     prevImgTimeout.current = window.setTimeout(() => {
       setShownImageIndex(newIndex);
+      isAnimationActive.current = false;
     }, 1250);
   }
 
-  function handleNextImgClick() {
+  function handleNextImgClick(currentIndex = shownImageIndex) {
+    if (isAnimationActive.current) return;
+    isAnimationActive.current = true;
+
     clearTimeout(noiseAnimationTimeout.current);
     clearTimeout(firstSparkTimeout.current);
-    sliderContainerElement.current?.classList.remove(styles.prevImageAnimation);
-    sliderContainerElement.current?.classList.remove(styles.nextImageAnimation);
+
+    resetAnimationClasses();
     sliderContainerElement.current?.classList.add(styles.nextImageAnimation);
 
     let newIndex: number;
 
-    if (shownImageIndex === imagesList.length - 1) {
+    if (currentIndex === imagesList.length - 1) {
       newIndex = 0;
     } else {
-      newIndex = shownImageIndex + 1;
+      newIndex = currentIndex + 1;
     }
 
     changeComments(newIndex);
 
     nextImgTimeout.current = window.setTimeout(() => {
       setShownImageIndex(newIndex);
+      isAnimationActive.current = false;
     }, 1250);
   }
+
+  // Theese functions are used to handle the swipe event
+
+  function touchstart(e: TouchEvent) {
+    if (isAnimationActive.current) return;
+
+    if (e.changedTouches.length > 0) {
+      touchStartX.current = e.changedTouches[0].clientX;
+    }
+  }
+
+  function touchend(e: TouchEvent) {
+    if (isAnimationActive.current) return;
+
+    if (e.changedTouches.length > 0) {
+      touchEndX.current = e.changedTouches[0].clientX;
+      const SWIPE_THRESHOLD = 40;
+
+      if (touchStartX.current - touchEndX.current > SWIPE_THRESHOLD) {
+        handleNextImgClick(shownImageIndexRef.current);
+      }
+
+      if (touchStartX.current - touchEndX.current < -SWIPE_THRESHOLD) {
+        handlePrevImgClick(shownImageIndexRef.current);
+      }
+    }
+  }
+
+  useEffect(() => {
+    shownImageIndexRef.current = shownImageIndex;
+  }, [shownImageIndex]);
 
   useEffect(() => {
     function checkNewResolution() {
@@ -111,6 +165,7 @@ function SliderSmall({
   }, [isMobileResolution]);
 
   useEffect(() => {
+    // Activates tv noise and sparks animations if the animated prop is true
     if (animated) {
       firstSparkTimeout.current = window.setTimeout(() => {
         setShowSparks(true);
@@ -124,9 +179,32 @@ function SliderSmall({
       }, 2500);
     }
 
+    // This part add the swipe events
+    if (shownImageContainerElement.current) {
+      shownImageContainerElement.current!.addEventListener(
+        "touchstart",
+        touchstart,
+      );
+      shownImageContainerElement.current!.addEventListener(
+        "touchend",
+        touchend,
+      );
+    }
+
     return () => {
       clearTimeout(noiseAnimationTimeout.current);
       clearTimeout(firstSparkTimeout.current);
+
+      if (shownImageContainerElement.current) {
+        shownImageContainerElement.current.removeEventListener(
+          "touchstart",
+          touchstart,
+        );
+        shownImageContainerElement.current.removeEventListener(
+          "touchend",
+          touchend,
+        );
+      }
     };
   }, []);
 
@@ -142,6 +220,7 @@ function SliderSmall({
           <div className={styles.prevImageMainContainer}>
             <button
               type="button"
+              onClick={() => handlePictureOnClick(imagesList[previousImgIndex])}
               className={styles.allButtons}
               aria-label="Ver imagen a pantalla completa"
             >
@@ -162,8 +241,8 @@ function SliderSmall({
             className={styles.shownImageMainContainer}
           >
             <button
-              onClick={() => handlePictureOnClick(imagesList[shownImageIndex])}
               type="button"
+              onClick={() => handlePictureOnClick(imagesList[shownImageIndex])}
               className={styles.allButtons}
               aria-label="Ver imagen a pantalla completa"
             >
@@ -174,7 +253,7 @@ function SliderSmall({
                     ? imagesMobileList[shownImageIndex]
                     : imagesList[shownImageIndex]
                 }
-                alt="Captura del proyecto"
+                alt={`Captura del proyecto ${shownImageIndex + 1}`}
               />
             </button>
           </div>
@@ -182,6 +261,7 @@ function SliderSmall({
           <div className={styles.nextImageMainContainer}>
             <button
               type="button"
+              onClick={() => handlePictureOnClick(imagesList[nextImgIndex])}
               className={styles.allButtons}
               aria-label="Ver imagen a pantalla completa"
             >
@@ -201,7 +281,7 @@ function SliderSmall({
         <button
           type="button"
           aria-label="Imagen Anterior"
-          onClick={handlePrevImgClick}
+          onClick={() => handlePrevImgClick()}
           className={styles.prevImgIcon}
         >
           <ArrowLeftIcon
@@ -214,7 +294,7 @@ function SliderSmall({
         <button
           type="button"
           aria-label="Imagen Siguiente"
-          onClick={handleNextImgClick}
+          onClick={() => handleNextImgClick()}
           className={styles.nextImgIcon}
         >
           <ArrowRightIcon
