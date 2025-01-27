@@ -8,7 +8,7 @@ type LetterTranslatorProps = {
   activate: boolean;
   alienLettersTimer: number;
   normalLettersTimer: number;
-  forMainPage?: boolean;
+  forMainPage?: boolean; // This prop is used to change the style of AnimatedAlienLetter and AnimatedNormalLetter for the main page (bigger size).
 };
 
 function LetterTranslator({
@@ -19,23 +19,38 @@ function LetterTranslator({
   forMainPage = false,
 }: LetterTranslatorProps) {
   const textArray: string[] = [];
-  for (let i = 0; i < text.length; i++) {
-    textArray.push("*");
+
+  for (const letter of text) {
+    if (letter === " ") {
+      textArray.push("?"); // We use "?" as a placeholder for spaces.
+    } else {
+      textArray.push("*");
+    }
   }
 
   const [textToShow, setTextToShow] = useState<string[]>([]);
-  //Guardamos el estado en una referencia, ya que dentro del "interval" que creamos en el useEffect() no se tiene acceso al valor actualizado de "textToShow", siempre trabaja con el valor que tenía cuando se creó el interval.
+
+  // We store the state in a reference because inside the "interval" created in useEffect(),
+  // there is no access to the updated value of "textToShow"; it always works with the value it had when the interval was created.
   const textToShowRef = useRef<string[]>(textToShow);
-  //Se utiliza como index para ir transformando los "*" en letras normales dentro de textArray
+
+  //It is used as an index to progressively add the elements of textArray to textToShow. We don't use the "textToShow" length directly because it is not updated immediately.
+  const textArrayCounter = useRef<number>(0);
+
+  // It is used as an index to progressively transform the "*" characters into regular letters within textArray.
   const translatorCounter = useRef<number>(0);
 
   function returnLetterComponents() {
     const result: React.ReactNode[] = [];
     if (textToShow.length > 0) {
       textToShow.map((element, index) => {
-        if (element === "*") {
+        if (element === "*" || element === "?") {
           result.push(
-            <AnimatedAlienLetter key={index} forMainPage={forMainPage} />,
+            <AnimatedAlienLetter
+              key={index}
+              forMainPage={forMainPage}
+              isCharacterSpace={element === "?" ? true : false}
+            />,
           );
         } else {
           result.push(
@@ -64,19 +79,24 @@ function LetterTranslator({
         if (textToShowRef.current.length < textArray.length) {
           const newTextToShow = [
             ...textToShowRef.current,
-            textArray[textToShow.length],
+            textArray[textArrayCounter.current],
           ];
+
+          textArrayCounter.current++;
+
           setTextToShow(newTextToShow);
         } else if (translatorCounter.current < textArray.length) {
-          //Terminamos el intervalo creado en el 1º bloque del "if" antes de crear uno nuevo.
+          // We only reach this "if" block if textToShow already contains all the elements of textArray (all the AnimatedAlienLetter elements are already rendered).
+          // We clear the previously created interval before creating a new one.
           clearInterval(interval);
 
           interval = window.setInterval(() => {
-            //Una vez creado el intervalo no se vuelve a comprobar si se cumplen las condiciones para que pare, por lo que las ponemos dentro del propio interval
+            // Once the interval is created, the conditions to stop it are not rechecked, so we include them within the interval itself.
             if (translatorCounter.current >= textArray.length - 1) {
               clearInterval(interval);
             }
 
+            // Now we will gradually replace the "*" and "?" with the corresponding letters from the "text" prop.
             const newTextToShow = [...textToShowRef.current];
             newTextToShow.splice(
               translatorCounter.current,

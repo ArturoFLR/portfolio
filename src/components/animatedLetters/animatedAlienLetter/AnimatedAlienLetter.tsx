@@ -3,10 +3,12 @@ import styles from "./AnimatedAlienLetter.module.scss";
 import { useEffect, useRef, useState } from "react";
 
 type AnimatedAlienLetterProps = {
+  isCharacterSpace: boolean;
   forMainPage?: boolean;
 };
 
 function AnimatedAlienLetter({
+  isCharacterSpace,
   forMainPage = false,
 }: AnimatedAlienLetterProps) {
   const initialCharacter = Math.floor(Math.random() * alienCharacters2.length);
@@ -27,7 +29,7 @@ function AnimatedAlienLetter({
     <span
       className={`${styles.alienLetterContainer} ${forMainPage ? styles.alienLetterContForMainPage : null}`}
     >
-      {alienCharacters2[showedCharacter]}
+      {isCharacterSpace ? " " : alienCharacters2[showedCharacter]}
     </span>
   );
 }
