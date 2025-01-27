@@ -265,3 +265,19 @@
     height: 560px;
   }
 }
+
+//*********************************** TOUCH SCREENS
+
+@media (hover: none) and (pointer: coarse) {
+  .proyectCardMainContainer {
+    &:hover {
+      scale: 1;
+      border-color: black;
+      box-shadow: none;
+
+      .titlePositioner {
+        filter: none;
+      }
+    }
+  }
+}
