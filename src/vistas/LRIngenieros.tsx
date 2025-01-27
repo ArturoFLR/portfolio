@@ -9,6 +9,7 @@ import proyectsData from "../data/proyectsData";
 import SliderSmall from "../components/proyectDetails/sliderSmall/SliderSmall";
 import GenericLink from "../components/links/genericLink/GenericLink";
 import PictureViewer from "../components/proyectDetails/pictureViewer/PictureViewer";
+import { Helmet } from "react-helmet";
 
 function LRIngenieros() {
   const [actualIndex, setActualIndex] = useState<number>(0);
@@ -74,6 +75,15 @@ function LRIngenieros() {
 
   return (
     <main className={styles.mainTag}>
+      <Helmet>
+        <title>Plant-In | Proyecto de Arturo López Rosa</title>
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="Sitio Web corporativo para L&R Ingenieros. Proyecto realizado como freelance."
+        />
+      </Helmet>
+
       <ProyectsNav animated={location.state.animated === true ? true : false} />
 
       <h1 className={styles.letterTranslatorContainer}>

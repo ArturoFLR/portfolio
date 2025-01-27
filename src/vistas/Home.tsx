@@ -11,6 +11,7 @@ import HeaderH2 from "../components/headers/headerH2/HeaderH2";
 import ProyectCard from "../components/proyectCard/ProyectCard";
 import { useLocation } from "react-router";
 import TechIcon, { TechIconType } from "../components/techIcon/TechIcon";
+import { Helmet } from "react-helmet";
 
 type MainStateType =
   | "loading1"
@@ -94,6 +95,15 @@ function Home() {
 
   return (
     <main className={styles.mainTag}>
+      <Helmet>
+        <title>Arturo López Rosa | Desarrollador Frontend</title>
+        <meta
+          name="description"
+          content="Portfolio of Arturo López Rosa, desarrollador Front-End especializado en React y TypeScript. Conóceme y explora mis proyectos."
+        />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
       <header className={styles.headerTag}>
         <LoadingContainerHero
           animated={mainState === "noAnimations" ? false : true}

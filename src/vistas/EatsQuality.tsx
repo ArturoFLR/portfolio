@@ -9,6 +9,7 @@ import SliderSmall from "../components/proyectDetails/sliderSmall/SliderSmall";
 import GenericLink from "../components/links/genericLink/GenericLink";
 import proyectsData from "../data/proyectsData";
 import PictureViewer from "../components/proyectDetails/pictureViewer/PictureViewer";
+import { Helmet } from "react-helmet";
 
 function EatsQuality() {
   const [actualIndex, setActualIndex] = useState<number>(0);
@@ -74,6 +75,15 @@ function EatsQuality() {
 
   return (
     <main className={styles.mainTag}>
+      <Helmet>
+        <title>EatsQuality | Proyecto de Arturo López Rosa</title>
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="EatsQuality es una Web App para encargar comida a domicilio. Proyecto realizado dentro de un equipo gestionado a través de la web No Country"
+        />
+      </Helmet>
+
       <ProyectsNav animated={location.state.animated === true ? true : false} />
 
       <h1 className={styles.letterTranslatorContainer}>

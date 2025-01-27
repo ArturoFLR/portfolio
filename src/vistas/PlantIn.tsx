@@ -9,6 +9,7 @@ import SliderSmall from "../components/proyectDetails/sliderSmall/SliderSmall";
 import GenericLink from "../components/links/genericLink/GenericLink";
 import PictureViewer from "../components/proyectDetails/pictureViewer/PictureViewer";
 import proyectsData from "../data/proyectsData";
+import { Helmet } from "react-helmet";
 
 function PlantIn() {
   const [actualIndex, setActualIndex] = useState<number>(0);
@@ -76,6 +77,15 @@ function PlantIn() {
 
   return (
     <main className={styles.mainTag}>
+      <Helmet>
+        <title>Plant-In | Proyecto de Arturo López Rosa</title>
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="Plant-In es una Web App diseñada para promocionar las huertas agroecológicas argentinas. Proyecto realizado dentro de un equipo gestionado a través de la web Id For Ideas."
+        />
+      </Helmet>
+
       <ProyectsNav animated={location.state.animated === true ? true : false} />
 
       <h1 className={styles.letterTranslatorContainer}>

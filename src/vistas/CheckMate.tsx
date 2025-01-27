@@ -9,6 +9,7 @@ import TechIcon, { TechIconType } from "../components/techIcon/TechIcon";
 import GenericLink from "../components/links/genericLink/GenericLink";
 import LetterTranslator from "../components/letterTranslator/LetterTranslator";
 import PictureViewer from "../components/proyectDetails/pictureViewer/PictureViewer";
+import { Helmet } from "react-helmet";
 
 function CheckMate() {
   const [actualIndex, setActualIndex] = useState<number>(0);
@@ -73,6 +74,15 @@ function CheckMate() {
 
   return (
     <main className={styles.mainTag}>
+      <Helmet>
+        <title>CHECKMATE! | Proyecto de Arturo López Rosa</title>
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="CHECKMATE! es un juego de ajedrez online para uno o dos jugadores. Juega contra tus amigos o practica contra la computadora. Compatible con dispositivos móviles y de escritorio."
+        />
+      </Helmet>
+
       <ProyectsNav animated={location.state.animated === true ? true : false} />
 
       <h1 className={styles.letterTranslatorContainer}>
