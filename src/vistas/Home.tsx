@@ -67,7 +67,7 @@ function Home() {
     if (mainState === "loading1") {
       mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loading2");
-      }, 5000);
+      }, 2700);
     }
 
     if (mainState === "loading2") {
