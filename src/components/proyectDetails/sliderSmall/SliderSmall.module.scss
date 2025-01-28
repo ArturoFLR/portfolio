@@ -191,6 +191,10 @@
   background-color: transparent;
   border: none;
   padding: 0px;
+
+  &:focus {
+    border: 4px solid white;
+  }
 }
 
 .allImgTags {
@@ -469,5 +473,17 @@
     bottom: -70%;
     right: 0%;
     width: 350px;
+  }
+}
+
+//*********************************** TOUCH SCREENS
+
+@media (hover: none) and (pointer: coarse) {
+  .prevImgIcon,
+  .nextImgIcon {
+    &:hover {
+      filter: none;
+      box-shadow: none;
+    }
   }
 }
