@@ -50,7 +50,8 @@
     z-index: 3;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     .moreDetailsContainer {
       opacity: 1;
     }
