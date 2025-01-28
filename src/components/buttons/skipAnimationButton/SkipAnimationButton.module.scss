@@ -38,13 +38,15 @@
   cursor: pointer;
   width: 110px;
   height: 110px;
+  border: none;
   border-radius: 100%;
   background: $backgroundContainer;
   overflow: hidden;
   user-select: none;
   transition: scale 200ms;
 
-  &:hover {
+  &:hover,
+  &:focus {
     scale: 1.1;
 
     .contentAnimated {

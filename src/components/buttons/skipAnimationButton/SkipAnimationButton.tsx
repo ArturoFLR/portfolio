@@ -3,16 +3,14 @@ import styles from "./SkipAnimationButton.module.scss";
 
 type SkipAnimationButtonProps = {
   children: React.ReactNode;
-  ariaLabel?: string;
   handleClick: () => void;
 };
 
 function SkipAnimationButton({
-  ariaLabel,
   handleClick,
   children,
 }: SkipAnimationButtonProps) {
-  const mainContainerElement = useRef<HTMLDivElement>(null);
+  const mainContainerElement = useRef<HTMLButtonElement>(null);
   const outroTimer = useRef<number>(0);
 
   function onClickMainHandler() {
@@ -29,16 +27,16 @@ function SkipAnimationButton({
   }, []);
 
   return (
-    <div
+    <button
+      type="button"
       ref={mainContainerElement}
       className={styles.mainContainer}
-      aria-label={ariaLabel}
       onClick={onClickMainHandler}
     >
       <div className={`${styles.content} ${styles.contentAnimated}`}>
         {children}
       </div>
-    </div>
+    </button>
   );
 }
 
