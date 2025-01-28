@@ -42,7 +42,6 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
             linkType="link"
             linkHref={proyectsData.proyectsRoutes[prevLinkIndex]}
             animatedLinkState={false}
-            tabIndex={1}
             ariaLabel={`Ir a ${proyectsData.proyectsNames[prevLinkIndex]}`}
           >
             <div className={styles.prevLinkContainer}>
@@ -60,12 +59,7 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
           </NavLink>
         </li>
         <li className={styles.proyectsNavOlTag}>
-          <NavLink
-            linkType="link"
-            linkHref="/"
-            animatedLinkState={false}
-            tabIndex={2}
-          >
+          <NavLink linkType="link" linkHref="/" animatedLinkState={false}>
             <div className={styles.homeLinkContainer}>Home</div>
           </NavLink>
         </li>
@@ -74,7 +68,6 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
             linkType="link"
             linkHref={proyectsData.proyectsRoutes[nextLinkIndex]}
             animatedLinkState={false}
-            tabIndex={3}
             ariaLabel={`Ir a ${proyectsData.proyectsNames[nextLinkIndex]}`}
           >
             <div className={styles.nextLinkContainer}>

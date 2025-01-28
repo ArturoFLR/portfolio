@@ -245,7 +245,6 @@ function SliderSmall({
               type="button"
               onClick={() => handlePictureOnClick(imagesList[shownImageIndex])}
               className={styles.allButtons}
-              tabIndex={5}
               aria-label="Ver imagen a pantalla completa"
             >
               <img
@@ -286,7 +285,6 @@ function SliderSmall({
           aria-label="Imagen Anterior"
           onClick={() => handlePrevImgClick()}
           className={styles.prevImgIcon}
-          tabIndex={4}
         >
           <ArrowLeftIcon
             color="inherit"
@@ -300,7 +298,6 @@ function SliderSmall({
           aria-label="Imagen Siguiente"
           onClick={() => handleNextImgClick()}
           className={styles.nextImgIcon}
-          tabIndex={6}
         >
           <ArrowRightIcon
             color="inherit"
