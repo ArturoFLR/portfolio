@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /checkmate
+Allow: /lringenieros
+Allow: /en256colores
+Allow: /eatsquality
+Allow: /plantin
+
+Disallow: /wrongpath
