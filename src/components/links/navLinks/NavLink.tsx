@@ -9,6 +9,7 @@ type NavLinkProps = {
   animatedLinkState?: boolean;
   children: React.ReactNode;
   tabIndex?: number;
+  ariaLabel?: string;
 };
 
 function NavLink({
@@ -17,12 +18,17 @@ function NavLink({
   animatedLinkState,
   children,
   tabIndex,
+  ariaLabel,
 }: NavLinkProps) {
   if (!tabIndex) tabIndex = 500;
 
   if (tabIndex === 500) {
     return linkType === "anchor" ? (
-      <a className={styles.navLink} href={linkHref}>
+      <a
+        className={styles.navLink}
+        href={linkHref}
+        aria-label={ariaLabel ? ariaLabel : ""}
+      >
         {children}
       </a>
     ) : (
@@ -30,13 +36,19 @@ function NavLink({
         className={styles.navLink}
         to={linkHref}
         state={{ animated: animatedLinkState }}
+        aria-label={ariaLabel ? ariaLabel : ""}
       >
         {children}
       </Link>
     );
   } else {
     return linkType === "anchor" ? (
-      <a className={styles.navLink} href={linkHref} tabIndex={tabIndex}>
+      <a
+        className={styles.navLink}
+        href={linkHref}
+        tabIndex={tabIndex}
+        aria-label={ariaLabel ? ariaLabel : ""}
+      >
         {children}
       </a>
     ) : (
@@ -45,6 +57,7 @@ function NavLink({
         to={linkHref}
         state={{ animated: animatedLinkState }}
         tabIndex={tabIndex}
+        aria-label={ariaLabel ? ariaLabel : ""}
       >
         {children}
       </Link>

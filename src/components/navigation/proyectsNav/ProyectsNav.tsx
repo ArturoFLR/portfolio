@@ -43,6 +43,7 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
             linkHref={proyectsData.proyectsRoutes[prevLinkIndex]}
             animatedLinkState={false}
             tabIndex={1}
+            ariaLabel={`Ir a ${proyectsData.proyectsNames[prevLinkIndex]}`}
           >
             <div className={styles.prevLinkContainer}>
               <div className={styles.prevLinkIconContainer}>
@@ -74,6 +75,7 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
             linkHref={proyectsData.proyectsRoutes[nextLinkIndex]}
             animatedLinkState={false}
             tabIndex={3}
+            ariaLabel={`Ir a ${proyectsData.proyectsNames[nextLinkIndex]}`}
           >
             <div className={styles.nextLinkContainer}>
               <div className={styles.nextLinkTextContainer}>
