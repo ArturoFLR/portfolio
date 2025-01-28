@@ -29,7 +29,11 @@ function AnimatedAlienLetter({
     <span
       className={`${styles.alienLetterContainer} ${forMainPage ? styles.alienLetterContForMainPage : null}`}
     >
-      {isCharacterSpace ? " " : alienCharacters[showedCharacter]}
+      {isCharacterSpace
+        ? " "
+        : forMainPage
+          ? " "
+          : alienCharacters[showedCharacter]}
     </span>
   );
 }
