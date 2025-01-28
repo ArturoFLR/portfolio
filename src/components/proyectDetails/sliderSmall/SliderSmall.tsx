@@ -223,6 +223,7 @@ function SliderSmall({
               onClick={() => handlePictureOnClick(imagesList[previousImgIndex])}
               className={styles.allButtons}
               aria-label="Ver imagen a pantalla completa"
+              tabIndex={-1}
             >
               <img
                 className={styles.allImgTags}
@@ -244,6 +245,7 @@ function SliderSmall({
               type="button"
               onClick={() => handlePictureOnClick(imagesList[shownImageIndex])}
               className={styles.allButtons}
+              tabIndex={5}
               aria-label="Ver imagen a pantalla completa"
             >
               <img
@@ -263,6 +265,7 @@ function SliderSmall({
               type="button"
               onClick={() => handlePictureOnClick(imagesList[nextImgIndex])}
               className={styles.allButtons}
+              tabIndex={-1}
               aria-label="Ver imagen a pantalla completa"
             >
               <img
@@ -283,6 +286,7 @@ function SliderSmall({
           aria-label="Imagen Anterior"
           onClick={() => handlePrevImgClick()}
           className={styles.prevImgIcon}
+          tabIndex={4}
         >
           <ArrowLeftIcon
             color="inherit"
@@ -296,6 +300,7 @@ function SliderSmall({
           aria-label="Imagen Siguiente"
           onClick={() => handleNextImgClick()}
           className={styles.nextImgIcon}
+          tabIndex={6}
         >
           <ArrowRightIcon
             color="inherit"
