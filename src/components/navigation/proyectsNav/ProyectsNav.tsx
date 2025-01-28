@@ -37,7 +37,7 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
       role="navigation"
     >
       <ul className={styles.proyectsNavUlTag}>
-        <ol className={styles.proyectsNavOlTag}>
+        <li className={styles.proyectsNavOlTag}>
           <NavLink
             linkType="link"
             linkHref={proyectsData.proyectsRoutes[prevLinkIndex]}
@@ -58,8 +58,8 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
               </div>
             </div>
           </NavLink>
-        </ol>
-        <ol className={styles.proyectsNavOlTag}>
+        </li>
+        <li className={styles.proyectsNavOlTag}>
           <NavLink
             linkType="link"
             linkHref="/"
@@ -68,8 +68,8 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
           >
             <div className={styles.homeLinkContainer}>Home</div>
           </NavLink>
-        </ol>
-        <ol className={styles.proyectsNavOlTag}>
+        </li>
+        <li className={styles.proyectsNavOlTag}>
           <NavLink
             linkType="link"
             linkHref={proyectsData.proyectsRoutes[nextLinkIndex]}
@@ -91,7 +91,7 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
               </div>
             </div>
           </NavLink>
-        </ol>
+        </li>
       </ul>
     </nav>
   );
