@@ -36,7 +36,7 @@ function CommentsViewer({
 
   return (
     <div className={styles.commentsViewerMainContainer}>
-      <h1 className={styles.letterTranslatorPositioner}>
+      <h1 className={styles.letterTranslatorPositioner} aria-hidden="true">
         <LetterTranslator
           text={proyectTitle}
           activate={true}
@@ -44,6 +44,11 @@ function CommentsViewer({
           normalLettersTimer={normalLettersTimer}
         />
       </h1>
+
+      <p className={styles.ariaOnly} role="heading" aria-level={1}>
+        {proyectTitle}
+      </p>
+
       <div className={styles.olTagContainer}>
         <ol
           className={`${styles.olTag} ${fading === "in" ? styles.olTagFadeIn : styles.olTagFadeOut}`}

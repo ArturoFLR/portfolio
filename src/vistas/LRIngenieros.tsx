@@ -86,7 +86,7 @@ function LRIngenieros() {
 
       <ProyectsNav animated={location.state.animated === true ? true : false} />
 
-      <h1 className={styles.letterTranslatorContainer}>
+      <h1 className={styles.letterTranslatorContainer} aria-hidden="true">
         <LetterTranslator
           text="L&R Ingenieros"
           activate={true}
@@ -94,6 +94,10 @@ function LRIngenieros() {
           normalLettersTimer={80}
         />
       </h1>
+
+      <p className={styles.ariaOnly} role="heading" aria-level={1}>
+        L&R Ingenieros
+      </p>
 
       <div className={styles.sliderSmallAndCommentsContainer}>
         <div className={styles.commentsViewerContainer}>

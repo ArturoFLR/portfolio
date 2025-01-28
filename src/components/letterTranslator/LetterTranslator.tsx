@@ -117,7 +117,7 @@ function LetterTranslator({
   }, []);
 
   return (
-    <p className={styles.letterTranslatorMainContainer} aria-label={text}>
+    <p className={styles.letterTranslatorMainContainer} aria-hidden="true">
       {returnLetterComponents()}
     </p>
   );

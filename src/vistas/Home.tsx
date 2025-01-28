@@ -111,13 +111,16 @@ function Home() {
 
         <div className={styles.mainLetterTranslatorContainer} id="aboutMe">
           {mainState !== "loading1" && (
-            <LetterTranslator
-              text="Front-End  Developer"
-              activate={true}
-              alienLettersTimer={mainState === "noAnimations" ? 10 : 50}
-              normalLettersTimer={mainState === "noAnimations" ? 15 : 130}
-              forMainPage={true}
-            />
+            <>
+              <LetterTranslator
+                text="Front-End  Developer"
+                activate={true}
+                alienLettersTimer={mainState === "noAnimations" ? 10 : 50}
+                normalLettersTimer={mainState === "noAnimations" ? 15 : 130}
+                forMainPage={true}
+              />
+              <p className={styles.ariaOnly}>Font-End Developer</p>
+            </>
           )}
         </div>
 

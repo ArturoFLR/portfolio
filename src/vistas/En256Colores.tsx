@@ -75,7 +75,7 @@ function En256Colores() {
 
       <ProyectsNav animated={location.state.animated === true ? true : false} />
 
-      <h1 className={styles.letterTranslatorContainer}>
+      <h1 className={styles.letterTranslatorContainer} aria-hidden="true">
         <LetterTranslator
           text="En 256 Colores"
           activate={true}
@@ -83,6 +83,10 @@ function En256Colores() {
           normalLettersTimer={80}
         />
       </h1>
+
+      <p className={styles.ariaOnly} role="heading" aria-level={1}>
+        En 256 Colores
+      </p>
 
       <div className={styles.sliderSmallAndCommentsContainer}>
         <div className={styles.commentsViewerContainer}>

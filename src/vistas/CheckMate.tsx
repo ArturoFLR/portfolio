@@ -85,7 +85,7 @@ function CheckMate() {
 
       <ProyectsNav animated={location.state.animated === true ? true : false} />
 
-      <h1 className={styles.letterTranslatorContainer}>
+      <h1 className={styles.letterTranslatorContainer} aria-hidden="true">
         <LetterTranslator
           text="CHECKMATE!"
           activate={true}
@@ -93,6 +93,10 @@ function CheckMate() {
           normalLettersTimer={100}
         />
       </h1>
+
+      <p className={styles.ariaOnly} role="heading" aria-level={1}>
+        CHECKMATE!
+      </p>
 
       <div className={styles.sliderSmallAndCommentsContainer}>
         <div className={styles.commentsViewerContainer}>

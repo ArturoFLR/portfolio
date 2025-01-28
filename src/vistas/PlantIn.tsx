@@ -88,7 +88,7 @@ function PlantIn() {
 
       <ProyectsNav animated={location.state.animated === true ? true : false} />
 
-      <h1 className={styles.letterTranslatorContainer}>
+      <h1 className={styles.letterTranslatorContainer} aria-hidden="true">
         <LetterTranslator
           text="Plant-In"
           activate={true}
@@ -96,6 +96,10 @@ function PlantIn() {
           normalLettersTimer={100}
         />
       </h1>
+
+      <p className={styles.ariaOnly} role="heading" aria-level={1}>
+        Plant-In
+      </p>
 
       <div className={styles.sliderSmallAndCommentsContainer}>
         <div className={styles.commentsViewerContainer}>
