@@ -67,13 +67,13 @@ function Home() {
     if (mainState === "loading1") {
       mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loading2");
-      }, 2700);
+      }, 2500);
     }
 
     if (mainState === "loading2") {
       mainStateTimeout.current = window.setTimeout(() => {
         setMainState("loading3");
-      }, 4000);
+      }, 3000);
     }
 
     if (mainState === "loading3") {
@@ -116,7 +116,7 @@ function Home() {
                 text="Front-End  Developer"
                 activate={true}
                 alienLettersTimer={mainState === "noAnimations" ? 10 : 50}
-                normalLettersTimer={mainState === "noAnimations" ? 15 : 130}
+                normalLettersTimer={mainState === "noAnimations" ? 15 : 90}
                 forMainPage={true}
               />
               <p className={styles.ariaOnly}>Font-End Developer</p>
