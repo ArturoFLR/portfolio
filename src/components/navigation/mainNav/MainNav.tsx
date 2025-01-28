@@ -12,21 +12,21 @@ function MainNav({ animated }: MainNavProps) {
       role="navigation"
     >
       <ul className={styles.mainNavUlTag}>
-        <ol className={styles.mainNavOlTag}>
+        <li className={styles.mainNavOlTag}>
           <NavLink linkType="anchor" linkHref="#proyects">
             Proyectos
           </NavLink>
-        </ol>
-        <ol className={styles.mainNavOlTag}>
+        </li>
+        <li className={styles.mainNavOlTag}>
           <NavLink linkType="anchor" linkHref="#technologies">
             Tecnologías
           </NavLink>
-        </ol>
-        <ol className={styles.mainNavOlTag}>
+        </li>
+        <li className={styles.mainNavOlTag}>
           <NavLink linkType="anchor" linkHref="#aboutMe">
             Sobre mí
           </NavLink>
-        </ol>
+        </li>
       </ul>
     </nav>
   );
