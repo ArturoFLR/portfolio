@@ -8,6 +8,7 @@ type NavLinkProps = {
   linkType: NavLinkType;
   animatedLinkState?: boolean;
   children: React.ReactNode;
+  tabIndex?: number;
 };
 
 function NavLink({
@@ -15,20 +16,40 @@ function NavLink({
   linkType,
   animatedLinkState,
   children,
+  tabIndex,
 }: NavLinkProps) {
-  return linkType === "anchor" ? (
-    <a className={styles.navLink} href={linkHref}>
-      {children}
-    </a>
-  ) : (
-    <Link
-      className={styles.navLink}
-      to={linkHref}
-      state={{ animated: animatedLinkState }}
-    >
-      {children}
-    </Link>
-  );
+  if (!tabIndex) tabIndex = 500;
+
+  if (tabIndex === 500) {
+    return linkType === "anchor" ? (
+      <a className={styles.navLink} href={linkHref}>
+        {children}
+      </a>
+    ) : (
+      <Link
+        className={styles.navLink}
+        to={linkHref}
+        state={{ animated: animatedLinkState }}
+      >
+        {children}
+      </Link>
+    );
+  } else {
+    return linkType === "anchor" ? (
+      <a className={styles.navLink} href={linkHref} tabIndex={tabIndex}>
+        {children}
+      </a>
+    ) : (
+      <Link
+        className={styles.navLink}
+        to={linkHref}
+        state={{ animated: animatedLinkState }}
+        tabIndex={tabIndex}
+      >
+        {children}
+      </Link>
+    );
+  }
 }
 
 export default NavLink;
