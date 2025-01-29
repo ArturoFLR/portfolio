@@ -126,7 +126,7 @@ const platinImagesAndComments: ImagesAndComments = {
   ],
   comments: [
     [
-      "Proyecto gestionado a través de la web ID for Ideas, en la que se crean grupos de trabajo formados por diversos perfiles (front-end, back-end, ux/ui...) con el objetivo de desarrollar una proyecto. En este caso se decidió crear una Web App para promocionar las huertas agroecológicas en territorio Argentino.",
+      "Proyecto gestionado a través de la Web ID for Ideas, en la que se crean grupos de trabajo formados por diversos perfiles (front-end, back-end, ux/ui...) con el objetivo de desarrollar una proyecto. En este caso se decidió crear una Web App para promocionar las huertas agroecológicas en territorio Argentino.",
       "Realizada mediante React Js, TypeScript y Tailwind CSS.",
       "Se utilizó SCRUM gestionado mediante Azure Boards para mejorar nuestra eficiencia y coordinación.",
     ],
@@ -138,6 +138,7 @@ const platinImagesAndComments: ImagesAndComments = {
     [
       "La página cuenta con protección de rutas para evitar que un usuario no autorizado acceda a secciones restringidas. ",
       "Todos los formularios de la página están controlados e implementan validación de campos.",
+      "Se utilizan estado globales gestionados mediante los hooks useContext y useReducer.",
     ],
     [
       "Al dar de alta su huerta, el usuario puede añadir múltiples imágenes de la misma.",
@@ -153,7 +154,7 @@ const platinImagesAndComments: ImagesAndComments = {
       "Todos los sliders de la página son personalizados y se han implementado desde cero, sin utilizar librerías externas.",
     ],
     [
-      "Las publicaciones de los productores no se muestran directamente, antes deben ser aprobadas o rechazadas por los administradores.",
+      "Las publicaciones de los productores no se muestran directamente; antes deben ser aprobadas o rechazadas por los administradores.",
     ],
     [
       "Los administradores pueden gestionar también las peticiones de usuarios para convertirse en productores.",
@@ -161,7 +162,7 @@ const platinImagesAndComments: ImagesAndComments = {
     ["Vista de una petición de usuario para convertirse en productor."],
     [
       "Diseño completamente responsive y funcional en todo tipo de dispositivos, desde móviles a televisiones 4K.",
-      "En la versión móvil los sliders incorporan la función de swipe para navegar entre las imágenes.",
+      "En dispositivos con pantalla táctil los sliders permiten hacer swipe para navegar entre imágenes.",
     ],
   ],
 };
@@ -185,8 +186,8 @@ const eatsqualityImagesAndComments: ImagesAndComments = {
   ],
   comments: [
     [
-      "Proyecto gestionado por la web No Country, en la que se crean grupos de trabajo formados por diversos perfiles (front-end, back-end, ux/ui...) y se les asigna un jefe de proyecto, con el objetivo de desarrollar una proyecto en 5 semanas. En este caso se decidió crear una Web App de comida a domicilio.",
-      "En la 2º semana el equipo de back-end dejó el proyecto, por lo que tuve que hacerme cargo también de este aspecto (NodeJs + Express).",
+      "Proyecto gestionado por la Web No Country, en la que se crean grupos de trabajo formados por diversos perfiles (front-end, back-end, ux/ui...) y se les asigna un jefe de proyecto, con el objetivo de desarrollar una proyecto en 5 semanas. En este caso se decidió crear una Web App de comida a domicilio.",
+      "En la 2º semana el equipo de Back-End abandonó el proyecto, por lo que tuve que hacerme cargo también de este aspecto (NodeJs + Express).",
       "A pesar de los contratiempos, se pudo entregar un MVP funcional con los roles de cliente y restaurante en el plazo establecido.",
     ],
     [
@@ -202,6 +203,7 @@ const eatsqualityImagesAndComments: ImagesAndComments = {
     [
       "El cliente puede ver el estado de sus pedidos en curso, así como el histórico de pedidos anteriores.",
       "Cuando el restaurante modifica el estado, la información se actualiza inmediatamente en la vista de cliente.",
+      "Se utilizan estado globales, gestionados mediante los hooks useContext y useReducer, para compartir la información de los usuarios y el carrito entre las distintas vistas.",
     ],
     [
       "El restaurante también puede consultar los pedidos pendientes y realizados, así como modificar su estado.",
@@ -234,8 +236,8 @@ const en256coloresImagesAndComments: ImagesAndComments = {
   ],
   comments: [
     [
-      "Página web sobre videojuegos clásicos, creada como pasatiempo personal. Realizada con HTML, CSS y JavaScript, sin ningún tipo de librería o framework.",
-      "Fue mi primera toma de contacto con el mundo del desarrollo web, y la experiencia me resultó tan interesante que a la larga me hizo plantearme seriamente un cambio laboral.",
+      "Página Web sobre videojuegos clásicos, creada como pasatiempo personal. Realizada con HTML, CSS y JavaScript, sin ningún tipo de librería o framework.",
+      "Fue mi primera toma de contacto con el mundo del desarrollo Web, y la experiencia me resultó tan interesante que a la larga me hizo plantearme seriamente un cambio laboral.",
     ],
     [
       "A pesar de desconocer en aquel momento herramientas como CSS Grid o Flexbox, se logró una maquetación de cierta complejidad mediante el uso de la propiedad 'float' y el posicionamiento relativo y absoluto.",
@@ -252,7 +254,7 @@ const en256coloresImagesAndComments: ImagesAndComments = {
     ],
     [
       "Diseño completamente responsive y funcional en todo tipo de dispositivos.",
-      "Los elementos 'aside' son minimizados en la versión móvil para facilitar la navegación, siendo posible desplegarlos pulsando con el ratón.",
+      "Los elementos 'aside' son minimizados en la versión móvil para facilitar la navegación, siendo posible desplegarlos pulsando sobre ellos.",
     ],
   ],
 };
