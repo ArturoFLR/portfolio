@@ -27,6 +27,7 @@ function EatsQuality() {
     "reactrouter",
     "tailwind",
     "express",
+    "axios",
     "jira",
     "vite",
     "vscode",
