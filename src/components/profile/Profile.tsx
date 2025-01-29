@@ -28,7 +28,7 @@ function Profile({ animated }: ProfileProps) {
         <p
           className={`${styles.paragraph} ${animated ? styles.paragraphAnimated : null}`}
         >
-          Desarrollador front-end <span>junior</span> especializado en{" "}
+          Desarrollador Front-End <span>junior</span> especializado en{" "}
           <span>React y TypeScript.</span> Mi intensa formación autodidacta y
           varias colaboraciones en <span>equipos internacionales</span> me han
           preparado para enfrentar nuevos desafíos tecnológicos con agilidad y

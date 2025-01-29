@@ -208,6 +208,7 @@ function Home() {
                       "typescript",
                       "react",
                       "sass",
+                      "axios",
                       "vite",
                       "git",
                     ]}
