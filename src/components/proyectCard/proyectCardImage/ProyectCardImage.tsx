@@ -20,9 +20,7 @@ function ProyectCardImage({
       state={{ animated: true }}
     >
       <div className={styles.moreDetailsContainer}>
-        <div className={styles.iconContainer}>
-          <ZoomInIcon color="inherit" fontSize="inherit" />
-        </div>
+        <ZoomInIcon className={styles.iconContainer} />
         <p>Ver Detalles del Proyecto</p>
       </div>
       <img className={styles.image} src={imageSrc} alt={imageAlt}></img>
