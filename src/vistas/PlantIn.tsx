@@ -28,10 +28,11 @@ function PlantIn() {
     "docker",
     "leaflet",
     "tailwind",
+    "axios",
     "netlify",
     "azure",
-    "axios",
     "vite",
+    "vscode",
     "git",
   ];
 
