@@ -30,39 +30,18 @@ function GenericLink({
       <div
         className={`${styles.genericLinkContentContainer} ${animated ? styles.genericLinkContentContainerAnimated : null}`}
       >
-        <div className={styles.iconContainer}>
-          {icon === "github" && (
-            <GitHubIcon
-              color="inherit"
-              fontSize="inherit"
-              style={{ display: "block" }}
-            />
-          )}
+        {icon === "github" && <GitHubIcon className={styles.iconContainer} />}
 
-          {icon === "linkedin" && (
-            <LinkedInIcon
-              color="inherit"
-              fontSize="inherit"
-              style={{ display: "block" }}
-            />
-          )}
+        {icon === "linkedin" && (
+          <LinkedInIcon className={styles.iconContainer} />
+        )}
 
-          {icon === "document" && (
-            <PictureAsPdfIcon
-              color="inherit"
-              fontSize="inherit"
-              style={{ display: "block" }}
-            />
-          )}
+        {icon === "document" && (
+          <PictureAsPdfIcon className={styles.iconContainer} />
+        )}
 
-          {icon === "launch" && (
-            <LaunchIcon
-              color="inherit"
-              fontSize="inherit"
-              style={{ display: "block" }}
-            />
-          )}
-        </div>
+        {icon === "launch" && <LaunchIcon className={styles.iconContainer} />}
+
         <p className={styles.linkText}>{children}</p>
       </div>
     </a>
