@@ -221,7 +221,7 @@ function Home() {
                     proyectRoute="/lringenieros"
                     title="L&R Ingenieros"
                     description1="Trabajo Freelance."
-                    description2="Sitio Web oficial de L&R Ingenieros. Diseño UX/UI responsive, implementación con React y TypeScript y despliegue final con dominio propio en Netlify."
+                    description2="Sitio Web oficial de L&R Ingenieros. Diseño UX/UI responsive, implementación con React y TypeScript y despliegue final con dominio propio."
                     techIcons={[
                       "typescript",
                       "react",
