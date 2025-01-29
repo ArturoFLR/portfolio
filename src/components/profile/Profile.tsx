@@ -44,11 +44,15 @@ function Profile({ animated }: ProfileProps) {
 
           <ul>
             <li>
-              <LightbulbIcon className={styles.learningSectionLoadingIcon} />
+              <div className={styles.learningSectionLoadingIcon}>
+                <LightbulbIcon sx={{ color: "inherit", fontSize: "inherit" }} />
+              </div>
               Angular
             </li>
             <li>
-              <LightbulbIcon className={styles.learningSectionLoadingIcon} />
+              <div className={styles.learningSectionLoadingIcon}>
+                <LightbulbIcon sx={{ color: "inherit", fontSize: "inherit" }} />
+              </div>
               Styled Components
             </li>
           </ul>
