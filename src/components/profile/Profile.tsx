@@ -1,6 +1,6 @@
 import styles from "./Profile.module.scss";
 import HeaderH2 from "../headers/headerH2/HeaderH2";
-import CustomLightbulbIcon from "../customIconsMUI/CustomLightBulb";
+import { Lightbulb } from "@mui/icons-material";
 
 type ProfileProps = {
   animated: boolean;
@@ -45,13 +45,13 @@ function Profile({ animated }: ProfileProps) {
           <ul>
             <li>
               <div className={styles.learningSectionLoadingIcon}>
-                <CustomLightbulbIcon />
+                <Lightbulb />
               </div>
               Angular
             </li>
             <li>
               <div className={styles.learningSectionLoadingIcon}>
-                <CustomLightbulbIcon />
+                <Lightbulb />
               </div>
               Styled Components
             </li>
