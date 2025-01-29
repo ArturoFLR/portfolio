@@ -248,8 +248,8 @@ function Home() {
                       "docker",
                       "leaflet",
                       "tailwind",
-                      "netlify",
                       "azure",
+                      "netlify",
                     ]}
                     online="https://plant-in.netlify.app/"
                     github="https://github.com/Mgll3/agro-plantation-app"
