@@ -43,18 +43,18 @@ function Profile({ animated }: ProfileProps) {
           </div>
 
           <ul>
-            <ol>
+            <li>
               <div className={styles.learningSectionLoadingIcon}>
                 <LightbulbIcon color="inherit" fontSize="inherit" />
               </div>
               Angular
-            </ol>
-            <ol>
+            </li>
+            <li>
               <div className={styles.learningSectionLoadingIcon}>
                 <LightbulbIcon color="inherit" fontSize="inherit" />
               </div>
               Styled Components
-            </ol>
+            </li>
           </ul>
         </div>
       </div>

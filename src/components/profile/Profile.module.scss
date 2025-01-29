@@ -91,7 +91,7 @@
     }
   }
 
-  ol {
+  li {
     display: flex;
     align-items: center;
     margin-left: 3rem;
@@ -106,7 +106,7 @@
     }
   }
 
-  ol:first-child {
+  li:first-child {
     margin-bottom: 1.2rem;
   }
 }
@@ -204,7 +204,7 @@
       margin-bottom: 2rem;
     }
 
-    ol {
+    li {
       margin-left: 5rem;
 
       .learningSectionLoadingIcon {
@@ -213,7 +213,7 @@
       }
     }
 
-    ol:first-child {
+    li:first-child {
       margin-bottom: 1.5rem;
     }
   }
@@ -251,7 +251,7 @@
       margin-bottom: 3rem;
     }
 
-    ol {
+    li {
       margin-left: 6rem;
 
       .learningSectionLoadingIcon {
@@ -260,7 +260,7 @@
       }
     }
 
-    ol:first-child {
+    li:first-child {
       margin-bottom: 2rem;
     }
   }
@@ -300,11 +300,11 @@
       margin-bottom: 1rem;
     }
 
-    ol {
+    li {
       margin-left: 3rem;
     }
 
-    ol:first-child {
+    li:first-child {
       margin-bottom: 0.8rem;
     }
   }
@@ -344,11 +344,11 @@
       margin-bottom: 1rem;
     }
 
-    ol {
+    li {
       margin-left: 2rem;
     }
 
-    ol:first-child {
+    li:first-child {
       margin-bottom: 0.8rem;
     }
   }
