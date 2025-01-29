@@ -45,13 +45,8 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
             ariaLabel={`Ir a ${proyectsData.proyectsNames[prevLinkIndex]}`}
           >
             <div className={styles.prevLinkContainer}>
-              <div className={styles.prevLinkIconContainer}>
-                <DoubleArrowIcon
-                  color="inherit"
-                  fontSize="inherit"
-                  style={{ display: "block" }}
-                />
-              </div>
+              <DoubleArrowIcon className={styles.prevLinkIconContainer} />
+
               <div className={styles.prevLinkTextContainer}>
                 {proyectsData.proyectsNames[prevLinkIndex]}
               </div>
@@ -75,13 +70,7 @@ function ProyectsNav({ animated }: ProyectsNavProps) {
                 {proyectsData.proyectsNames[nextLinkIndex]}
               </div>
 
-              <div className={styles.nextLinkIconContainer}>
-                <DoubleArrowIcon
-                  color="inherit"
-                  fontSize="inherit"
-                  style={{ display: "block" }}
-                />
-              </div>
+              <DoubleArrowIcon className={styles.nextLinkIconContainer} />
             </div>
           </NavLink>
         </li>
