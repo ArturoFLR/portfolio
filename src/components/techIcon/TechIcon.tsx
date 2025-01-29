@@ -170,7 +170,7 @@ function TechIcon({ iconName, bigVersion = false }: TechIconProps) {
 
     case "azure":
       colorClassname = styles.greenIconContainer;
-      dataTitle = "Azure";
+      dataTitle = "Azure Boards";
       src = "icons/azure.webp";
       alt = "Azure icon";
       break;
