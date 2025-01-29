@@ -234,6 +234,14 @@
     border: 4px solid black;
     color: rgb(169, 166, 166);
   }
+
+  .arrowLeftIcon,
+  .arrowRightIcon {
+    display: block;
+    color: inherit;
+    font-size: inherit;
+    transition: all 1ms;
+  }
 }
 
 .prevImgIcon::before,

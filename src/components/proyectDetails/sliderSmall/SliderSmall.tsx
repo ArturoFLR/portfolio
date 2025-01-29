@@ -286,11 +286,7 @@ function SliderSmall({
           onClick={() => handlePrevImgClick()}
           className={styles.prevImgIcon}
         >
-          <ArrowLeftIcon
-            color="inherit"
-            fontSize="inherit"
-            style={{ display: "block" }}
-          />
+          <ArrowLeftIcon className={styles.arrowLeftIcon} />
         </button>
 
         <button
@@ -299,11 +295,7 @@ function SliderSmall({
           onClick={() => handleNextImgClick()}
           className={styles.nextImgIcon}
         >
-          <ArrowRightIcon
-            color="inherit"
-            fontSize="inherit"
-            style={{ display: "block" }}
-          />
+          <ArrowRightIcon className={styles.arrowRightIcon} />
         </button>
       </div>
 
