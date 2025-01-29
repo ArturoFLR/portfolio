@@ -29,6 +29,7 @@ function CheckMate() {
     "sass",
     "axios",
     "vite",
+    "vscode",
     "git",
   ];
 
