@@ -47,7 +47,7 @@ function Profile({ animated }: ProfileProps) {
               <div className={styles.learningSectionLoadingIcon}>
                 <CustomLightbulbIcon />
               </div>
-              Angular
+              Next.js
             </li>
             <li>
               <div className={styles.learningSectionLoadingIcon}>
