@@ -109,6 +109,8 @@ function LetterTranslator({
           }, normalLettersTimer);
         }
       }, alienLettersTimer);
+    } else {
+      setTextToShow(Array.from(text));
     }
 
     return () => {

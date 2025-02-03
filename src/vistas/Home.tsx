@@ -114,7 +114,7 @@ function Home() {
             <>
               <LetterTranslator
                 text="Front-End  Developer"
-                activate={true}
+                activate={mainState === "noAnimations" ? false : true}
                 alienLettersTimer={mainState === "noAnimations" ? 10 : 50}
                 normalLettersTimer={mainState === "noAnimations" ? 15 : 90}
                 forMainPage={true}
