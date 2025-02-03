@@ -197,26 +197,6 @@ function Home() {
 
                 <div className={styles.proyectCardsContainer}>
                   <ProyectCard
-                    imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
-                    imageAlt="Imagen de CHECKMATE!"
-                    proyectRoute="/checkmate"
-                    title="CHECKMATE!"
-                    description1="Proyecto Personal."
-                    description2="Juego de ajedrez online para uno o dos jugadores con varios niveles de dificultad, avatares y posibilidad de guardar y cargar partida."
-                    techIcons={[
-                      "poo",
-                      "typescript",
-                      "react",
-                      "sass",
-                      "axios",
-                      "vite",
-                      "git",
-                    ]}
-                    online="https://arturoflr.github.io/checkmate/"
-                    github="https://github.com/ArturoFLR/checkmate"
-                  />
-
-                  <ProyectCard
                     imageSrc="images/proyects/lringenieros/l&rIngenieros-1-miniature.webp"
                     imageAlt="Imagen de L&R Ingenieros"
                     proyectRoute="/lringenieros"
@@ -272,6 +252,26 @@ function Home() {
                       "jira",
                     ]}
                     github="https://github.com/No-Country/c17-113-ft-csharp"
+                  />
+
+                  <ProyectCard
+                    imageSrc="images/proyects/checkmate/checkmate-1-miniature.webp"
+                    imageAlt="Imagen de CHECKMATE!"
+                    proyectRoute="/checkmate"
+                    title="CHECKMATE!"
+                    description1="Proyecto Personal."
+                    description2="Juego de ajedrez online para uno o dos jugadores con varios niveles de dificultad, avatares y posibilidad de guardar y cargar partida."
+                    techIcons={[
+                      "poo",
+                      "typescript",
+                      "react",
+                      "sass",
+                      "axios",
+                      "vite",
+                      "git",
+                    ]}
+                    online="https://arturoflr.github.io/checkmate/"
+                    github="https://github.com/ArturoFLR/checkmate"
                   />
 
                   <ProyectCard
