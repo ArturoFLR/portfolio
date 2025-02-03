@@ -51,7 +51,7 @@
 }
 
 .profilePositioner {
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 
 .mainButtonsContainer {
@@ -129,7 +129,7 @@
   }
 
   .profilePositioner {
-    margin-top: 14rem;
+    margin-top: 16rem;
   }
 
   .mainButtonsContainer {
@@ -262,11 +262,19 @@
     row-gap: 3.5rem;
     margin: 10rem auto 4rem;
   }
+
+  .profilePositioner {
+    margin-top: 13rem;
+  }
 }
 
 @media (max-width: 1280px) {
   .techItemsContainer {
     width: 47%;
+  }
+
+  .profilePositioner {
+    margin-top: 5rem;
   }
 }
 
